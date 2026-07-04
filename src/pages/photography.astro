@@ -274,16 +274,21 @@ const renderOrder = photos
         else if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
       }, { signal: __sig });
 
-      // Touch swipe — horizontal drag navigates; vertical drift cancels.
-      // Listeners stay passive (no preventDefault) so pinch-zoom and the
-      // browser's tap-click suppression keep working; sub-slop taps still
-      // fall through to the backdrop-click close above.
+      // Touch swipe — the gesture locks to an axis after a small slop:
+      // horizontal navigates prev/next, downward dismisses. Listeners stay
+      // passive (no preventDefault) so the browser's tap-click suppression
+      // keeps working; sub-slop taps still fall through to the
+      // backdrop-click close above.
       const figureEl = lb.querySelector('.lb-figure');
       const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
       let swipe = null;
+      function resetFigure(animate) {
+        figureEl.style.transition = animate && !reduceMotion.matches ? 'transform 0.22s ease-out' : 'none';
+        figureEl.style.transform = '';
+      }
       lb.addEventListener('touchstart', (e) => {
         swipe = e.touches.length === 1
-          ? { x: e.touches[0].clientX, y: e.touches[0].clientY, dx: 0, dy: 0 }
+          ? { x: e.touches[0].clientX, y: e.touches[0].clientY, dx: 0, dy: 0, axis: null }
           : null;
         if (swipe) figureEl.style.transition = 'none';
       }, { passive: true });
@@ -291,27 +296,37 @@ const renderOrder = photos
         if (!swipe) return;
         swipe.dx = e.touches[0].clientX - swipe.x;
         swipe.dy = e.touches[0].clientY - swipe.y;
-        if (Math.abs(swipe.dx) > Math.abs(swipe.dy)) {
+        if (!swipe.axis && Math.hypot(swipe.dx, swipe.dy) > 12) {
+          swipe.axis = Math.abs(swipe.dx) > Math.abs(swipe.dy) ? 'x' : 'y';
+        }
+        if (swipe.axis === 'x') {
           // Damped follow; extra resistance at the ends signals the edge.
           const atEdge = (swipe.dx > 0 && index === 0) || (swipe.dx < 0 && index === photos.length - 1);
           figureEl.style.transform = `translateX(${swipe.dx * (atEdge ? 0.12 : 0.35)}px)`;
+        } else if (swipe.axis === 'y') {
+          // Downward follows the finger toward dismissal; upward resists.
+          figureEl.style.transform = `translateY(${swipe.dy > 0 ? swipe.dy : swipe.dy * 0.12}px)`;
         }
       }, { passive: true });
       lb.addEventListener('touchend', () => {
         if (!swipe) return;
-        const { dx, dy } = swipe;
+        const { dx, dy, axis } = swipe;
         swipe = null;
-        figureEl.style.transition = reduceMotion.matches ? 'none' : 'transform 0.22s ease-out';
-        figureEl.style.transform = '';
-        if (Math.abs(dx) > 48 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+        if (axis === 'y' && dy > 96) {
+          // Figure keeps its offset while the lightbox fades; reset once hidden.
+          close();
+          setTimeout(() => resetFigure(false), 240);
+          return;
+        }
+        resetFigure(true);
+        if (axis === 'x' && Math.abs(dx) > 48) {
           if (dx < 0) next(); else prev();
         }
       });
       lb.addEventListener('touchcancel', () => {
         if (!swipe) return;
         swipe = null;
-        figureEl.style.transition = 'none';
-        figureEl.style.transform = '';
+        resetFigure(false);
       });
 
       // Deep-link on load
