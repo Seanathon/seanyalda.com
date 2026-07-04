@@ -1,0 +1,47 @@
+---
+interface FooterLink { href: string; label: string; external?: boolean; }
+interface Props {
+  display?: string;
+  bgImage?: string;
+  links?: FooterLink[];
+  copy?: string;
+}
+const defaultDisplay = `Building at the<br>intersection of<br>product, design<br>&amp; code.`;
+const defaultLinks: FooterLink[] = [
+  { href: 'mailto:seanyalda@pm.me', label: 'Email' },
+  { href: 'https://linkedin.com/in/sean-yalda', label: 'LinkedIn', external: true },
+  { href: 'https://github.com/Seanathon', label: 'GitHub', external: true },
+  { href: '/about', label: 'About' },
+];
+const {
+  display = defaultDisplay,
+  bgImage = '/assets/img/cave.webp',
+  links = defaultLinks,
+  copy = 'Sean Yalda · seanyalda@pm.me<br>© 2026',
+} = Astro.props;
+---
+
+<footer>
+  <div class="footer-left">
+    <div class="footer-bg" aria-hidden="true">
+      <img src={bgImage} alt="" data-rand-photo="footer" />
+    </div>
+    <div class="footer-display reveal" set:html={display}></div>
+    <div class="footer-wordmark">Sean Yalda · Los Angeles, CA · 2026</div>
+  </div>
+  <div class="footer-right">
+    <ul class="footer-nav">
+      {links.map(l => (
+        <li>
+          <a href={l.href} target={l.external ? '_blank' : undefined} rel={l.external ? 'noopener' : undefined}>
+            {l.label}
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+              <path d="M2 8L8 2M8 2H3M8 2v5" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </li>
+      ))}
+    </ul>
+    <div class="footer-copy" set:html={copy}></div>
+  </div>
+</footer>

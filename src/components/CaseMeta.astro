@@ -1,0 +1,23 @@
+---
+interface Props {
+  credits: string[];
+  stack: string[];
+  services: string[];
+}
+const { credits, stack, services } = Astro.props;
+---
+
+<section class="case-meta">
+  <div class="case-meta-col reveal">
+    <div class="case-meta-label">Credits</div>
+    <ul class="case-meta-list">{credits.map(c => <li>{c}</li>)}</ul>
+  </div>
+  <div class="case-meta-col reveal">
+    <div class="case-meta-label">Stack</div>
+    <ul class="case-meta-list">{stack.map(s => <li>{s}</li>)}</ul>
+  </div>
+  <div class="case-meta-col reveal">
+    <div class="case-meta-label">Services</div>
+    <ul class="case-meta-list">{services.map(s => <li>{s}</li>)}</ul>
+  </div>
+</section>

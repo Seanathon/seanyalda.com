@@ -1,0 +1,19 @@
+---
+type Page = 'home' | 'work' | 'about' | 'photography';
+interface Props {
+  active?: Page;
+}
+const { active } = Astro.props;
+const isActive = (key: Page) => active === key;
+---
+
+<nav id="nav">
+  <a href="/" class="nav-wordmark">Sean Yalda</a>
+  <ul class="nav-links">
+    <li><a href="/" aria-current={isActive('home') ? 'page' : undefined}>Home</a></li>
+    <li><a href="/work" aria-current={isActive('work') ? 'page' : undefined}>Work</a></li>
+    <li><a href="/about" aria-current={isActive('about') ? 'page' : undefined}>About</a></li>
+    <li><a href="/photography" aria-current={isActive('photography') ? 'page' : undefined}>Photography</a></li>
+    <li><a href="mailto:seanyalda@pm.me">Contact</a></li>
+  </ul>
+</nav>

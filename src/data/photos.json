@@ -1,0 +1,4067 @@
+[
+  {
+    "id": "dsc00250",
+    "src": "/assets/img/photography/dsc00250.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "date": "2023-07-22",
+    "year": 2023,
+    "camera": "SONY ILCE-7M3",
+    "lens": "35mm F1.4 DG HSM | Art 012",
+    "focal": "35.0 mm",
+    "aperture": "f/16.0",
+    "shutter": "1/200",
+    "iso": 2500,
+    "color": "#2d393b",
+    "palette": [
+      "#2d393b",
+      "#b89f96",
+      "#8fa2a5",
+      "#86827e",
+      "#73929c"
+    ],
+    "hue": 188.6,
+    "saturation": 0.135,
+    "lightness": 0.204,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc07735",
+    "src": "/assets/img/photography/dsc07735.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1125,
+    "date": "2021-06-03",
+    "year": 2021,
+    "camera": "SONY ILCE-7M3",
+    "lens": "E 70-180mm F2.8 A056",
+    "focal": "70.0 mm",
+    "aperture": "f/11.0",
+    "shutter": "1/400",
+    "iso": 160,
+    "color": "#d9d7d8",
+    "palette": [
+      "#d9d7d8",
+      "#4b423b",
+      "#655f58",
+      "#918378",
+      "#78685e"
+    ],
+    "hue": 330.0,
+    "saturation": 0.026,
+    "lightness": 0.847,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc06814",
+    "src": "/assets/img/photography/dsc06814.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "date": "2021-05-31",
+    "year": 2021,
+    "camera": "SONY ILCE-7M3",
+    "lens": "E 70-180mm F2.8 A056",
+    "focal": "180.0 mm",
+    "aperture": "f/9.0",
+    "shutter": "1/320",
+    "iso": 400,
+    "color": "#45aec0",
+    "palette": [
+      "#45aec0",
+      "#ccdee0",
+      "#1c1d1c",
+      "#115e6b",
+      "#27494d"
+    ],
+    "hue": 188.8,
+    "saturation": 0.494,
+    "lightness": 0.512,
+    "bucket": "teal",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc06716",
+    "src": "/assets/img/photography/dsc06716.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "date": "2021-05-30",
+    "year": 2021,
+    "camera": "SONY ILCE-7M3",
+    "lens": "35mm F1.4 DG HSM | Art 012",
+    "focal": "35.0 mm",
+    "aperture": "f/9.0",
+    "shutter": "1/400",
+    "iso": 400,
+    "color": "#cedee1",
+    "palette": [
+      "#cedee1",
+      "#2e7dba",
+      "#20201c",
+      "#94c4d3",
+      "#0c3260"
+    ],
+    "hue": 189.5,
+    "saturation": 0.241,
+    "lightness": 0.845,
+    "bucket": "teal",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc06317",
+    "src": "/assets/img/photography/dsc06317.webp",
+    "alt": "",
+    "width": 1428,
+    "height": 2000,
+    "date": "2021-01-24",
+    "year": 2021,
+    "camera": "SONY ILCE-7M3",
+    "lens": "E 70-180mm F2.8 A056",
+    "focal": "70.0 mm",
+    "aperture": "f/2.8",
+    "shutter": "1/1600",
+    "iso": 100,
+    "color": "#434856",
+    "palette": [
+      "#434856",
+      "#dddfe4",
+      "#afc0d8",
+      "#8ea0be",
+      "#948c92"
+    ],
+    "hue": 224.2,
+    "saturation": 0.124,
+    "lightness": 0.3,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc06046",
+    "src": "/assets/img/photography/dsc06046.webp",
+    "alt": "",
+    "width": 1125,
+    "height": 2000,
+    "date": "2020-12-03",
+    "year": 2020,
+    "camera": "SONY ILCE-7M3",
+    "lens": "E 70-180mm F2.8 A056",
+    "focal": "84.0 mm",
+    "aperture": "f/2.8",
+    "shutter": "1/160",
+    "iso": 400,
+    "color": "#dab095",
+    "palette": [
+      "#dab095",
+      "#1e2428",
+      "#7c5944",
+      "#5974ab",
+      "#9c9484"
+    ],
+    "hue": 23.5,
+    "saturation": 0.483,
+    "lightness": 0.72,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc04241",
+    "src": "/assets/img/photography/dsc04241.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "date": "2020-10-31",
+    "year": 2020,
+    "camera": "SONY ILCE-7M3",
+    "lens": "FE 28-70mm F3.5-5.6 OSS",
+    "focal": "28.0 mm",
+    "aperture": "f/3.5",
+    "shutter": "1/320",
+    "iso": 6400,
+    "color": "#38312a",
+    "palette": [
+      "#38312a",
+      "#eacbac",
+      "#9a9ba6",
+      "#a7b5c1",
+      "#907e75"
+    ],
+    "hue": 30.0,
+    "saturation": 0.143,
+    "lightness": 0.192,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc03111",
+    "src": "/assets/img/photography/dsc03111.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "date": "2020-10-07",
+    "year": 2020,
+    "camera": "SONY ILCE-7M3",
+    "lens": "EF50/1.4 USM",
+    "focal": "50.0 mm",
+    "aperture": "f/11.0",
+    "shutter": "1/1000",
+    "iso": 320,
+    "color": "#413e39",
+    "palette": [
+      "#413e39",
+      "#cb9f73",
+      "#9c7b54",
+      "#94b2be",
+      "#7e9ead"
+    ],
+    "hue": 37.5,
+    "saturation": 0.066,
+    "lightness": 0.239,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc01616",
+    "src": "/assets/img/photography/dsc01616.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1125,
+    "date": "2020-07-10",
+    "year": 2020,
+    "camera": "SONY ILCE-7M3",
+    "lens": "FE 28-70mm F3.5-5.6 OSS",
+    "focal": "28.0 mm",
+    "aperture": "f/18.0",
+    "shutter": "1/100",
+    "iso": 1600,
+    "color": "#2c2134",
+    "palette": [
+      "#2c2134",
+      "#d48164",
+      "#875f72",
+      "#9a7ca0",
+      "#a095a3"
+    ],
+    "hue": 274.7,
+    "saturation": 0.224,
+    "lightness": 0.167,
+    "bucket": "purple",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc06978",
+    "src": "/assets/img/photography/dsc06978.webp",
+    "alt": "",
+    "width": 1840,
+    "height": 1314,
+    "date": "2020-01-04",
+    "year": 2020,
+    "camera": "SONY ILCE-7M3",
+    "lens": "FE 28-70mm F3.5-5.6 OSS",
+    "focal": "70.0 mm",
+    "aperture": "f/14.0",
+    "shutter": "1/3200",
+    "iso": 2500,
+    "color": "#9f9f9f",
+    "palette": [
+      "#9f9f9f",
+      "#1d1d1d",
+      "#4c4c4c",
+      "#545454",
+      "#d7d7d7"
+    ],
+    "hue": 0.0,
+    "saturation": 0.0,
+    "lightness": 0.624,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "20200104-dsc06989",
+    "src": "/assets/img/photography/20200104-dsc06989.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "date": "2020-01-04",
+    "year": 2020,
+    "color": "#c3c7c8",
+    "palette": [
+      "#c3c7c8",
+      "#2f3f43",
+      "#5f4a3f",
+      "#629fb5",
+      "#5c6069"
+    ],
+    "hue": 192.0,
+    "saturation": 0.043,
+    "lightness": 0.775,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "20191021-dsc08958",
+    "src": "/assets/img/photography/20191021-dsc08958.webp",
+    "alt": "",
+    "width": 1429,
+    "height": 2000,
+    "date": "2019-10-21",
+    "year": 2019,
+    "color": "#1e533f",
+    "palette": [
+      "#1e533f",
+      "#dde7cb",
+      "#805a3b",
+      "#b08d49",
+      "#7cbb82"
+    ],
+    "hue": 157.4,
+    "saturation": 0.469,
+    "lightness": 0.222,
+    "bucket": "green",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc06607-2",
+    "src": "/assets/img/photography/dsc06607-2.webp",
+    "alt": "",
+    "width": 1125,
+    "height": 2000,
+    "date": "2019-09-29",
+    "year": 2019,
+    "camera": "SONY ILCE-7M3",
+    "lens": "FE 28-70mm F3.5-5.6 OSS",
+    "focal": "70.0 mm",
+    "aperture": "f/5.6",
+    "shutter": "1/200",
+    "iso": 3200,
+    "color": "#151927",
+    "palette": [
+      "#151927",
+      "#dbc7c2",
+      "#5f5c6d",
+      "#828294",
+      "#848c96"
+    ],
+    "hue": 226.7,
+    "saturation": 0.3,
+    "lightness": 0.118,
+    "bucket": "blue",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc03806-edit",
+    "src": "/assets/img/photography/dsc03806-edit.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "date": "2019-09-09",
+    "year": 2019,
+    "camera": "SONY ILCE-7M3",
+    "lens": "FE 28-70mm F3.5-5.6 OSS",
+    "focal": "63.0 mm",
+    "aperture": "f/5.6",
+    "shutter": "1/60",
+    "iso": 100,
+    "color": "#ad855a",
+    "palette": [
+      "#ad855a",
+      "#090807",
+      "#685339",
+      "#838471",
+      "#747c7c"
+    ],
+    "hue": 31.1,
+    "saturation": 0.336,
+    "lightness": 0.516,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.505,
+      "y": 0.467
+    }
+  },
+  {
+    "id": "dsc02694",
+    "src": "/assets/img/photography/dsc02694.webp",
+    "alt": "",
+    "width": 1546,
+    "height": 2000,
+    "date": "2019-08-23",
+    "year": 2019,
+    "camera": "SONY ILCE-7M3",
+    "lens": "FE 28-70mm F3.5-5.6 OSS",
+    "focal": "28.0 mm",
+    "aperture": "f/3.5",
+    "shutter": "1/60",
+    "iso": 1600,
+    "color": "#0c1325",
+    "palette": [
+      "#0c1325",
+      "#3b50c9",
+      "#153077",
+      "#bdcdee",
+      "#4896c5"
+    ],
+    "hue": 223.2,
+    "saturation": 0.51,
+    "lightness": 0.096,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.45
+    }
+  },
+  {
+    "id": "img-5646",
+    "src": "/assets/img/photography/img-5646.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1250,
+    "date": "2016-11-23",
+    "year": 2016,
+    "camera": "Canon EOS 7D",
+    "lens": "EF24-70mm f/2.8L USM",
+    "focal": "38.0 mm",
+    "aperture": "f/4.0",
+    "shutter": "1/100",
+    "iso": 100,
+    "color": "#4c3432",
+    "palette": [
+      "#4c3432",
+      "#d7d6d6",
+      "#918583",
+      "#666161",
+      "#826665"
+    ],
+    "hue": 4.6,
+    "saturation": 0.206,
+    "lightness": 0.247,
+    "bucket": "red",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "img-5586",
+    "src": "/assets/img/photography/img-5586.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "date": "2016-11-23",
+    "year": 2016,
+    "camera": "Canon EOS 7D",
+    "lens": "EF24-70mm f/2.8L USM",
+    "focal": "68.0 mm",
+    "aperture": "f/4.0",
+    "shutter": "1/200",
+    "iso": 100,
+    "color": "#bacdb5",
+    "palette": [
+      "#bacdb5",
+      "#11181b",
+      "#8d978c",
+      "#67766e",
+      "#798c85"
+    ],
+    "hue": 107.5,
+    "saturation": 0.194,
+    "lightness": 0.757,
+    "bucket": "green",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "img-2228",
+    "src": "/assets/img/photography/img-2228.webp",
+    "alt": "",
+    "width": 1429,
+    "height": 2000,
+    "date": "2015-07-06",
+    "year": 2015,
+    "camera": "Canon EOS 7D",
+    "lens": "EF50mm f/1.4 USM",
+    "focal": "50.0 mm",
+    "aperture": "f/1.4",
+    "shutter": "1/125",
+    "iso": 3200,
+    "color": "#d98518",
+    "palette": [
+      "#d98518",
+      "#162c1d",
+      "#6e430e",
+      "#9f9a7b",
+      "#f1bd66"
+    ],
+    "hue": 33.9,
+    "saturation": 0.801,
+    "lightness": 0.473,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "wedding-vows-2",
+    "src": "/assets/img/photography/wedding-vows-2.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1125,
+    "color": "#190f08",
+    "palette": [
+      "#190f08",
+      "#bd9370",
+      "#6e4426",
+      "#617193",
+      "#7d97a4"
+    ],
+    "hue": 24.7,
+    "saturation": 0.515,
+    "lightness": 0.065,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.935,
+      "y": 0.279
+    }
+  },
+  {
+    "id": "smoker-standard-1",
+    "src": "/assets/img/photography/smoker-standard-1.webp",
+    "alt": "",
+    "width": 891,
+    "height": 1248,
+    "color": "#232f32",
+    "palette": [
+      "#232f32",
+      "#f3b14e",
+      "#a29d96",
+      "#bc432d",
+      "#96929c"
+    ],
+    "hue": 192.0,
+    "saturation": 0.176,
+    "lightness": 0.167,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "skye-window-1",
+    "src": "/assets/img/photography/skye-window-1.webp",
+    "alt": "",
+    "width": 1429,
+    "height": 2000,
+    "color": "#0c1511",
+    "palette": [
+      "#0c1511",
+      "#c3cfc5",
+      "#a0256a",
+      "#759394",
+      "#687791"
+    ],
+    "hue": 153.3,
+    "saturation": 0.273,
+    "lightness": 0.065,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "sidewalk-cleaner-1",
+    "src": "/assets/img/photography/sidewalk-cleaner-1.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1250,
+    "color": "#8e897d",
+    "palette": [
+      "#8e897d",
+      "#12191b",
+      "#c3b7aa",
+      "#3e4237",
+      "#3e4b48"
+    ],
+    "hue": 42.4,
+    "saturation": 0.07,
+    "lightness": 0.524,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.508,
+      "y": 0.341
+    }
+  },
+  {
+    "id": "ryanmushroomhike",
+    "src": "/assets/img/photography/ryanmushroomhike.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#2f3029",
+    "palette": [
+      "#2f3029",
+      "#a69567",
+      "#b99cab",
+      "#717067",
+      "#87965a"
+    ],
+    "hue": 68.6,
+    "saturation": 0.079,
+    "lightness": 0.175,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "rejkmainstreetchurch",
+    "src": "/assets/img/photography/rejkmainstreetchurch.webp",
+    "alt": "",
+    "width": 1333,
+    "height": 2000,
+    "color": "#e1e9eb",
+    "palette": [
+      "#e1e9eb",
+      "#514a46",
+      "#969492",
+      "#817876",
+      "#707072"
+    ],
+    "hue": 192.0,
+    "saturation": 0.2,
+    "lightness": 0.902,
+    "bucket": "teal",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "ready-to-cross-1",
+    "src": "/assets/img/photography/ready-to-cross-1.webp",
+    "alt": "",
+    "width": 1428,
+    "height": 2000,
+    "color": "#37383e",
+    "palette": [
+      "#37383e",
+      "#bebdcc",
+      "#83737c",
+      "#6e8cae",
+      "#8ba7c6"
+    ],
+    "hue": 231.4,
+    "saturation": 0.06,
+    "lightness": 0.229,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "porthuron",
+    "src": "/assets/img/photography/porthuron.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#bed2c8",
+    "palette": [
+      "#bed2c8",
+      "#5e5068",
+      "#6499a3",
+      "#7daeb4",
+      "#949073"
+    ],
+    "hue": 150.0,
+    "saturation": 0.182,
+    "lightness": 0.784,
+    "bucket": "green",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "photo-booth-library",
+    "src": "/assets/img/photography/photo-booth-library.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#323321",
+    "palette": [
+      "#323321",
+      "#ccb1a7",
+      "#806e62",
+      "#93a3a3",
+      "#858e99"
+    ],
+    "hue": 63.3,
+    "saturation": 0.214,
+    "lightness": 0.165,
+    "bucket": "yellow",
+    "focus": {
+      "x": 0.57,
+      "y": 0.301
+    }
+  },
+  {
+    "id": "melo-1",
+    "src": "/assets/img/photography/melo-1.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#dfb0cd",
+    "palette": [
+      "#dfb0cd",
+      "#222428",
+      "#a43683",
+      "#be65a7",
+      "#aa9f22"
+    ],
+    "hue": 323.0,
+    "saturation": 0.423,
+    "lightness": 0.782,
+    "bucket": "pink",
+    "focus": {
+      "x": 0.722,
+      "y": 0.22
+    }
+  },
+  {
+    "id": "mandy-trippy-booth-1",
+    "src": "/assets/img/photography/mandy-trippy-booth-1.webp",
+    "alt": "",
+    "width": 1428,
+    "height": 2000,
+    "color": "#161514",
+    "palette": [
+      "#161514",
+      "#b8ab9b",
+      "#5b5145",
+      "#7b7e71",
+      "#82898d"
+    ],
+    "hue": 30.0,
+    "saturation": 0.048,
+    "lightness": 0.082,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "man-on-stoop-1-4",
+    "src": "/assets/img/photography/man-on-stoop-1-4.webp",
+    "alt": "",
+    "width": 1274,
+    "height": 1784,
+    "color": "#776f65",
+    "palette": [
+      "#776f65",
+      "#c6b4a6",
+      "#172b2e",
+      "#b2b4a9",
+      "#aaaaac"
+    ],
+    "hue": 33.3,
+    "saturation": 0.082,
+    "lightness": 0.431,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "img-7193-edit",
+    "src": "/assets/img/photography/img-7193-edit.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#b8b8b8",
+    "palette": [
+      "#b8b8b8",
+      "#2d2d2d",
+      "#545454",
+      "#6d6d6d",
+      "#5c5c5c"
+    ],
+    "hue": 0.0,
+    "saturation": 0.0,
+    "lightness": 0.722,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.478,
+      "y": 0.472
+    }
+  },
+  {
+    "id": "img-6772",
+    "src": "/assets/img/photography/img-6772.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#8c5022",
+    "palette": [
+      "#8c5022",
+      "#d7cbba",
+      "#371f13",
+      "#d17833",
+      "#bbaa98"
+    ],
+    "hue": 26.0,
+    "saturation": 0.609,
+    "lightness": 0.341,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "img-6525-copy",
+    "src": "/assets/img/photography/img-6525-copy.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#545047",
+    "palette": [
+      "#545047",
+      "#c7a76c",
+      "#7c7f82",
+      "#dcd0b7",
+      "#a3ac92"
+    ],
+    "hue": 41.5,
+    "saturation": 0.084,
+    "lightness": 0.304,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "img-6097",
+    "src": "/assets/img/photography/img-6097.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#786d65",
+    "palette": [
+      "#786d65",
+      "#d79562",
+      "#152d38",
+      "#9fe1f0",
+      "#b3b4ab"
+    ],
+    "hue": 25.3,
+    "saturation": 0.086,
+    "lightness": 0.433,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.549,
+      "y": 0.448
+    }
+  },
+  {
+    "id": "img-5962",
+    "src": "/assets/img/photography/img-5962.webp",
+    "alt": "",
+    "width": 1429,
+    "height": 2000,
+    "color": "#3b3d37",
+    "palette": [
+      "#3b3d37",
+      "#cc9f79",
+      "#8e7a68",
+      "#62c4cf",
+      "#a1a499"
+    ],
+    "hue": 80.0,
+    "saturation": 0.052,
+    "lightness": 0.227,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.6,
+      "y": 0.101
+    }
+  },
+  {
+    "id": "img-5449",
+    "src": "/assets/img/photography/img-5449.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#0f0604",
+    "palette": [
+      "#0f0604",
+      "#bf4e1c",
+      "#642206",
+      "#74543c",
+      "#846444"
+    ],
+    "hue": 10.9,
+    "saturation": 0.579,
+    "lightness": 0.037,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "img-5421-copy",
+    "src": "/assets/img/photography/img-5421-copy.webp",
+    "alt": "",
+    "width": 1600,
+    "height": 2000,
+    "color": "#b02008",
+    "palette": [
+      "#b02008",
+      "#1a0804",
+      "#731506",
+      "#8c642c",
+      "#8c5834"
+    ],
+    "hue": 8.6,
+    "saturation": 0.913,
+    "lightness": 0.361,
+    "bucket": "red",
+    "focus": {
+      "x": 0.5,
+      "y": 0.45
+    }
+  },
+  {
+    "id": "img-2432-edit",
+    "src": "/assets/img/photography/img-2432-edit.webp",
+    "alt": "",
+    "width": 1429,
+    "height": 2000,
+    "color": "#cdcdc5",
+    "palette": [
+      "#cdcdc5",
+      "#16e0e7",
+      "#2c1f26",
+      "#0d87b4",
+      "#477076"
+    ],
+    "hue": 60.0,
+    "saturation": 0.074,
+    "lightness": 0.788,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "img-1672",
+    "src": "/assets/img/photography/img-1672.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#1a140e",
+    "palette": [
+      "#1a140e",
+      "#96603a",
+      "#a2959c",
+      "#57545a",
+      "#57776e"
+    ],
+    "hue": 30.0,
+    "saturation": 0.3,
+    "lightness": 0.078,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "img-1625-edit",
+    "src": "/assets/img/photography/img-1625-edit.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#dfdfdf",
+    "palette": [
+      "#dfdfdf",
+      "#262626",
+      "#767676",
+      "#9c9c9c",
+      "#949494"
+    ],
+    "hue": 0.0,
+    "saturation": 0.0,
+    "lightness": 0.875,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "iceland-sean-cliff",
+    "src": "/assets/img/photography/iceland-sean-cliff.webp",
+    "alt": "",
+    "width": 1463,
+    "height": 2000,
+    "color": "#e2e0dd",
+    "palette": [
+      "#e2e0dd",
+      "#322f2a",
+      "#7a6250",
+      "#938f84",
+      "#897b63"
+    ],
+    "hue": 36.0,
+    "saturation": 0.079,
+    "lightness": 0.876,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.835,
+      "y": 0.37
+    }
+  },
+  {
+    "id": "iceland-mountain",
+    "src": "/assets/img/photography/iceland-mountain.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 902,
+    "color": "#997a49",
+    "palette": [
+      "#997a49",
+      "#3b3a34",
+      "#c8ecfb",
+      "#5e3e1a",
+      "#f4ce74"
+    ],
+    "hue": 36.8,
+    "saturation": 0.354,
+    "lightness": 0.443,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "haircut",
+    "src": "/assets/img/photography/haircut.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1118,
+    "color": "#463125",
+    "palette": [
+      "#463125",
+      "#e6e1cb",
+      "#91704e",
+      "#a4b0ba",
+      "#949aa3"
+    ],
+    "hue": 21.8,
+    "saturation": 0.308,
+    "lightness": 0.21,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dylan-1404",
+    "src": "/assets/img/photography/dylan-1404.webp",
+    "alt": "",
+    "width": 1125,
+    "height": 2000,
+    "color": "#27211b",
+    "palette": [
+      "#27211b",
+      "#e3bb7e",
+      "#a6540c",
+      "#8e8c81",
+      "#8c8484"
+    ],
+    "hue": 30.0,
+    "saturation": 0.182,
+    "lightness": 0.129,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.443,
+      "y": 0.401
+    }
+  },
+  {
+    "id": "dylan-1085",
+    "src": "/assets/img/photography/dylan-1085.webp",
+    "alt": "",
+    "width": 1125,
+    "height": 2000,
+    "color": "#e4bf95",
+    "palette": [
+      "#e4bf95",
+      "#383424",
+      "#50819c",
+      "#9c7a4f",
+      "#b1af8d"
+    ],
+    "hue": 31.9,
+    "saturation": 0.594,
+    "lightness": 0.739,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.636,
+      "y": 0.394
+    }
+  },
+  {
+    "id": "dsc09804",
+    "src": "/assets/img/photography/dsc09804.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 637,
+    "color": "#ae4125",
+    "palette": [
+      "#ae4125",
+      "#f9dbae",
+      "#ea8e4c",
+      "#d4a394",
+      "#65280c"
+    ],
+    "hue": 12.3,
+    "saturation": 0.649,
+    "lightness": 0.414,
+    "bucket": "red",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc09654-edit-edit",
+    "src": "/assets/img/photography/dsc09654-edit-edit.webp",
+    "alt": "",
+    "width": 1429,
+    "height": 2000,
+    "color": "#758789",
+    "palette": [
+      "#758789",
+      "#236c80",
+      "#8e4f2e",
+      "#dcc3af",
+      "#723413"
+    ],
+    "hue": 186.0,
+    "saturation": 0.079,
+    "lightness": 0.498,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc09375",
+    "src": "/assets/img/photography/dsc09375.webp",
+    "alt": "",
+    "width": 1500,
+    "height": 2000,
+    "color": "#1a3e3b",
+    "palette": [
+      "#1a3e3b",
+      "#d79871",
+      "#048686",
+      "#188b94",
+      "#7caca4"
+    ],
+    "hue": 175.0,
+    "saturation": 0.409,
+    "lightness": 0.173,
+    "bucket": "teal",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc09348-edit",
+    "src": "/assets/img/photography/dsc09348-edit.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#2b3b2c",
+    "palette": [
+      "#2b3b2c",
+      "#c6cfa3",
+      "#6fc69f",
+      "#4a855d",
+      "#8fa394"
+    ],
+    "hue": 123.8,
+    "saturation": 0.157,
+    "lightness": 0.2,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc09335-2",
+    "src": "/assets/img/photography/dsc09335-2.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1125,
+    "color": "#c9beae",
+    "palette": [
+      "#c9beae",
+      "#34382e",
+      "#6f6830",
+      "#797567",
+      "#6e6158"
+    ],
+    "hue": 35.6,
+    "saturation": 0.2,
+    "lightness": 0.735,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.73,
+      "y": 0.244
+    }
+  },
+  {
+    "id": "dsc09301-edit",
+    "src": "/assets/img/photography/dsc09301-edit.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#333333",
+    "palette": [
+      "#333333",
+      "#eeebe8",
+      "#ac7e62",
+      "#b99c8a",
+      "#717676"
+    ],
+    "hue": 0.0,
+    "saturation": 0.0,
+    "lightness": 0.2,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.481,
+      "y": 0.302
+    }
+  },
+  {
+    "id": "dsc09276-2",
+    "src": "/assets/img/photography/dsc09276-2.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1250,
+    "color": "#d6cdc3",
+    "palette": [
+      "#d6cdc3",
+      "#363733",
+      "#70653a",
+      "#848072",
+      "#736760"
+    ],
+    "hue": 31.6,
+    "saturation": 0.188,
+    "lightness": 0.802,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.63,
+      "y": 0.278
+    }
+  },
+  {
+    "id": "dsc09243",
+    "src": "/assets/img/photography/dsc09243.webp",
+    "alt": "",
+    "width": 1333,
+    "height": 2000,
+    "color": "#6555e3",
+    "palette": [
+      "#6555e3",
+      "#0d072a",
+      "#22268a",
+      "#d6cdfb",
+      "#acacec"
+    ],
+    "hue": 246.8,
+    "saturation": 0.717,
+    "lightness": 0.612,
+    "bucket": "blue",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc09196",
+    "src": "/assets/img/photography/dsc09196.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#4a35b9",
+    "palette": [
+      "#4a35b9",
+      "#0a051b",
+      "#dd2fa0",
+      "#21166a",
+      "#7884fc"
+    ],
+    "hue": 249.5,
+    "saturation": 0.555,
+    "lightness": 0.467,
+    "bucket": "blue",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc09158-2",
+    "src": "/assets/img/photography/dsc09158-2.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1334,
+    "color": "#484840",
+    "palette": [
+      "#484840",
+      "#dacab8",
+      "#978771",
+      "#a3b6a8",
+      "#9ca3a4"
+    ],
+    "hue": 60.0,
+    "saturation": 0.059,
+    "lightness": 0.267,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.418,
+      "y": 0.264
+    }
+  },
+  {
+    "id": "dsc09141-2",
+    "src": "/assets/img/photography/dsc09141-2.webp",
+    "alt": "",
+    "width": 1695,
+    "height": 1695,
+    "color": "#3d3935",
+    "palette": [
+      "#3d3935",
+      "#c9cbca",
+      "#82817a",
+      "#b78e77",
+      "#92a690"
+    ],
+    "hue": 30.0,
+    "saturation": 0.07,
+    "lightness": 0.224,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.45
+    }
+  },
+  {
+    "id": "dsc09012",
+    "src": "/assets/img/photography/dsc09012.webp",
+    "alt": "",
+    "width": 1429,
+    "height": 2000,
+    "color": "#eadcd3",
+    "palette": [
+      "#eadcd3",
+      "#5f4940",
+      "#cd9a77",
+      "#6b6069",
+      "#63859e"
+    ],
+    "hue": 23.5,
+    "saturation": 0.354,
+    "lightness": 0.873,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc09003",
+    "src": "/assets/img/photography/dsc09003.webp",
+    "alt": "",
+    "width": 1333,
+    "height": 2000,
+    "color": "#7c6a52",
+    "palette": [
+      "#7c6a52",
+      "#272733",
+      "#e8e8e5",
+      "#d2998a",
+      "#c5b6b2"
+    ],
+    "hue": 34.3,
+    "saturation": 0.204,
+    "lightness": 0.404,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc08997-copy-2",
+    "src": "/assets/img/photography/dsc08997-copy-2.webp",
+    "alt": "",
+    "width": 1333,
+    "height": 2000,
+    "color": "#aa7c68",
+    "palette": [
+      "#aa7c68",
+      "#f3d1c2",
+      "#32281e",
+      "#cfb2b1",
+      "#921432"
+    ],
+    "hue": 18.2,
+    "saturation": 0.28,
+    "lightness": 0.537,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc08983",
+    "src": "/assets/img/photography/dsc08983.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#574d44",
+    "palette": [
+      "#574d44",
+      "#e5dad3",
+      "#cf9482",
+      "#afa9b2",
+      "#979881"
+    ],
+    "hue": 28.4,
+    "saturation": 0.123,
+    "lightness": 0.304,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.353,
+      "y": 0.341
+    }
+  },
+  {
+    "id": "dsc08731-copy",
+    "src": "/assets/img/photography/dsc08731-copy.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#4a3d33",
+    "palette": [
+      "#4a3d33",
+      "#e4dfda",
+      "#cca08a",
+      "#898681",
+      "#a3ada2"
+    ],
+    "hue": 26.1,
+    "saturation": 0.184,
+    "lightness": 0.245,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc08642-edit-2",
+    "src": "/assets/img/photography/dsc08642-edit-2.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1000,
+    "color": "#43453c",
+    "palette": [
+      "#43453c",
+      "#81a6c1",
+      "#aac3d0",
+      "#c8cdd2",
+      "#9a818b"
+    ],
+    "hue": 73.3,
+    "saturation": 0.07,
+    "lightness": 0.253,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc08596",
+    "src": "/assets/img/photography/dsc08596.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1428,
+    "color": "#5e584b",
+    "palette": [
+      "#5e584b",
+      "#04a6c3",
+      "#c6ad9d",
+      "#82978f",
+      "#a2b4a1"
+    ],
+    "hue": 41.1,
+    "saturation": 0.112,
+    "lightness": 0.331,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc08575",
+    "src": "/assets/img/photography/dsc08575.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#382c23",
+    "palette": [
+      "#382c23",
+      "#e9d8cc",
+      "#c58a62",
+      "#baa89f",
+      "#8e7a6a"
+    ],
+    "hue": 25.7,
+    "saturation": 0.231,
+    "lightness": 0.178,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.77,
+      "y": 0.226
+    }
+  },
+  {
+    "id": "dsc08547",
+    "src": "/assets/img/photography/dsc08547.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1600,
+    "color": "#c7ae8f",
+    "palette": [
+      "#c7ae8f",
+      "#203526",
+      "#7e5637",
+      "#85b2a1",
+      "#87a179"
+    ],
+    "hue": 33.2,
+    "saturation": 0.333,
+    "lightness": 0.671,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.607,
+      "y": 0.221
+    }
+  },
+  {
+    "id": "dsc08529-copy",
+    "src": "/assets/img/photography/dsc08529-copy.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1601,
+    "color": "#3e4a31",
+    "palette": [
+      "#3e4a31",
+      "#d9997b",
+      "#a0ba9f",
+      "#947d4b",
+      "#4da09d"
+    ],
+    "hue": 88.8,
+    "saturation": 0.203,
+    "lightness": 0.241,
+    "bucket": "green",
+    "focus": {
+      "x": 0.5,
+      "y": 0.45
+    }
+  },
+  {
+    "id": "dsc08456",
+    "src": "/assets/img/photography/dsc08456.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#19130e",
+    "palette": [
+      "#19130e",
+      "#bc997a",
+      "#684b33",
+      "#7e7b90",
+      "#84a4a4"
+    ],
+    "hue": 27.3,
+    "saturation": 0.282,
+    "lightness": 0.076,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc08398",
+    "src": "/assets/img/photography/dsc08398.webp",
+    "alt": "",
+    "width": 1428,
+    "height": 2000,
+    "color": "#d0c1ac",
+    "palette": [
+      "#d0c1ac",
+      "#332d28",
+      "#544338",
+      "#766939",
+      "#726657"
+    ],
+    "hue": 35.0,
+    "saturation": 0.277,
+    "lightness": 0.745,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc08388",
+    "src": "/assets/img/photography/dsc08388.webp",
+    "alt": "",
+    "width": 1429,
+    "height": 2000,
+    "color": "#827a6a",
+    "palette": [
+      "#827a6a",
+      "#2f2523",
+      "#d2cabe",
+      "#c099c0",
+      "#c9b29e"
+    ],
+    "hue": 40.0,
+    "saturation": 0.102,
+    "lightness": 0.463,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc08387",
+    "src": "/assets/img/photography/dsc08387.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1347,
+    "color": "#294b46",
+    "palette": [
+      "#294b46",
+      "#e4dbd8",
+      "#cd4c3a",
+      "#d58d45",
+      "#899190"
+    ],
+    "hue": 171.2,
+    "saturation": 0.293,
+    "lightness": 0.227,
+    "bucket": "teal",
+    "focus": {
+      "x": 0.165,
+      "y": 0.499
+    }
+  },
+  {
+    "id": "dsc08375",
+    "src": "/assets/img/photography/dsc08375.webp",
+    "alt": "",
+    "width": 1429,
+    "height": 2000,
+    "color": "#b0714c",
+    "palette": [
+      "#b0714c",
+      "#f0ccb7",
+      "#421207",
+      "#65260e",
+      "#dcb2a5"
+    ],
+    "hue": 22.2,
+    "saturation": 0.397,
+    "lightness": 0.494,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc08342",
+    "src": "/assets/img/photography/dsc08342.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1125,
+    "color": "#f4f3f2",
+    "palette": [
+      "#f4f3f2",
+      "#534e22",
+      "#9f994e",
+      "#7c7337",
+      "#9e9a89"
+    ],
+    "hue": 30.0,
+    "saturation": 0.083,
+    "lightness": 0.953,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc08320",
+    "src": "/assets/img/photography/dsc08320.webp",
+    "alt": "",
+    "width": 1250,
+    "height": 2000,
+    "color": "#c58e5d",
+    "palette": [
+      "#c58e5d",
+      "#e5e7ec",
+      "#f6cd8d",
+      "#7e3f21",
+      "#705234"
+    ],
+    "hue": 28.3,
+    "saturation": 0.473,
+    "lightness": 0.569,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc08287",
+    "src": "/assets/img/photography/dsc08287.webp",
+    "alt": "",
+    "width": 1429,
+    "height": 2000,
+    "color": "#5e7050",
+    "palette": [
+      "#5e7050",
+      "#cacebf",
+      "#98c96e",
+      "#212129",
+      "#8b8bb2"
+    ],
+    "hue": 93.8,
+    "saturation": 0.167,
+    "lightness": 0.376,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc08255-copy",
+    "src": "/assets/img/photography/dsc08255-copy.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#b9b6ac",
+    "palette": [
+      "#b9b6ac",
+      "#322d1e",
+      "#524631",
+      "#726737",
+      "#67665d"
+    ],
+    "hue": 46.2,
+    "saturation": 0.085,
+    "lightness": 0.7,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc08234",
+    "src": "/assets/img/photography/dsc08234.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#44473f",
+    "palette": [
+      "#44473f",
+      "#ced8c7",
+      "#9cb98f",
+      "#8d8e89",
+      "#a29ba9"
+    ],
+    "hue": 82.5,
+    "saturation": 0.06,
+    "lightness": 0.263,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc08214-2-2-copy",
+    "src": "/assets/img/photography/dsc08214-2-2-copy.webp",
+    "alt": "",
+    "width": 1429,
+    "height": 2000,
+    "color": "#424736",
+    "palette": [
+      "#424736",
+      "#c5c9d1",
+      "#9aa0ad",
+      "#848985",
+      "#92b34a"
+    ],
+    "hue": 77.6,
+    "saturation": 0.136,
+    "lightness": 0.245,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc08138",
+    "src": "/assets/img/photography/dsc08138.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#323232",
+    "palette": [
+      "#323232",
+      "#bcbcbc",
+      "#989898",
+      "#767676",
+      "#8c8c8c"
+    ],
+    "hue": 0.0,
+    "saturation": 0.0,
+    "lightness": 0.196,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.524,
+      "y": 0.412
+    }
+  },
+  {
+    "id": "dsc08112",
+    "src": "/assets/img/photography/dsc08112.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1125,
+    "color": "#dce2e4",
+    "palette": [
+      "#dce2e4",
+      "#696156",
+      "#98948e",
+      "#817a77",
+      "#72777a"
+    ],
+    "hue": 195.0,
+    "saturation": 0.129,
+    "lightness": 0.878,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc07769",
+    "src": "/assets/img/photography/dsc07769.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#2e2827",
+    "palette": [
+      "#2e2827",
+      "#dddbdb",
+      "#6d5a4e",
+      "#8b7767",
+      "#8b8781"
+    ],
+    "hue": 8.6,
+    "saturation": 0.082,
+    "lightness": 0.167,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc07628",
+    "src": "/assets/img/photography/dsc07628.webp",
+    "alt": "",
+    "width": 1333,
+    "height": 2000,
+    "color": "#d8d3d1",
+    "palette": [
+      "#d8d3d1",
+      "#4a555a",
+      "#a07157",
+      "#8d9192",
+      "#777375"
+    ],
+    "hue": 17.1,
+    "saturation": 0.082,
+    "lightness": 0.833,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc07322",
+    "src": "/assets/img/photography/dsc07322.webp",
+    "alt": "",
+    "width": 1429,
+    "height": 2000,
+    "color": "#36433a",
+    "palette": [
+      "#36433a",
+      "#decd9b",
+      "#847f74",
+      "#8dba7b",
+      "#8c99a9"
+    ],
+    "hue": 138.5,
+    "saturation": 0.107,
+    "lightness": 0.237,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc07306-edit-edit",
+    "src": "/assets/img/photography/dsc07306-edit-edit.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#ccc6be",
+    "palette": [
+      "#ccc6be",
+      "#323638",
+      "#767b7a",
+      "#794a3e",
+      "#7b634e"
+    ],
+    "hue": 34.3,
+    "saturation": 0.121,
+    "lightness": 0.773,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.613,
+      "y": 0.122
+    }
+  },
+  {
+    "id": "dsc07285",
+    "src": "/assets/img/photography/dsc07285.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1428,
+    "color": "#dadddd",
+    "palette": [
+      "#dadddd",
+      "#2a4d58",
+      "#696564",
+      "#77814d",
+      "#55accf"
+    ],
+    "hue": 180.0,
+    "saturation": 0.042,
+    "lightness": 0.861,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc07225",
+    "src": "/assets/img/photography/dsc07225.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#1f2f33",
+    "palette": [
+      "#1f2f33",
+      "#e7ebe9",
+      "#108baf",
+      "#2b97bc",
+      "#82becc"
+    ],
+    "hue": 192.0,
+    "saturation": 0.244,
+    "lightness": 0.161,
+    "bucket": "teal",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc07207",
+    "src": "/assets/img/photography/dsc07207.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#292423",
+    "palette": [
+      "#292423",
+      "#d7bfac",
+      "#80564b",
+      "#899a9f",
+      "#40819b"
+    ],
+    "hue": 10.0,
+    "saturation": 0.079,
+    "lightness": 0.149,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.34,
+      "y": 0.285
+    }
+  },
+  {
+    "id": "dsc07022-edit",
+    "src": "/assets/img/photography/dsc07022-edit.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#38352b",
+    "palette": [
+      "#38352b",
+      "#cdc9bb",
+      "#1da1b9",
+      "#67cadb",
+      "#5d858c"
+    ],
+    "hue": 46.2,
+    "saturation": 0.131,
+    "lightness": 0.194,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc06841-edit",
+    "src": "/assets/img/photography/dsc06841-edit.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#31072a",
+    "palette": [
+      "#31072a",
+      "#b81172",
+      "#760968",
+      "#8b2d95",
+      "#8c448c"
+    ],
+    "hue": 310.0,
+    "saturation": 0.75,
+    "lightness": 0.11,
+    "bucket": "pink",
+    "focus": {
+      "x": 0.326,
+      "y": 0.396
+    }
+  },
+  {
+    "id": "dsc06812-edit",
+    "src": "/assets/img/photography/dsc06812-edit.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1397,
+    "color": "#2f2226",
+    "palette": [
+      "#2f2226",
+      "#d0cac5",
+      "#793039",
+      "#78808a",
+      "#8f7a4d"
+    ],
+    "hue": 341.5,
+    "saturation": 0.16,
+    "lightness": 0.159,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.663,
+      "y": 0.488
+    }
+  },
+  {
+    "id": "dsc06597",
+    "src": "/assets/img/photography/dsc06597.webp",
+    "alt": "",
+    "width": 1600,
+    "height": 2000,
+    "color": "#bc71a7",
+    "palette": [
+      "#bc71a7",
+      "#22547f",
+      "#041d33",
+      "#6c84b4",
+      "#6c7cb4"
+    ],
+    "hue": 316.8,
+    "saturation": 0.359,
+    "lightness": 0.59,
+    "bucket": "pink",
+    "focus": {
+      "x": 0.5,
+      "y": 0.45
+    }
+  },
+  {
+    "id": "dsc06545-2",
+    "src": "/assets/img/photography/dsc06545-2.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1577,
+    "color": "#d9c7c0",
+    "palette": [
+      "#d9c7c0",
+      "#261b16",
+      "#845f4f",
+      "#9c9a98",
+      "#908b8c"
+    ],
+    "hue": 16.8,
+    "saturation": 0.248,
+    "lightness": 0.802,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.5,
+      "y": 0.45
+    }
+  },
+  {
+    "id": "dsc06541",
+    "src": "/assets/img/photography/dsc06541.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#2b2d35",
+    "palette": [
+      "#2b2d35",
+      "#ccc2de",
+      "#afb0d0",
+      "#8c94b9",
+      "#95435b"
+    ],
+    "hue": 228.0,
+    "saturation": 0.104,
+    "lightness": 0.188,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.604,
+      "y": 0.402
+    }
+  },
+  {
+    "id": "dsc06530-edit",
+    "src": "/assets/img/photography/dsc06530-edit.webp",
+    "alt": "",
+    "width": 1600,
+    "height": 2000,
+    "color": "#a9a099",
+    "palette": [
+      "#a9a099",
+      "#18130f",
+      "#523a29",
+      "#755642",
+      "#63625f"
+    ],
+    "hue": 26.3,
+    "saturation": 0.085,
+    "lightness": 0.631,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.594,
+      "y": 0.321
+    }
+  },
+  {
+    "id": "dsc06487-2",
+    "src": "/assets/img/photography/dsc06487-2.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1600,
+    "color": "#dbd7d1",
+    "palette": [
+      "#dbd7d1",
+      "#2b5063",
+      "#805d44",
+      "#678e9e",
+      "#595c65"
+    ],
+    "hue": 36.0,
+    "saturation": 0.122,
+    "lightness": 0.839,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.45
+    }
+  },
+  {
+    "id": "dsc06480-copy-2",
+    "src": "/assets/img/photography/dsc06480-copy-2.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#deab77",
+    "palette": [
+      "#deab77",
+      "#2b4441",
+      "#5eb2b9",
+      "#895435",
+      "#99a790"
+    ],
+    "hue": 30.3,
+    "saturation": 0.609,
+    "lightness": 0.669,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc06461-copy",
+    "src": "/assets/img/photography/dsc06461-copy.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#bf9d8a",
+    "palette": [
+      "#bf9d8a",
+      "#2d3d3f",
+      "#e27c25",
+      "#edecd2",
+      "#804421"
+    ],
+    "hue": 21.5,
+    "saturation": 0.293,
+    "lightness": 0.645,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc06387-edit",
+    "src": "/assets/img/photography/dsc06387-edit.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1428,
+    "color": "#372e1d",
+    "palette": [
+      "#372e1d",
+      "#bb5e40",
+      "#845f49",
+      "#83aaab",
+      "#7f908f"
+    ],
+    "hue": 39.2,
+    "saturation": 0.31,
+    "lightness": 0.165,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.666,
+      "y": 0.234
+    }
+  },
+  {
+    "id": "dsc06283",
+    "src": "/assets/img/photography/dsc06283.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1125,
+    "color": "#2e2013",
+    "palette": [
+      "#2e2013",
+      "#d7bfa9",
+      "#967657",
+      "#a7a38d",
+      "#97908e"
+    ],
+    "hue": 28.9,
+    "saturation": 0.415,
+    "lightness": 0.127,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc06136-copy-2",
+    "src": "/assets/img/photography/dsc06136-copy-2.webp",
+    "alt": "",
+    "width": 1429,
+    "height": 2000,
+    "color": "#42513c",
+    "palette": [
+      "#42513c",
+      "#dfb583",
+      "#9a8f68",
+      "#b5b88f",
+      "#87a59e"
+    ],
+    "hue": 102.9,
+    "saturation": 0.149,
+    "lightness": 0.276,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.484,
+      "y": 0.399
+    }
+  },
+  {
+    "id": "dsc06077-2",
+    "src": "/assets/img/photography/dsc06077-2.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1125,
+    "color": "#5e6f53",
+    "palette": [
+      "#5e6f53",
+      "#d6dab9",
+      "#1f2c25",
+      "#a9bd90",
+      "#a3c3ad"
+    ],
+    "hue": 96.4,
+    "saturation": 0.144,
+    "lightness": 0.38,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc04873",
+    "src": "/assets/img/photography/dsc04873.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1125,
+    "color": "#10110d",
+    "palette": [
+      "#10110d",
+      "#a78267",
+      "#645347",
+      "#837c73",
+      "#7f7474"
+    ],
+    "hue": 75.0,
+    "saturation": 0.133,
+    "lightness": 0.059,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc04837",
+    "src": "/assets/img/photography/dsc04837.webp",
+    "alt": "",
+    "width": 1600,
+    "height": 2000,
+    "color": "#362523",
+    "palette": [
+      "#362523",
+      "#cb927d",
+      "#986959",
+      "#8185a3",
+      "#92a9b6"
+    ],
+    "hue": 6.3,
+    "saturation": 0.213,
+    "lightness": 0.175,
+    "bucket": "red",
+    "focus": {
+      "x": 0.5,
+      "y": 0.45
+    }
+  },
+  {
+    "id": "dsc04834-edit",
+    "src": "/assets/img/photography/dsc04834-edit.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1125,
+    "color": "#211d18",
+    "palette": [
+      "#211d18",
+      "#cfa887",
+      "#745944",
+      "#949487",
+      "#426699"
+    ],
+    "hue": 33.3,
+    "saturation": 0.158,
+    "lightness": 0.112,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.461,
+      "y": 0.285
+    }
+  },
+  {
+    "id": "dsc04622",
+    "src": "/assets/img/photography/dsc04622.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1428,
+    "color": "#52504b",
+    "palette": [
+      "#52504b",
+      "#edd8a3",
+      "#9fcfe0",
+      "#569bb6",
+      "#998a78"
+    ],
+    "hue": 42.9,
+    "saturation": 0.045,
+    "lightness": 0.308,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.646,
+      "y": 0.358
+    }
+  },
+  {
+    "id": "dsc04555",
+    "src": "/assets/img/photography/dsc04555.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1125,
+    "color": "#957f63",
+    "palette": [
+      "#957f63",
+      "#a2b7b9",
+      "#372819",
+      "#53371c",
+      "#edc798"
+    ],
+    "hue": 33.6,
+    "saturation": 0.202,
+    "lightness": 0.486,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc04375",
+    "src": "/assets/img/photography/dsc04375.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#424035",
+    "palette": [
+      "#424035",
+      "#d2bc9b",
+      "#918a6f",
+      "#989e9e",
+      "#a8aca3"
+    ],
+    "hue": 50.8,
+    "saturation": 0.109,
+    "lightness": 0.233,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc04371-copy",
+    "src": "/assets/img/photography/dsc04371-copy.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1125,
+    "color": "#262828",
+    "palette": [
+      "#262828",
+      "#bdb4ac",
+      "#787f81",
+      "#929da0",
+      "#8d939c"
+    ],
+    "hue": 180.0,
+    "saturation": 0.026,
+    "lightness": 0.153,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc04366-copy-4",
+    "src": "/assets/img/photography/dsc04366-copy-4.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#cec6c1",
+    "palette": [
+      "#cec6c1",
+      "#1f1b1b",
+      "#594241",
+      "#746157",
+      "#727371"
+    ],
+    "hue": 23.1,
+    "saturation": 0.117,
+    "lightness": 0.782,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc04331",
+    "src": "/assets/img/photography/dsc04331.webp",
+    "alt": "",
+    "width": 1333,
+    "height": 2000,
+    "color": "#d3bbad",
+    "palette": [
+      "#d3bbad",
+      "#2c1f20",
+      "#552f34",
+      "#695f5b",
+      "#74573b"
+    ],
+    "hue": 22.1,
+    "saturation": 0.302,
+    "lightness": 0.753,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc04296",
+    "src": "/assets/img/photography/dsc04296.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1125,
+    "color": "#252f35",
+    "palette": [
+      "#252f35",
+      "#e4ddd9",
+      "#8a9daa",
+      "#6e879f",
+      "#a86933"
+    ],
+    "hue": 202.5,
+    "saturation": 0.178,
+    "lightness": 0.176,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc04274",
+    "src": "/assets/img/photography/dsc04274.webp",
+    "alt": "",
+    "width": 1333,
+    "height": 2000,
+    "color": "#151b25",
+    "palette": [
+      "#151b25",
+      "#c8aaa4",
+      "#566d9e",
+      "#696176",
+      "#7296b6"
+    ],
+    "hue": 217.5,
+    "saturation": 0.276,
+    "lightness": 0.114,
+    "bucket": "blue",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc04236",
+    "src": "/assets/img/photography/dsc04236.webp",
+    "alt": "",
+    "width": 1429,
+    "height": 2000,
+    "color": "#c0b6b1",
+    "palette": [
+      "#c0b6b1",
+      "#261f19",
+      "#523b2e",
+      "#806347",
+      "#6c6565"
+    ],
+    "hue": 20.0,
+    "saturation": 0.106,
+    "lightness": 0.724,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc04188-edit",
+    "src": "/assets/img/photography/dsc04188-edit.webp",
+    "alt": "",
+    "width": 1125,
+    "height": 2000,
+    "color": "#100b08",
+    "palette": [
+      "#100b08",
+      "#c69e6a",
+      "#61462c",
+      "#34508c",
+      "#84948c"
+    ],
+    "hue": 22.5,
+    "saturation": 0.333,
+    "lightness": 0.047,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc04161-copy-2",
+    "src": "/assets/img/photography/dsc04161-copy-2.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#0f0f1a",
+    "palette": [
+      "#0f0f1a",
+      "#505fa0",
+      "#5f5155",
+      "#81b3ce",
+      "#8d625c"
+    ],
+    "hue": 240.0,
+    "saturation": 0.268,
+    "lightness": 0.08,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc04140",
+    "src": "/assets/img/photography/dsc04140.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#2b2922",
+    "palette": [
+      "#2b2922",
+      "#cec1b9",
+      "#826b5d",
+      "#527aa7",
+      "#91a4aa"
+    ],
+    "hue": 46.7,
+    "saturation": 0.117,
+    "lightness": 0.151,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc03959",
+    "src": "/assets/img/photography/dsc03959.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1428,
+    "color": "#1f1715",
+    "palette": [
+      "#1f1715",
+      "#da9126",
+      "#6c3a24",
+      "#5ea7a0",
+      "#3c4ea5"
+    ],
+    "hue": 12.0,
+    "saturation": 0.192,
+    "lightness": 0.102,
+    "bucket": "red",
+    "focus": {
+      "x": 0.498,
+      "y": 0.328
+    }
+  },
+  {
+    "id": "dsc03841",
+    "src": "/assets/img/photography/dsc03841.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#1f222a",
+    "palette": [
+      "#1f222a",
+      "#b7ada4",
+      "#6b6c74",
+      "#8b949c",
+      "#878b9c"
+    ],
+    "hue": 223.6,
+    "saturation": 0.151,
+    "lightness": 0.143,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc03814",
+    "src": "/assets/img/photography/dsc03814.webp",
+    "alt": "",
+    "width": 1429,
+    "height": 2000,
+    "color": "#363128",
+    "palette": [
+      "#363128",
+      "#bab88f",
+      "#7f7961",
+      "#918b95",
+      "#9b9c75"
+    ],
+    "hue": 38.6,
+    "saturation": 0.149,
+    "lightness": 0.184,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc03793",
+    "src": "/assets/img/photography/dsc03793.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#171107",
+    "palette": [
+      "#171107",
+      "#bb8f22",
+      "#694d15",
+      "#72a196",
+      "#7b8284"
+    ],
+    "hue": 37.5,
+    "saturation": 0.533,
+    "lightness": 0.059,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc03739",
+    "src": "/assets/img/photography/dsc03739.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#272727",
+    "palette": [
+      "#272727",
+      "#c5c5c5",
+      "#7a7a7a",
+      "#9c9c9c",
+      "#949494"
+    ],
+    "hue": 0.0,
+    "saturation": 0.0,
+    "lightness": 0.153,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.281,
+      "y": 0.353
+    }
+  },
+  {
+    "id": "dsc03708",
+    "src": "/assets/img/photography/dsc03708.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#c7e0e1",
+    "palette": [
+      "#c7e0e1",
+      "#713817",
+      "#282210",
+      "#a86f24",
+      "#788f93"
+    ],
+    "hue": 182.3,
+    "saturation": 0.302,
+    "lightness": 0.831,
+    "bucket": "teal",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc03642",
+    "src": "/assets/img/photography/dsc03642.webp",
+    "alt": "",
+    "width": 1546,
+    "height": 2000,
+    "color": "#302e2a",
+    "palette": [
+      "#302e2a",
+      "#c8beaf",
+      "#826d59",
+      "#8ba7ab",
+      "#7a8f97"
+    ],
+    "hue": 40.0,
+    "saturation": 0.067,
+    "lightness": 0.176,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.45
+    }
+  },
+  {
+    "id": "dsc03597-edit-2",
+    "src": "/assets/img/photography/dsc03597-edit-2.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#2d3030",
+    "palette": [
+      "#2d3030",
+      "#a6c7cd",
+      "#6d95a7",
+      "#5e7c85",
+      "#9c8819"
+    ],
+    "hue": 180.0,
+    "saturation": 0.032,
+    "lightness": 0.182,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc03533",
+    "src": "/assets/img/photography/dsc03533.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#524525",
+    "palette": [
+      "#524525",
+      "#f8efea",
+      "#8c7854",
+      "#b79e7a",
+      "#a49c75"
+    ],
+    "hue": 42.7,
+    "saturation": 0.378,
+    "lightness": 0.233,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc03255",
+    "src": "/assets/img/photography/dsc03255.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#35302a",
+    "palette": [
+      "#35302a",
+      "#b8c0c0",
+      "#8aa6ad",
+      "#7b695d",
+      "#75909a"
+    ],
+    "hue": 32.7,
+    "saturation": 0.116,
+    "lightness": 0.186,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc03046",
+    "src": "/assets/img/photography/dsc03046.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#3c3325",
+    "palette": [
+      "#3c3325",
+      "#dee1e1",
+      "#896733",
+      "#7f8d9d",
+      "#9aaab3"
+    ],
+    "hue": 36.5,
+    "saturation": 0.237,
+    "lightness": 0.19,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc02950",
+    "src": "/assets/img/photography/dsc02950.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 625,
+    "color": "#181508",
+    "palette": [
+      "#181508",
+      "#d53112",
+      "#691b0a",
+      "#1faf86",
+      "#265c95"
+    ],
+    "hue": 48.8,
+    "saturation": 0.5,
+    "lightness": 0.063,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc02682-2",
+    "src": "/assets/img/photography/dsc02682-2.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#65564b",
+    "palette": [
+      "#65564b",
+      "#cda78e",
+      "#0aaec5",
+      "#21231f",
+      "#a8ac85"
+    ],
+    "hue": 25.4,
+    "saturation": 0.148,
+    "lightness": 0.345,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc02669-2",
+    "src": "/assets/img/photography/dsc02669-2.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1125,
+    "color": "#4f433e",
+    "palette": [
+      "#4f433e",
+      "#26bed3",
+      "#bf9c83",
+      "#857a7d",
+      "#77a69e"
+    ],
+    "hue": 17.6,
+    "saturation": 0.121,
+    "lightness": 0.276,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc02636",
+    "src": "/assets/img/photography/dsc02636.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#3b3d35",
+    "palette": [
+      "#3b3d35",
+      "#d2dbd6",
+      "#9aa58f",
+      "#828054",
+      "#7d8ca3"
+    ],
+    "hue": 75.0,
+    "saturation": 0.07,
+    "lightness": 0.224,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc02610-edit-edit",
+    "src": "/assets/img/photography/dsc02610-edit-edit.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#22151d",
+    "palette": [
+      "#22151d",
+      "#c7765e",
+      "#3d46b8",
+      "#7b412d",
+      "#6c968e"
+    ],
+    "hue": 323.1,
+    "saturation": 0.236,
+    "lightness": 0.108,
+    "bucket": "pink",
+    "focus": {
+      "x": 0.583,
+      "y": 0.374
+    }
+  },
+  {
+    "id": "dsc02603",
+    "src": "/assets/img/photography/dsc02603.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#d1cecb",
+    "palette": [
+      "#d1cecb",
+      "#201d1d",
+      "#a6a6a6",
+      "#7e6964",
+      "#8c8b94"
+    ],
+    "hue": 30.0,
+    "saturation": 0.061,
+    "lightness": 0.808,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.65,
+      "y": 0.391
+    }
+  },
+  {
+    "id": "dsc02418",
+    "src": "/assets/img/photography/dsc02418.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1125,
+    "color": "#696969",
+    "palette": [
+      "#696969",
+      "#0e0e0e",
+      "#c3c3c3",
+      "#a4a4a4",
+      "#acacac"
+    ],
+    "hue": 0.0,
+    "saturation": 0.0,
+    "lightness": 0.412,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc02322",
+    "src": "/assets/img/photography/dsc02322.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#b4d2d6",
+    "palette": [
+      "#b4d2d6",
+      "#22231d",
+      "#ac821e",
+      "#5e451a",
+      "#617f83"
+    ],
+    "hue": 187.1,
+    "saturation": 0.293,
+    "lightness": 0.773,
+    "bucket": "teal",
+    "focus": {
+      "x": 0.934,
+      "y": 0.904
+    }
+  },
+  {
+    "id": "dsc02236-copy",
+    "src": "/assets/img/photography/dsc02236-copy.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#8da196",
+    "palette": [
+      "#8da196",
+      "#5a3d2e",
+      "#e3b188",
+      "#805b3f",
+      "#2e251b"
+    ],
+    "hue": 147.0,
+    "saturation": 0.096,
+    "lightness": 0.592,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc02232",
+    "src": "/assets/img/photography/dsc02232.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1125,
+    "color": "#d89e77",
+    "palette": [
+      "#d89e77",
+      "#425348",
+      "#819e92",
+      "#7c452b",
+      "#8d592e"
+    ],
+    "hue": 24.1,
+    "saturation": 0.554,
+    "lightness": 0.657,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc02198",
+    "src": "/assets/img/photography/dsc02198.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 2000,
+    "color": "#c3dbd8",
+    "palette": [
+      "#c3dbd8",
+      "#584633",
+      "#baad98",
+      "#838680",
+      "#c27d5e"
+    ],
+    "hue": 172.5,
+    "saturation": 0.25,
+    "lightness": 0.812,
+    "bucket": "teal",
+    "focus": {
+      "x": 0.5,
+      "y": 0.45
+    }
+  },
+  {
+    "id": "dsc02106",
+    "src": "/assets/img/photography/dsc02106.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#4a3e26",
+    "palette": [
+      "#4a3e26",
+      "#d1a576",
+      "#957749",
+      "#a1a850",
+      "#9a9491"
+    ],
+    "hue": 40.0,
+    "saturation": 0.321,
+    "lightness": 0.22,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc02008-edit",
+    "src": "/assets/img/photography/dsc02008-edit.webp",
+    "alt": "",
+    "width": 1600,
+    "height": 2000,
+    "color": "#31423a",
+    "palette": [
+      "#31423a",
+      "#d3cda5",
+      "#8fc2a4",
+      "#848c63",
+      "#85a2a5"
+    ],
+    "hue": 151.8,
+    "saturation": 0.148,
+    "lightness": 0.225,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.522,
+      "y": 0.247
+    }
+  },
+  {
+    "id": "dsc01948-edit",
+    "src": "/assets/img/photography/dsc01948-edit.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#2c3c39",
+    "palette": [
+      "#2c3c39",
+      "#e1b782",
+      "#6a7b65",
+      "#058ab3",
+      "#8ba88f"
+    ],
+    "hue": 168.8,
+    "saturation": 0.154,
+    "lightness": 0.204,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.507,
+      "y": 0.335
+    }
+  },
+  {
+    "id": "dsc01937-edit",
+    "src": "/assets/img/photography/dsc01937-edit.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#223131",
+    "palette": [
+      "#223131",
+      "#d8d6b5",
+      "#67b6cb",
+      "#797d65",
+      "#2e91ae"
+    ],
+    "hue": 180.0,
+    "saturation": 0.181,
+    "lightness": 0.163,
+    "bucket": "teal",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc01915",
+    "src": "/assets/img/photography/dsc01915.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1125,
+    "color": "#a5aaa6",
+    "palette": [
+      "#a5aaa6",
+      "#2a2726",
+      "#543f32",
+      "#8f6640",
+      "#68888c"
+    ],
+    "hue": 132.0,
+    "saturation": 0.029,
+    "lightness": 0.657,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc01772-edit",
+    "src": "/assets/img/photography/dsc01772-edit.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#a2a773",
+    "palette": [
+      "#a2a773",
+      "#242f27",
+      "#ecf0e7",
+      "#5b4c2e",
+      "#796e36"
+    ],
+    "hue": 65.8,
+    "saturation": 0.228,
+    "lightness": 0.553,
+    "bucket": "yellow",
+    "focus": {
+      "x": 0.49,
+      "y": 0.332
+    }
+  },
+  {
+    "id": "dsc01772",
+    "src": "/assets/img/photography/dsc01772.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#49483f",
+    "palette": [
+      "#49483f",
+      "#efe9e0",
+      "#bf8f56",
+      "#87846d",
+      "#97a2a4"
+    ],
+    "hue": 54.0,
+    "saturation": 0.074,
+    "lightness": 0.267,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc01750-edit",
+    "src": "/assets/img/photography/dsc01750-edit.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#bfa869",
+    "palette": [
+      "#bfa869",
+      "#2f4133",
+      "#e0e4c1",
+      "#5e724e",
+      "#644625"
+    ],
+    "hue": 44.0,
+    "saturation": 0.402,
+    "lightness": 0.58,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.435,
+      "y": 0.597
+    }
+  },
+  {
+    "id": "dsc01693-edit",
+    "src": "/assets/img/photography/dsc01693-edit.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1766,
+    "color": "#3d3746",
+    "palette": [
+      "#3d3746",
+      "#e4265c",
+      "#993c5e",
+      "#87b466",
+      "#ab69a5"
+    ],
+    "hue": 264.0,
+    "saturation": 0.12,
+    "lightness": 0.245,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.45
+    }
+  },
+  {
+    "id": "dsc01357-copy",
+    "src": "/assets/img/photography/dsc01357-copy.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#e9c7cd",
+    "palette": [
+      "#e9c7cd",
+      "#30271e",
+      "#744f3f",
+      "#986f58",
+      "#4494a1"
+    ],
+    "hue": 349.4,
+    "saturation": 0.436,
+    "lightness": 0.847,
+    "bucket": "red",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc01348",
+    "src": "/assets/img/photography/dsc01348.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#1d1d1d",
+    "palette": [
+      "#1d1d1d",
+      "#b4b4b4",
+      "#686868",
+      "#8c8c8c",
+      "#848484"
+    ],
+    "hue": 0.0,
+    "saturation": 0.0,
+    "lightness": 0.114,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc01316",
+    "src": "/assets/img/photography/dsc01316.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1125,
+    "color": "#b18dac",
+    "palette": [
+      "#b18dac",
+      "#0f1326",
+      "#646ca5",
+      "#899dc8",
+      "#63568c"
+    ],
+    "hue": 308.3,
+    "saturation": 0.187,
+    "lightness": 0.624,
+    "bucket": "pink",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc01315",
+    "src": "/assets/img/photography/dsc01315.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1125,
+    "color": "#322830",
+    "palette": [
+      "#322830",
+      "#e07743",
+      "#82767c",
+      "#84b4b8",
+      "#6860b4"
+    ],
+    "hue": 312.0,
+    "saturation": 0.111,
+    "lightness": 0.176,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc01283-copy",
+    "src": "/assets/img/photography/dsc01283-copy.webp",
+    "alt": "",
+    "width": 1429,
+    "height": 2000,
+    "color": "#2f3432",
+    "palette": [
+      "#2f3432",
+      "#e8de9e",
+      "#1683cd",
+      "#79b9e7",
+      "#7e8064"
+    ],
+    "hue": 156.0,
+    "saturation": 0.051,
+    "lightness": 0.194,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc01201",
+    "src": "/assets/img/photography/dsc01201.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#222020",
+    "palette": [
+      "#222020",
+      "#e1d9d7",
+      "#92523f",
+      "#ef7915",
+      "#807d7d"
+    ],
+    "hue": 0.0,
+    "saturation": 0.03,
+    "lightness": 0.129,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.454,
+      "y": 0.365
+    }
+  },
+  {
+    "id": "dsc00790",
+    "src": "/assets/img/photography/dsc00790.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1125,
+    "color": "#d4cecd",
+    "palette": [
+      "#d4cecd",
+      "#1a191d",
+      "#784d3c",
+      "#c77d51",
+      "#4c545c"
+    ],
+    "hue": 8.6,
+    "saturation": 0.075,
+    "lightness": 0.818,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc00642-edit",
+    "src": "/assets/img/photography/dsc00642-edit.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#e0d0b4",
+    "palette": [
+      "#e0d0b4",
+      "#23362f",
+      "#c69b69",
+      "#a58142",
+      "#835435"
+    ],
+    "hue": 38.2,
+    "saturation": 0.415,
+    "lightness": 0.792,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dsc00594-edit",
+    "src": "/assets/img/photography/dsc00594-edit.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1428,
+    "color": "#b5a595",
+    "palette": [
+      "#b5a595",
+      "#2e453e",
+      "#dedfe0",
+      "#844a46",
+      "#7f7a36"
+    ],
+    "hue": 30.0,
+    "saturation": 0.178,
+    "lightness": 0.647,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.354,
+      "y": 0.256
+    }
+  },
+  {
+    "id": "dsc00461",
+    "src": "/assets/img/photography/dsc00461.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#372d28",
+    "palette": [
+      "#372d28",
+      "#c5b5aa",
+      "#81675b",
+      "#668ea5",
+      "#93a37d"
+    ],
+    "hue": 20.0,
+    "saturation": 0.158,
+    "lightness": 0.186,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.655,
+      "y": 0.266
+    }
+  },
+  {
+    "id": "dsc00382-2-edit",
+    "src": "/assets/img/photography/dsc00382-2-edit.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#b6a999",
+    "palette": [
+      "#b6a999",
+      "#272729",
+      "#5b5c59",
+      "#553d33",
+      "#875636"
+    ],
+    "hue": 33.1,
+    "saturation": 0.166,
+    "lightness": 0.657,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.69,
+      "y": 0.382
+    }
+  },
+  {
+    "id": "dsc00156",
+    "src": "/assets/img/photography/dsc00156.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#2f2a24",
+    "palette": [
+      "#2f2a24",
+      "#d3b7a4",
+      "#80614e",
+      "#88a6a5",
+      "#78889f"
+    ],
+    "hue": 32.7,
+    "saturation": 0.133,
+    "lightness": 0.163,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.772,
+      "y": 0.39
+    }
+  },
+  {
+    "id": "dsc00011",
+    "src": "/assets/img/photography/dsc00011.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#d5bf87",
+    "palette": [
+      "#d5bf87",
+      "#323329",
+      "#8a7648",
+      "#96a57d",
+      "#99b8a9"
+    ],
+    "hue": 43.1,
+    "saturation": 0.481,
+    "lightness": 0.682,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "dp5-copy",
+    "src": "/assets/img/photography/dp5-copy.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1428,
+    "color": "#d8cfc2",
+    "palette": [
+      "#d8cfc2",
+      "#1db0b9",
+      "#463b2e",
+      "#1c6a6d",
+      "#075057"
+    ],
+    "hue": 35.5,
+    "saturation": 0.22,
+    "lightness": 0.804,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "cityscapela",
+    "src": "/assets/img/photography/cityscapela.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1125,
+    "color": "#101a29",
+    "palette": [
+      "#101a29",
+      "#193e73",
+      "#b7b3ba",
+      "#366ba6",
+      "#68a3cd"
+    ],
+    "hue": 216.0,
+    "saturation": 0.439,
+    "lightness": 0.112,
+    "bucket": "blue",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "chris-on-deck-sunset-1",
+    "src": "/assets/img/photography/chris-on-deck-sunset-1.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1125,
+    "color": "#3b3333",
+    "palette": [
+      "#3b3333",
+      "#dead82",
+      "#916b5c",
+      "#a0aebd",
+      "#8898b0"
+    ],
+    "hue": 0.0,
+    "saturation": 0.073,
+    "lightness": 0.216,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.786,
+      "y": 0.516
+    }
+  },
+  {
+    "id": "charlie-topgun1",
+    "src": "/assets/img/photography/charlie-topgun1.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1334,
+    "color": "#c8bda8",
+    "palette": [
+      "#c8bda8",
+      "#1d1815",
+      "#5d402e",
+      "#6d6865",
+      "#996d42"
+    ],
+    "hue": 39.4,
+    "saturation": 0.225,
+    "lightness": 0.722,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "catfish",
+    "src": "/assets/img/photography/catfish.webp",
+    "alt": "",
+    "width": 1600,
+    "height": 2000,
+    "color": "#dc899d",
+    "palette": [
+      "#dc899d",
+      "#1f069a",
+      "#89309c",
+      "#8689d0",
+      "#896bd9"
+    ],
+    "hue": 345.5,
+    "saturation": 0.542,
+    "lightness": 0.7,
+    "bucket": "red",
+    "focus": {
+      "x": 0.5,
+      "y": 0.45
+    }
+  },
+  {
+    "id": "casa-magazines-1-2",
+    "src": "/assets/img/photography/casa-magazines-1-2.webp",
+    "alt": "",
+    "width": 1429,
+    "height": 2000,
+    "color": "#2b1a18",
+    "palette": [
+      "#2b1a18",
+      "#d3b79c",
+      "#7e473a",
+      "#879ca3",
+      "#5e7e96"
+    ],
+    "hue": 6.3,
+    "saturation": 0.284,
+    "lightness": 0.131,
+    "bucket": "red",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "buddhists",
+    "src": "/assets/img/photography/buddhists.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1429,
+    "color": "#907253",
+    "palette": [
+      "#907253",
+      "#e4e1dd",
+      "#3b3123",
+      "#71341e",
+      "#e7c897"
+    ],
+    "hue": 30.5,
+    "saturation": 0.269,
+    "lightness": 0.445,
+    "bucket": "orange",
+    "focus": {
+      "x": 0.213,
+      "y": 0.482
+    }
+  },
+  {
+    "id": "applepaperpoetry-1",
+    "src": "/assets/img/photography/applepaperpoetry-1.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1250,
+    "color": "#6a6849",
+    "palette": [
+      "#6a6849",
+      "#9abca3",
+      "#241d10",
+      "#77ab95",
+      "#c1ba8f"
+    ],
+    "hue": 56.4,
+    "saturation": 0.184,
+    "lightness": 0.351,
+    "bucket": "yellow",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "ambassador-bridge-1",
+    "src": "/assets/img/photography/ambassador-bridge-1.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1125,
+    "color": "#1b2e2e",
+    "palette": [
+      "#1b2e2e",
+      "#e1d1b1",
+      "#9c8665",
+      "#eb9f42",
+      "#655546"
+    ],
+    "hue": 180.0,
+    "saturation": 0.26,
+    "lightness": 0.143,
+    "bucket": "teal",
+    "focus": {
+      "x": 0.5,
+      "y": 0.4
+    }
+  },
+  {
+    "id": "adham-neil-1",
+    "src": "/assets/img/photography/adham-neil-1.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#6d635a",
+    "palette": [
+      "#6d635a",
+      "#d0cbc8",
+      "#181716",
+      "#aeb8b9",
+      "#9da9ae"
+    ],
+    "hue": 28.4,
+    "saturation": 0.095,
+    "lightness": 0.39,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.561,
+      "y": 0.317
+    }
+  },
+  {
+    "id": "adham-6-1-2",
+    "src": "/assets/img/photography/adham-6-1-2.webp",
+    "alt": "",
+    "width": 2000,
+    "height": 1333,
+    "color": "#33312b",
+    "palette": [
+      "#33312b",
+      "#cbb49b",
+      "#977c5e",
+      "#a4b2ab",
+      "#7595a6"
+    ],
+    "hue": 45.0,
+    "saturation": 0.085,
+    "lightness": 0.184,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.435,
+      "y": 0.408
+    }
+  },
+  {
+    "id": "10574387-10151984777647255-1772934863689441585-n",
+    "src": "/assets/img/photography/10574387-10151984777647255-1772934863689441585-n.webp",
+    "alt": "",
+    "width": 960,
+    "height": 640,
+    "color": "#c2c3ba",
+    "palette": [
+      "#c2c3ba",
+      "#48353b",
+      "#846969",
+      "#8b5e45",
+      "#4d5468"
+    ],
+    "hue": 66.7,
+    "saturation": 0.07,
+    "lightness": 0.747,
+    "bucket": "neutral",
+    "focus": {
+      "x": 0.488,
+      "y": 0.117
+    }
+  }
+]

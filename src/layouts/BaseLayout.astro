@@ -1,0 +1,134 @@
+---
+import '../styles/global.css';
+import { ClientRouter } from 'astro:transitions';
+import Nav from '../components/Nav.astro';
+import Toolbar from '../components/Toolbar.astro';
+import Footer from '../components/Footer.astro';
+import photosData from '../data/photos.json';
+
+const photoPool = (photosData as Array<{ id: string; src: string; width: number; height: number; location?: string | null; color?: string; focus?: { x: number; y: number } }>)
+  .filter(p => p.width >= p.height)
+  .map(p => ({
+    id: p.id,
+    src: p.src,
+    loc: p.location || '',
+    color: p.color || '',
+    fx: p.focus?.x ?? 0.5,
+    fy: p.focus?.y ?? 0.4,
+  }));
+
+type Page = 'home' | 'work' | 'about' | 'photography';
+
+interface Props {
+  title: string;
+  description?: string;
+  active?: Page;
+  footerDisplay?: string;
+  footerCopy?: string;
+  footerLinks?: { href: string; label: string; external?: boolean }[];
+  ogImage?: string;
+}
+
+const {
+  title,
+  description = 'Sean Yalda — Software engineer and interactive designer. Twelve years building products at the intersection of AI, platform, and human learning.',
+  active,
+  footerDisplay,
+  footerCopy,
+  footerLinks,
+  ogImage = '/assets/img/bryson-canyon.webp',
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical.toString()} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={new URL(ogImage, Astro.site).toString()} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonical.toString()} />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@400..600&display=swap" />
+
+  <script is:inline>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t) document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+
+  <script is:inline data-astro-rerun define:vars={{ photoPool }}>
+    (function () {
+      const STORE_KEY = 'randPhotosUsed';
+      const targets = document.querySelectorAll('[data-rand-photo]');
+      if (!targets.length || !photoPool.length) return;
+
+      let used;
+      try { used = new Set(JSON.parse(sessionStorage.getItem(STORE_KEY) || '[]')); }
+      catch (e) { used = new Set(); }
+
+      const pickFrom = (pool) => pool[Math.floor(Math.random() * pool.length)];
+      const pageUsed = new Set();
+
+      targets.forEach((el) => {
+        let available = photoPool.filter(p => !used.has(p.id) && !pageUsed.has(p.id));
+        if (!available.length) {
+          // Pool exhausted for the session — reset, but still avoid this page's picks.
+          used = new Set();
+          available = photoPool.filter(p => !pageUsed.has(p.id));
+          if (!available.length) available = photoPool;
+        }
+        const pick = pickFrom(available);
+        pageUsed.add(pick.id);
+        used.add(pick.id);
+
+        if (pick.color) el.style.backgroundColor = pick.color;
+        el.style.objectPosition = (pick.fx * 100).toFixed(1) + '% ' + (pick.fy * 100).toFixed(1) + '%';
+        el.src = pick.src;
+
+        const kind = el.getAttribute('data-rand-photo');
+        if (kind === 'strip') {
+          const fig = el.closest('.photo-strip');
+          const locEl = fig && fig.querySelector('[data-rand-location]');
+          if (locEl) locEl.textContent = pick.loc || '';
+        } else if (kind === 'hero') {
+          const section = el.closest('.hero');
+          const credit = section && section.querySelector('[data-rand-credit]');
+          if (credit) {
+            credit.innerHTML = pick.loc
+              ? 'Photography — <em>Sean Yalda</em> · ' + pick.loc
+              : 'Photography — <em>Sean Yalda</em>';
+          }
+        }
+      });
+
+      try { sessionStorage.setItem(STORE_KEY, JSON.stringify([...used])); } catch (e) {}
+    })();
+  </script>
+
+  <ClientRouter />
+</head>
+<body>
+  <Nav active={active} />
+  <slot />
+  <Toolbar />
+  <Footer display={footerDisplay} copy={footerCopy} links={footerLinks} />
+
+  <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="../scripts/app.ts"></script>
+</body>
+</html>

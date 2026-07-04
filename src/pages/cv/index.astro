@@ -1,0 +1,245 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Statement from '../../components/Statement.astro';
+import Section from '../../components/Section.astro';
+import PhotoStrip from '../../components/PhotoStrip.astro';
+
+const roles = [
+  {
+    num: '01',
+    company: 'Sayari',
+    title: 'Senior Software Engineer',
+    context: 'Enterprise risk intelligence · Los Angeles, Remote',
+    dates: 'Nov 2021<br>Present',
+    badge: 'Current',
+    bullets: [
+      '<strong>Architected and built a production AI orchestration platform</strong> from the ground up using LangGraph.js, Vertex AI, and TypeScript, coordinating multi-stage investigative workflows across Elasticsearch, BigQuery, and Memgraph. Compresses hours of manual analyst work into minutes. Won the 2026 company AI hackathon.',
+      'Designed and delivered bulk user provisioning and authentication integrated with <strong>Auth0, HubSpot, and Salesforce</strong>, automating free-trial account creation and saving the sales team hundreds of hours while generating thousands of qualified leads.',
+      'Led company-wide <strong>Mixpanel analytics strategy</strong> across 100+ instrumented metrics; enforced a practice of success metrics in every PRD, partnering with the product team to establish evidence-based decision-making across growth and product.',
+      'Built the <strong>Projects featureset</strong> end-to-end: designed the UX and implemented an interactive CSV upload pipeline with real-time validation, normalisation, and error recovery using TanStack React Table, React Query, Redux, Rx.js, TypeScript, and io-ts.',
+      'Co-built <strong>Sayari Map</strong> from concept to MVP in under six months as one of three engineers, opening an entirely new customer segment in geospatial risk and supply chain screening.',
+      'Mentored engineers who now own full product domains; regularly engaged in COO-level cross-functional technical discussions across security, infrastructure, and data teams.',
+    ],
+  },
+  {
+    num: '02',
+    company: 'PlayVS',
+    title: 'Web Development Manager · Founding Employee',
+    context: 'Student esports education platform · Los Angeles',
+    dates: 'Jan 2018<br>Apr 2021',
+    bullets: [
+      '<strong>Joined as the first employee.</strong> Helped CEO Delane Parnell raise the seed round with Science Inc., designed the MVP, and produced fundraising pitch decks for the <strong>$15M Series A</strong>.',
+      'Led product engineering as Technical Product Manager through the <strong>$30M Series B</strong>; drove growth and marketing engineering during the <strong>$50M Series C</strong>. Scaled from zero to tens of thousands of student users nationally.',
+      'Architected a headless CMS content platform (Prismic) inspired by the NY Times\' "The Scoop" publishing engine, with built-in media management, multiple editorial templates, a flexible component system, and a rich taxonomy. <strong>Reduced content production times by 60%.</strong>',
+      'Owned end-to-end: <strong>designed the UX</strong> and built the platform MVP using Next.js (SSR, code splitting, HMR), integrated with the PlayVS league engine via REST API for real-time regional data; led a team of four engineers with AWS Elastic Beanstalk and CloudWatch CI/CD monitoring.',
+    ],
+  },
+  {
+    num: '03',
+    company: 'FACINGS, Inc.',
+    title: 'Technical Product Manager & Engineer',
+    context: 'NFT creator platform · Remote',
+    dates: 'Apr 2021<br>Apr 2022',
+    bullets: [
+      'Designed and built the <strong>FACINGS marketing site and product platform</strong>: a Shopify-style SaaS dashboard (Next.js, Redux, Node.js) enabling NFT creators to configure, publish, and manage collections, campaigns, orders, customers, and an online store without engineering intervention.',
+      'Designed the interactive <strong>multi-step onboarding flow</strong>, translating complex blockchain configuration into a guided UX accessible to non-technical creators.',
+      'Architected an on-demand <strong>NFT asset creation API</strong> on the WAX blockchain, enabling new asset types to be defined through the platform UI without code changes.',
+    ],
+  },
+  {
+    num: '04',
+    company: 'OSLabs / GraphQL Blueprint',
+    title: 'Software Engineer · Open Source',
+    context: 'Open-source developer tooling · Los Angeles',
+    dates: 'Jan 2021<br>Nov 2021',
+    bullets: [
+      'Produced an open-source tool to auto-generate GraphQL schemas, queries, and mutations, plus NoSQL schemas and SQL build scripts. <strong>Used by several hundred engineers</strong>, approximately half of whom exported generated boilerplate directly into their projects.',
+      'Built parsing algorithms to dynamically generate deeply nested typed code structures without blocking the main thread; delivered unit test coverage with Jest and CI/CD to AWS EC2 via CircleCI.',
+    ],
+  },
+  {
+    num: '05',
+    company: 'Oakland University',
+    title: 'Advanced Web Design Lecturer',
+    context: 'DES330 · Rochester Hills, Michigan',
+    dates: 'Aug 2016<br>Dec 2016',
+    bullets: [
+      'Designed and delivered a <strong>160+ hour curriculum</strong> for Advanced Web Design, mentoring 15 undergraduate graphic design students.',
+      'Constructed the full course syllabus including lecture content, project briefs, and assessment rubrics, translating professional web engineering practice into structured pedagogical architecture.',
+    ],
+  },
+  {
+    num: '06',
+    company: 'Pitch Black Media',
+    title: 'UX/UI Engineer & Front-End Developer',
+    context: 'Digital agency · Pleasant Ridge, Michigan',
+    dates: 'May 2015<br>Jan 2017',
+    bullets: [
+      'Designed and developed for clients including the <strong>University of Michigan</strong>, Sun Communities, Michigan Science Center, and City of Detroit Land Bank.',
+      'Created reusable WordPress theme and plugin architecture that <strong>reduced development time by 33%</strong>, deployed across 8+ client projects.',
+    ],
+  },
+  {
+    num: '07',
+    company: 'Dandelion (DNDLN)',
+    title: 'Web Development Manager',
+    context: 'Digital agency · Detroit, Michigan',
+    dates: 'Nov 2014<br>May 2015',
+    bullets: [
+      '<strong>Designed and built</strong> the City of Detroit home auction platform end-to-end: $60K project cost, $2M+ in revenue within six months, still operational today.',
+      'Delivered the Easter Seals Michigan intranet and training materials, used daily by approximately <strong>500 employees</strong>.',
+    ],
+  },
+];
+
+const skills = [
+  {
+    label: 'AI & Orchestration',
+    highlights: ['LangGraph.js', 'Vertex AI', 'Anthropic API', 'AI agent orchestration', 'Multi-stage agentic pipelines'],
+    items: ['Harness Engineering', 'OpenAI API'],
+  },
+  {
+    label: 'Backend & Infrastructure',
+    highlights: ['Node.js, PostgreSQL, MongoDB', 'Auth0, OAuth, SSO, RBAC, JWT', 'Elasticsearch, BigQuery'],
+    items: ['Memgraph, Snowflake', 'RESTful APIs, GraphQL (Apollo)', 'Docker, GCP, AWS (EC2, S3, RDS)', 'Linux Server Administration, CI/CD'],
+  },
+  {
+    label: 'Frontend & Full Stack',
+    highlights: ['TypeScript, JavaScript (ES5+)', 'React.js, Next.js (SSR)'],
+    items: ['Redux, Rx.js, React Query', 'TanStack React Table', 'HTML, CSS/Sass/CSS-in-JS', 'Webpack, Turbo', 'Zod, io-ts'],
+  },
+  {
+    label: 'Data & Analytics',
+    highlights: ['Mixpanel'],
+    items: ['Open Telemetry', 'Langfuse', 'HubSpot, Salesforce integrations', 'Express, Fastify API', 'SQL schema design', 'DeepEval'],
+  },
+  {
+    label: 'Methods & Tools',
+    highlights: [],
+    items: ['Agile/Scrum, Jira', 'TDD (Jest, Enzyme)', 'Information Architecture', 'Headless CMS (Prismic)', 'UX/UI Design', 'OOP & Functional Programming', 'Technical Product Management'],
+  },
+];
+
+const recognition = [
+  { type: 'Patent', title: 'System and Method for Delivering Augmented Reality to Printed Books', meta: 'USPTO · Jul 2016' },
+  { type: 'Award', title: '1st Place, Sayari AI Hackathon', meta: 'Sayari · 2026' },
+  { type: 'Award', title: '1st Place & Community Choice, 6th Annual Detroit Startup Weekend', meta: 'Nov 2014' },
+  { type: 'Talk', title: 'Fundamentals of Data Modelling: Why it Matters and How to Get Started', meta: 'SingleSprout Speaker Series' },
+  { type: 'Recognition', title: '3rd Place, Sayari Company-Wide Sales Competition', meta: 'Sayari · 2024' },
+  { type: 'Nomination', title: 'Sayari Cultural Award Nomination', meta: 'Sayari · 2025 Summit' },
+];
+
+const education = [
+  ['Codesmith', 'Software Engineering Immersive'],
+  ['Grand Circus Detroit', 'Dynamic Web Design · 2013'],
+  ['Art Institute of Detroit', 'Design'],
+  ['Oakland Community College', 'Fine Arts, Illustration & Design · 2012'],
+];
+---
+
+<BaseLayout
+  title="Curriculum Vitae — Sean Yalda"
+  description="Sean Yalda — Senior full-stack engineer. Twelve years across AI orchestration, platform infrastructure, and human learning. Selected experience, capabilities, recognition, and education."
+  ogImage="/assets/img/bryson-canyon.webp"
+  footerDisplay="Building at the<br>intersection of<br>product, design<br>&amp; code."
+  footerCopy="Sean Yalda · Curriculum Vitae<br>Los Angeles · 2026"
+>
+  <Hero
+    headline="Twelve years across<br>AI, platform, and"
+    headlineEm="human learning."
+    tag="Curriculum Vitae · Sean Yalda · Senior Full Stack Engineer · 2026"
+    bgImage="/assets/img/bryson-canyon.webp"
+    bgCredit="Photography — <em>Sean Yalda</em> · Bryce Canyon, Utah"
+    contact={[
+      { href: 'mailto:seanyalda@pm.me', label: 'seanyalda@pm.me' },
+      { href: 'tel:+15862954265', label: '(586) 295-4265' },
+      { href: 'https://linkedin.com/in/sean-yalda', label: 'LinkedIn', external: true },
+      { href: 'https://github.com/Seanathon', label: 'GitHub', external: true },
+      { href: '/assets/files/Sean_Yalda_Resume_ATS-2026.pdf', label: 'Download PDF', external: true },
+    ]}
+    cta={{ href: '#experience', label: 'View Experience' }}
+  />
+
+  <Statement headline="Engineering, design,<br>and pedagogy as<br>one practice.">
+    <p>
+      Senior full-stack engineer with 12+ years architecting enterprise platform infrastructure, AI-augmented pipelines, and education-sector applications. Deep across the backend: authentication, learner data models, content delivery, platform abstractions. Most major products extend to full ownership, with UX design and frontend implementation delivered alongside the architecture as a single unit.
+    </p>
+    <p>
+      Building and shipping production AI orchestration with LangGraph.js, Vertex AI, and the Anthropic API. LLM integration and agentic tooling are central to daily engineering, not peripheral.
+    </p>
+    <p>
+      Founding engineer at PlayVS, scaled from MVP through a $50M Series C across 30+ NFHS-sanctioned states. U.S. patent in augmented reality for printed books. Adjunct lecturer at Oakland University, 160+ hours of curriculum translating pedagogical intent into structured learning architecture.
+    </p>
+  </Statement>
+
+  <Section id="experience" label="Work History" display="Experience.">
+    {roles.map(r => (
+      <div class="role-item reveal">
+        <span class="role-num">{r.num}</span>
+        <div>
+          <div class="role-company">{r.company}</div>
+          <div class="role-title">{r.title}</div>
+          <div class="role-context">{r.context}</div>
+          <ul class="role-bullets">
+            {r.bullets.map(b => <li set:html={b}></li>)}
+          </ul>
+        </div>
+        <div class="role-dates">
+          <Fragment set:html={r.dates} />
+          {r.badge && <><br /><div class="badge">{r.badge}</div></>}
+        </div>
+      </div>
+    ))}
+  </Section>
+
+  <Section id="skills" variant="surface" label="Technical Capabilities" display="Skills.">
+    <div class="skills-grid">
+      {skills.map(s => (
+        <div class="skill-cat reveal">
+          <div class="skill-cat-label">{s.label}</div>
+          <ul class="skill-list">
+            {s.highlights.map(h => <li class="highlight">{h}</li>)}
+            {s.items.map(i => <li>{i}</li>)}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <PhotoStrip
+    src="/assets/img/iceland-farms.webp"
+    alt="Icelandic valley farms at golden hour"
+    location="Suðurland · Iceland"
+  />
+
+  <Section id="recognition" label="Awards, Patents, Talks" display="Recognition.">
+    <div class="rec-grid">
+      {recognition.map(r => (
+        <div class="rec-item reveal">
+          <div class="rec-type">{r.type}</div>
+          <div class="rec-title">{r.title}</div>
+          <div class="rec-meta">{r.meta}</div>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <PhotoStrip
+    src="/assets/img/grand-teton.webp"
+    alt="Grand Teton range in autumn"
+    location="Grand Teton · Wyoming"
+    tall
+  />
+
+  <Section variant="cream" label="Education" display="Education.">
+    <ul class="edu-list">
+      {education.map(([school, program]) => (
+        <li class="edu-item reveal">
+          <span class="edu-school">{school}</span>
+          <span class="edu-program">{program}</span>
+        </li>
+      ))}
+    </ul>
+  </Section>
+</BaseLayout>

@@ -1,0 +1,65 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import CaseMeta from '../components/CaseMeta.astro';
+import CaseOutro from '../components/CaseOutro.astro';
+
+interface Props {
+  data: {
+    title: string;
+    company?: string;
+    role: string;
+    period: string;
+    tag: string;
+    summary: string;
+    heroImage: string;
+    bgCredit?: string;
+    liveUrl?: string;
+    liveUrlLabel?: string;
+    credits: string[];
+    stack: string[];
+    services: string[];
+    outroBody: string;
+  };
+}
+const { data } = Astro.props;
+
+const heroContact = [
+  ...(data.liveUrl ? [{ href: data.liveUrl, label: data.liveUrlLabel ?? 'Visit live site', external: true }] : []),
+  { href: '/work', label: 'All work' },
+];
+
+const footerLinks = [
+  { href: '/work', label: 'All work' },
+  { href: '/about', label: 'About' },
+  { href: 'mailto:seanyalda@pm.me', label: 'Email' },
+  { href: 'https://linkedin.com/in/sean-yalda', label: 'LinkedIn', external: true },
+];
+---
+
+<BaseLayout
+  title={`${data.title} — Case study — Sean Yalda`}
+  description={data.summary}
+  active="work"
+  footerDisplay="Next up:<br><em>more case studies</em><br>in the queue."
+  footerLinks={footerLinks}
+  ogImage={data.heroImage}
+>
+  <Hero
+    headline={data.title}
+    headlineEm={data.role}
+    tag={data.tag}
+    bgImage={data.heroImage}
+    bgCredit={data.bgCredit}
+    contact={heroContact}
+    short
+  />
+
+  <CaseMeta credits={data.credits} stack={data.stack} services={data.services} />
+
+  <slot />
+
+  {data.liveUrl && data.liveUrlLabel && (
+    <CaseOutro body={data.outroBody} linkHref={data.liveUrl} linkLabel={data.liveUrlLabel} />
+  )}
+</BaseLayout>

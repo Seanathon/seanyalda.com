@@ -1,0 +1,44 @@
+---
+interface Props {
+  num: string;
+  company: string;
+  title: string;
+  description: string;
+  href?: string;
+  cta?: string;
+  placeholder?: boolean;
+  slug?: string;
+}
+const {
+  num,
+  company,
+  title,
+  description,
+  href,
+  cta = 'Read case study',
+  placeholder = false,
+  slug,
+} = Astro.props;
+const Tag: 'a' | 'div' = href && !placeholder ? 'a' : 'div';
+---
+
+<Tag
+  href={href}
+  class="work-card reveal"
+  style={placeholder ? 'cursor: default;' : undefined}
+>
+  <div class="work-card-num">{num}</div>
+  <div class="work-card-body">
+    <div class="work-card-company" style={placeholder ? 'opacity: 0.55;' : undefined} transition:name={slug ? `card-company-${slug}` : undefined}>{company}</div>
+    <div class="work-card-title">{title}</div>
+    <p class="work-card-desc" set:html={description}></p>
+  </div>
+  {!placeholder && (
+    <span class="work-card-cta">
+      {cta}
+      <svg width="14" height="9" viewBox="0 0 14 9" fill="none" aria-hidden="true">
+        <path d="M1 4.5h12M9 1l4 3.5L9 8" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </span>
+  )}
+</Tag>

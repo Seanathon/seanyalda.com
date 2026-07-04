@@ -1,0 +1,18 @@
+---
+interface Props {
+  body: string;
+  linkHref: string;
+  linkLabel: string;
+}
+const { body, linkHref, linkLabel } = Astro.props;
+---
+
+<section class="case-outro">
+  <p set:html={body}></p>
+  <a href={linkHref} target="_blank" rel="noopener" class="case-outro-link">
+    {linkLabel}
+    <svg width="22" height="14" viewBox="0 0 14 9" fill="none" aria-hidden="true">
+      <path d="M1 4.5h12M9 1l4 3.5L9 8" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+</section>

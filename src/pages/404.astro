@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="Not found — Sean Yalda" description="The page you're looking for isn't here.">
+  <Hero
+    headline="404."
+    headlineEm="This page doesn't exist."
+    tag="But these do — Home · Work · About · Photography"
+    bgImage="/assets/img/cave.webp"
+    bgCredit="Photography — <em>Sean Yalda</em>"
+    contact={[
+      { href: '/', label: 'Home' },
+      { href: '/work', label: 'Work' },
+      { href: '/about', label: 'About' },
+      { href: '/photography', label: 'Photography' },
+    ]}
+  />
+</BaseLayout>

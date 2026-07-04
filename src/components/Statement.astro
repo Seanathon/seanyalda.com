@@ -1,0 +1,28 @@
+---
+interface Props {
+  label?: string;
+  headline: string;
+}
+const { label = 'Practice', headline } = Astro.props;
+---
+
+<section class="statement">
+  <div class="statement-tiles">
+    <div class="tile tile-1"></div>
+    <div class="tile tile-2"></div>
+    <div class="tile tile-3"></div>
+    <div class="tile tile-4"></div>
+  </div>
+  <div class="statement-left reveal">
+    <div class="statement-label">
+      <div class="statement-label-dot"></div>
+      <span class="statement-label-text">{label}</span>
+    </div>
+    <h2 class="statement-headline" set:html={headline}></h2>
+  </div>
+  <div class="statement-right reveal">
+    <div class="statement-body">
+      <slot />
+    </div>
+  </div>
+</section>

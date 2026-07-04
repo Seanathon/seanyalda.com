@@ -1,0 +1,93 @@
+---
+title: "Alumni Association of the University of Michigan"
+order: 2
+company: "Alumni Association of U-M"
+role: "UX & Engineering."
+period: "2016–2017"
+tag: "Case study · UX & Engineering · 2016–2017"
+summary: "Member-facing platform for the global U-M alumni community. Salesforce CRM, client-side event & trip filtering, member auth, multi-stakeholder collaboration."
+heroImage: "/assets/img/grand-teton.webp"
+bgCredit: "Photography — <em>Sean Yalda</em> · Grand Teton, Wyoming"
+liveUrl: "https://alumni.umich.edu/"
+liveUrlLabel: "Visit alumni.umich.edu"
+credits:
+  - "In collaboration with Pitch Black Media"
+  - "Alumni Association of the University of Michigan"
+  - "Salesforce solution architects"
+stack:
+  - "JavaScript · Sass · PHP · Python"
+  - "Salesforce CRM integration"
+  - "Association member auth + signup"
+  - "Client-side filtering of events & trips"
+services:
+  - "UX/UI Design"
+  - "Frontend Engineering"
+  - "Backend Engineering"
+  - "Information Architecture"
+outroBody: "The platform shipped as the gateway for one of the largest alumni communities in the world. It remains in production today, supporting global chapter activity, the Association's travel program, and the member experience across desktop and mobile."
+---
+
+import CaseSection from '../../components/CaseSection.astro';
+import CasePoints from '../../components/CasePoints.astro';
+import CaseGallery from '../../components/CaseGallery.astro';
+
+<CaseSection eyebrow="Context" title="A global community, one connected gateway.">
+  The Alumni Association of the University of Michigan serves as an independent gateway for alumni of all identities, backgrounds, and experiences — across the globe and in our neighborhoods — in order to create and deepen belonging to the Michigan Family.
+</CaseSection>
+
+<CaseSection variant="cream" eyebrow="The challenge" title="One platform, many constituents.">
+  The Association needed a digital experience that could serve hundreds of thousands of alumni globally — surfacing chapter events, alumni travel programs, member benefits, and member-only content from a single Salesforce-backed system. The site had to feel personal at any scale, with filtering performant enough to handle complex queries client-side.
+
+  <CasePoints items={[
+    "Authenticated member experience for the entire global alumni network.",
+    "Real-time event and trip discovery without round-tripping the server.",
+    "Salesforce CRM as the source of truth for member data.",
+    "Accessible across devices — many alumni access from older browsers and lower bandwidth."
+  ]} />
+</CaseSection>
+
+<CaseGallery
+  hero={{ src: '/assets/img/work/U-M-featured.jpg', alt: 'U-M featured' }}
+  thumbs={[
+    { src: '/assets/img/work/U-M-iphone.jpg', alt: 'U-M website on iPhone' },
+    { src: '/assets/img/work/U-M-about.jpg', alt: 'U-M about page' }
+  ]}
+/>
+
+<CaseSection eyebrow="The approach" title="A modern frontend on a stable institutional backbone.">
+  We paired a fast, accessible JavaScript frontend with PHP and Python services bridging the Salesforce CRM. Member auth and signup were tied directly into the Association's existing identity system. Event and travel listings were rendered server-side for SEO and then enhanced with client-side filtering for instant discovery.
+</CaseSection>
+
+<CaseSection variant="cream" eyebrow="Frontend engineering" title="Discovery in one tap, not three.">
+  Client-side filtering of events and travel programs let members narrow by chapter, region, date, or interest without waiting for a server round-trip. The implementation balanced fast first paint with accessibility — every filter operation announced to assistive tech, every list rendered with semantic markup.
+
+  <CasePoints items={[
+    "Faceted filtering wired to the existing list markup — no SPA framework required.",
+    "Accessible state announcements for every filter change.",
+    "SSR-first rendering with progressive enhancement.",
+    "Tested on the device classes alumni actually use."
+  ]} />
+</CaseSection>
+
+<CaseSection eyebrow="Backend engineering" title="Salesforce as the source of truth.">
+  We built thin PHP and Python services that brokered the relationship between the public web and Salesforce. Member auth flows mapped to existing CRM identities so the Association could keep one source of truth. Caching layers in front of the CRM held read paths fast and gave us isolation from upstream rate limits.
+
+  <CasePoints items={[
+    "Member signup and login backed by Salesforce identities.",
+    "Read caching to absorb burst traffic from event announcements.",
+    "Webhook-driven sync for membership status, chapter affiliation, and trip RSVPs.",
+    "Auditable error handling and observability across every CRM boundary."
+  ]} />
+</CaseSection>
+
+<CaseGallery
+  hero={{ src: '/assets/img/work/U-M-menu-on-ipad.jpg', alt: 'Tablet menu' }}
+  thumbs={[
+    { src: '/assets/img/work/U-M-iphone.jpg', alt: 'Mobile' },
+    { src: '/assets/img/work/U-M-about.jpg', alt: 'About' }
+  ]}
+/>
+
+<CaseSection variant="cream" eyebrow="UX/UI design" title="Institutional, but warm.">
+  The visual system had to feel unmistakably Michigan while making space for editorial range — Crain's-style features one week, chapter event roundups the next. Type hierarchy, photographic crops, and a restrained color palette did most of the work, with component-level details reserved for member-only surfaces where trust and clarity matter most.
+</CaseSection>

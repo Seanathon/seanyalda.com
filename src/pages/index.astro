@@ -1,0 +1,62 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Statement from '../components/Statement.astro';
+import Section from '../components/Section.astro';
+import WorkCard from '../components/WorkCard.astro';
+import PhotoStrip from '../components/PhotoStrip.astro';
+
+const caseStudies = (await getCollection('caseStudies'))
+  .filter(cs => !cs.data.draft)
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout
+  title="Sean Yalda — Software Engineer & Interactive Designer"
+  active="home"
+>
+  <Hero
+    headline="Software Engineer &amp;"
+    headlineEm="Interactive Designer."
+    tag="Sean Yalda · Los Angeles"
+    bgImage="/assets/img/bryson-canyon.webp"
+    bgCredit="Photography — <em>Sean Yalda</em> · Bryce Canyon, Utah"
+    contact={[
+      { href: 'mailto:seanyalda@pm.me', label: 'seanyalda@pm.me' },
+      { href: 'https://linkedin.com/in/sean-yalda', label: 'LinkedIn', external: true },
+      { href: 'https://github.com/Seanathon', label: 'GitHub', external: true },
+      { href: 'https://www.instagram.com/sleepysensei/', label: 'Instagram', external: true },
+    ]}
+    cta={{ href: '/work', label: 'View Work' }}
+  />
+
+  <Statement
+    headline="Information architecture,<br>product, <em>&amp; growth.</em>"
+  >
+    <p>
+      Using design and technology, I've helped teams across the country take their objectives and translate them into growth strategies that were researched, executed, measured, and ultimately achieved through impactful brands, products, and services.
+    </p>
+  </Statement>
+
+  <Section id="work" label="Selected Work" display="Recent.">
+    <div class="work-grid">
+      {caseStudies.map((cs, i) => (
+        <WorkCard
+          num={String(i + 1).padStart(2, '0')}
+          company={cs.data.company ?? cs.data.title}
+          title={`${cs.data.role.replace(/\.$/, '')} · ${cs.data.period}`}
+          description={cs.data.summary}
+          href={`/work/${cs.id}`}
+          slug={cs.id}
+        />
+      ))}
+    </div>
+  </Section>
+
+  <PhotoStrip
+    src="/assets/img/iceland-farms.webp"
+    alt="Icelandic valley farms at golden hour"
+    location="Suðurland · Iceland"
+  />
+</BaseLayout>

@@ -1,0 +1,105 @@
+---
+title: "PlayVS"
+order: 1
+company: "PlayVS"
+role: "Founding engineer."
+period: "2018–2021"
+tag: "Case study · 2018 – 2021 · Series A → B → C"
+summary: "Built the infrastructure and platform for high school and collegiate esports. Headless CMS, Next.js, and a content engine that reduced production time by 60%."
+heroImage: "/assets/img/bryson-canyon.webp"
+bgCredit: "Photography — <em>Sean Yalda</em> · Bryce Canyon, Utah"
+liveUrl: "https://playvs.com/"
+liveUrlLabel: "Visit playvs.com"
+credits:
+  - "In collaboration with Use All 5 (UA5)"
+  - "PlayVS Product team"
+  - "PlayVS Growth & Marketing team"
+  - "CEO Delane Parnell"
+stack:
+  - "Next.js · SSR · Code splitting"
+  - "Node.js · REST API"
+  - "Headless CMS (Prismic)"
+  - "AWS Elastic Beanstalk · CloudWatch"
+  - "CircleCI · CI/CD"
+services:
+  - "Web Development Management"
+  - "Information Architecture"
+  - "UX Design"
+  - "Frontend Engineering"
+  - "Pitch design (Series A, B, C)"
+outroBody: "From 2018 to 2021, PlayVS evolved from a simple lead-conversion landing page into a content architecture with hundreds of documents, ~30 components, and a publishing model that reduced production time by 60%. The site supported numerous company initiatives and generated enough leads to earn over 25% of the company's overall revenue."
+---
+
+import CaseSection from '../../components/CaseSection.astro';
+import CasePoints from '../../components/CasePoints.astro';
+import CaseGallery from '../../components/CaseGallery.astro';
+
+<CaseSection eyebrow="Context" title="Esports for high schools, built from zero.">
+  PlayVS built the infrastructure and platform for high school and collegiate esports — partnering with game publishers and high school governing bodies to operate sanctioned leagues across the country. I joined as the first employee, helping CEO Delane Parnell raise the seed round with Science Inc., designing the MVP, and producing fundraising pitch decks for the $15M Series A.
+
+  Through the $30M Series B I led product engineering as Technical Product Manager. Through the $50M Series C, I drove growth and marketing engineering and scaled the platform from zero to tens of thousands of student users nationally.
+</CaseSection>
+
+<CaseSection variant="cream" eyebrow="The challenge" title="10–20 marketing initiatives a quarter.">
+  The growth team executed 10 to 20 initiatives per quarter — Academy, Game Changers, summer and winter tournaments, regional marketing pages — and needed a web solution that could keep up. The site had to evolve constantly without becoming bottlenecked by the engineering team's capacity.
+
+  <CasePoints items={[
+    "Architect a sitemap flexible enough for current programs and a year of unknowns.",
+    "Design a content model whose components match the editorial system.",
+    "Help users in an unfamiliar industry navigate naturally.",
+    "Define metrics so we'd know whether we were on track."
+  ]} />
+</CaseSection>
+
+<CaseGallery
+  hero={{ src: '/assets/img/work/U-M-featured.jpg', alt: 'PlayVS work sample' }}
+  thumbs={[
+    { src: '/assets/img/work/U-M-iphone.jpg', alt: 'Mobile view' },
+    { src: '/assets/img/work/U-M-about.jpg', alt: 'Editorial page' }
+  ]}
+/>
+
+<CaseSection eyebrow="The approach" title="Component-driven, content-first.">
+  A component-based architecture and content model that could grow alongside the company without massive overhead each time an initiative launched. Using Prismic, non-technical employees could update the site on the fly — and we built a platform that could adapt to the ever-changing needs of a fast-paced startup in a new industry.
+</CaseSection>
+
+<CaseSection variant="cream" eyebrow="Information architecture" title="80% SaaS site, 20% community portal.">
+  We applied the Pareto principle to frame the site as roughly 80% SaaS marketing and 20% community-focused. That single decision compressed the discovery work and let the team execute against a clear editorial mandate.
+
+  <CasePoints items={[
+    "Sitemap built for present programs and future initiatives.",
+    "Components scoped to the content model — not the other way around.",
+    "Navigation tested with real users from this new industry.",
+    "Metrics defined alongside every initiative."
+  ]} />
+</CaseSection>
+
+<CaseSection eyebrow="Web development management" title="Adaptive engineering for a moving target.">
+  An all-JavaScript stack (Next.js + Node.js), headless CMS with decoupled frontend, version control, a CI/CD pipeline on AWS Elastic Beanstalk, and project management tooling — built so the team could adapt to constantly shifting needs and budget.
+
+  <CasePoints items={[
+    "Cost/value analysis to ship the highest-impact items first.",
+    "Partner (UA5) that could flex with budget and timeline.",
+    "System designed for the company, its partners, and its community.",
+    "Strategy → design → development → launch with a people-first mindset."
+  ]} />
+</CaseSection>
+
+<CaseGallery
+  hero={{ src: '/assets/img/work/U-M-menu-on-ipad.jpg', alt: 'Tablet menu view' }}
+  thumbs={[
+    { src: '/assets/img/work/U-M-iphone.jpg', alt: 'Mobile' },
+    { src: '/assets/img/work/U-M-about.jpg', alt: 'About' }
+  ]}
+/>
+
+<CaseSection variant="cream" eyebrow="Frontend engineering" title="~30 components, a huge surface area.">
+  Using Prismic's REST API and the PlayVS product API, we produced a large website with minimal backend code. The site comprised roughly 30 components that could be composed into landing pages, microsites, and more on the fly — ultimately empowering the growth team to ship freely.
+
+  <CasePoints items={[
+    "Minimal network requests and fast page loads via a front-end optimization budget.",
+    "Tech debt kept low; unused components and dependencies removed continuously.",
+    "QA against accessibility, brand, performance, and usability guidelines.",
+    "Mandatory PR review on every change to enforce minimum time/space complexity."
+  ]} />
+</CaseSection>

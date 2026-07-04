@@ -1,0 +1,17 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  location: string;
+  tall?: boolean;
+}
+const { src, alt, location, tall = false } = Astro.props;
+---
+
+<figure class={`photo-strip${tall ? ' photo-strip--tall' : ''}`}>
+  <img src={src} alt={alt} loading="lazy" data-rand-photo="strip" />
+  <div class="photo-strip-meta">
+    <span class="photo-strip-location" data-rand-location>{location}</span>
+    <span class="photo-strip-credit">Photography — <em>Sean Yalda</em></span>
+  </div>
+</figure>

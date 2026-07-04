@@ -1,0 +1,146 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Statement from '../components/Statement.astro';
+import Section from '../components/Section.astro';
+import PhotoStrip from '../components/PhotoStrip.astro';
+
+const clients = [
+  ['Sayari', 'Enterprise risk intelligence'],
+  ['PlayVS', 'Student esports platform'],
+  ['Alumni Association of the University of Michigan', 'Member platform · with Pitch Black Media'],
+  ['Pitch Black Media', 'Digital agency'],
+  ['Michigan Science Center', 'Web & brand'],
+  ['City of Detroit', 'Home auction platform'],
+  ['Sun Communities', 'Web & content'],
+  ['FACINGS', 'Brand & web'],
+  ['Oakland University', 'Advanced Web Design lecturer'],
+  ['Open Source Labs', 'GraphQL Blueprint'],
+  ['Prettybird Productions', 'Creative direction'],
+  ['8° Plato', 'Brand & web'],
+];
+
+const services = [
+  { label: 'Engineering', highlights: ['Full Stack Development', 'AI Agent Orchestration'], items: ['System Design', 'Information Architecture', 'Data & Content Modeling'] },
+  { label: 'Design', highlights: ['UX / UI Design', 'Prototype Design'], items: ['Creative Direction', 'Pitch Deck Design', 'Photography'] },
+  { label: 'Strategy', highlights: ['Product Management', 'Technical Consulting'], items: ['Process & Documentation', 'Cost/Value Analysis', 'Roadmap & Discovery'] },
+];
+
+const strengths = [
+  { label: 'Building from zero', highlights: ['Founding engineer experience', 'MVP design & delivery'], items: ['Strategic vision', 'Scaling small teams'] },
+  { label: 'Understanding users', highlights: ['User research', 'Usability testing'], items: ['Information architecture', 'Empathy-driven decision making'] },
+  { label: 'Telling the story', highlights: ['Presentations & pitch design', 'Technical writing'], items: ['Editorial product thinking', 'Cross-functional translation'] },
+  { label: 'Going deep', highlights: ['Data structures & algorithms', 'Production AI orchestration'], items: ['Schema & data modeling', 'Cost/value analysis'] },
+];
+
+const background = [
+  { type: 'Heritage', title: 'First-generation Assyrian/Chaldean-American', meta: 'Originally from Detroit, now based in Los Angeles' },
+  { type: 'Training', title: 'Majored in Graphic Design & Illustration', meta: 'Self-taught engineer and startup founder' },
+  { type: 'Reach', title: 'Built products used by hundreds of thousands', meta: 'Including tools like <a href="https://cube.hywn.com" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none;">The Cube</a> &amp; <a href="https://breakingchanges.ai" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none;">BreakingChanges.ai</a>' },
+  { type: 'Practice', title: 'Early adopter of AI for creative and technical workflows', meta: 'LLM integration is central to the daily craft' },
+  { type: 'Travel', title: '47 U.S. states, 3 continents (so far)', meta: 'Photographs the trips' },
+  { type: 'Life', title: 'Fatherhood reshaped the creative perspective', meta: 'Believes in generational impact through design & tech' },
+  { type: 'Music', title: 'Former touring musician and busker', meta: 'Still jams when the chance comes around' },
+  { type: 'Craft', title: 'Hands-on with both code and carpentry', meta: 'Builds things that last' },
+  { type: 'Patent', title: 'U.S. Patent holder & classified inventor', meta: 'Augmented reality for printed books · USPTO · 2016' },
+  { type: 'Community', title: 'Active contributor to open source', meta: 'GraphQL Blueprint, Harness Engineering, and more' },
+  { type: 'Fundraising', title: 'Helped raise over $100M through pitch design', meta: 'PlayVS Series A, B, C — and several others' },
+  { type: 'Range', title: 'Thrives in solo projects and collaborative teams alike', meta: 'Knows how to read people, fix things, and spot patterns' },
+];
+---
+
+<BaseLayout
+  title="About — Sean Yalda"
+  description="About Sean Yalda — software engineer, designer, and former touring musician based in Los Angeles."
+  active="about"
+  footerDisplay="Let's build<br>something<br><em>worth keeping.</em>"
+  ogImage="/assets/img/grand-teton.webp"
+>
+  <Hero
+    headline="About"
+    headlineEm="Sean Yalda."
+    tag="Designer · Engineer · Photographer · First-Gen Assyrian/Chaldean-American"
+    bgImage="/assets/img/grand-teton.webp"
+    bgCredit="Photography — <em>Sean Yalda</em> · Grand Teton, Wyoming"
+    contact={[
+      { href: 'mailto:seanyalda@pm.me', label: 'seanyalda@pm.me' },
+      { href: 'https://linkedin.com/in/sean-yalda', label: 'LinkedIn', external: true },
+      { href: 'https://github.com/Seanathon', label: 'GitHub', external: true },
+      { href: 'https://www.instagram.com/sleepysensei/', label: 'Instagram', external: true },
+    ]}
+    short
+  />
+
+  <Statement headline="Bringing ideas<br>to life online<br>since 2002.">
+    <p>Over a decade of experience in tech startups and creative agencies, helping businesses grow, adapt, and connect — often by merging design with engineering in meaningful ways.</p>
+    <p>From the earliest ventures — turning side projects into full-time jobs — motivated by a desire to make systems smoother, stories clearer, and life a little easier through thoughtful strategy, design, and technology. That drive hasn't gone away; it's just matured.</p>
+    <p>The work has touched education, sports, music, science, real estate, art, and retail. Whether it's information architecture or UX research, interface design or front-end engineering — the focus is aligning digital experiences with human needs.</p>
+  </Statement>
+
+  <Section label="Selected Clients" display="Clients.">
+    <ul class="edu-list">
+      {clients.map(([name, desc]) => (
+        <li class="edu-item reveal">
+          <span class="edu-school">{name}</span>
+          <span class="edu-program">{desc}</span>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <Section variant="cream" label="What I do" display="Services.">
+    <div class="skills-grid" style="border-top-color: rgba(0,0,0,0.12); border-left-color: rgba(0,0,0,0.12);">
+      {services.map(s => (
+        <div class="skill-cat reveal" style="background: transparent; border-bottom-color: rgba(0,0,0,0.12); border-right-color: rgba(0,0,0,0.12);">
+          <div class="skill-cat-label" style="color: var(--hero-txt);">{s.label}</div>
+          <ul class="skill-list">
+            {s.highlights.map(h => <li class="highlight" style="color: var(--bg);">{h}</li>)}
+            {s.items.map(i => <li style="color: rgba(0,0,0,0.65);">{i}</li>)}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <Section variant="surface" label="Where I'm strongest" display="Strengths.">
+    <div class="skills-grid">
+      {strengths.map(s => (
+        <div class="skill-cat reveal">
+          <div class="skill-cat-label">{s.label}</div>
+          <ul class="skill-list">
+            {s.highlights.map(h => <li class="highlight">{h}</li>)}
+            {s.items.map(i => <li>{i}</li>)}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <PhotoStrip
+    src="/assets/img/iceland-farms.webp"
+    alt="Icelandic farms"
+    location="Suðurland · Iceland"
+  />
+
+  <Section variant="cream" label="Approach" display="Narrative.">
+    <div class="statement-body reveal" style="max-width: 720px; color: var(--bg); font-size: var(--fs-md);">
+      <p>Hybrid roles where design meets code and business meets culture. Fluent in metrics like KPIs and ROI, but rooted in the belief that the best outcomes come from empathy-driven thinking. Thriving in collaborative environments and knowing how to navigate solo terrain — especially when building from scratch.</p>
+      <p>Currently based in Los Angeles, designing and developing brands, products, and services with momentum. Starts most days by resetting the space — a habit that reflects the deeper approach to work: clear the clutter, trust the process.</p>
+      <p>The goals are both personal and far-reaching: to enrich society through good design and to build generational wealth with integrity.</p>
+      <p>A believer in curiosity and contrast, drawing inspiration from long walks, conversations with strangers, and moments of stillness. Comfortable stepping into new roles, new cities, or new ideas — often finding insight where others might not look.</p>
+      <p>Collaborative by nature, with a deep respect for culture, rhythm, and story. Whether working with nonprofits or global brands, the same thoughtful energy goes to the table: listen first, build with care.</p>
+    </div>
+  </Section>
+
+  <Section label="Background" display="Notes.">
+    <div class="rec-grid">
+      {background.map(b => (
+        <div class="rec-item reveal">
+          <div class="rec-type">{b.type}</div>
+          <div class="rec-title">{b.title}</div>
+          <div class="rec-meta" set:html={b.meta}></div>
+        </div>
+      ))}
+    </div>
+  </Section>
+</BaseLayout>

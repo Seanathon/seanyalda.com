@@ -1,0 +1,25 @@
+---
+interface Props {
+  id?: string;
+  variant?: 'default' | 'cream' | 'surface';
+  label?: string;
+  display?: string;
+  class?: string;
+}
+const { id, variant = 'default', label, display, class: extra } = Astro.props;
+const classes = ['section'];
+if (variant === 'cream') classes.push('section--cream');
+if (variant === 'surface') classes.push('section--surface', 'surface-section');
+if (extra) classes.push(extra);
+---
+
+<section id={id} class={classes.join(' ')}>
+  {label && (
+    <div class="sec-label reveal">
+      <div class="sec-label-dot"></div>
+      <span class="sec-label-text">{label}</span>
+    </div>
+  )}
+  {display && <div class="display reveal">{display}</div>}
+  <slot />
+</section>

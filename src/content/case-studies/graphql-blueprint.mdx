@@ -1,0 +1,69 @@
+---
+title: "GraphQL Blueprint"
+order: 3
+company: "GraphQL Blueprint"
+role: "Open source."
+period: "2021"
+tag: "Case study · Open Source · OSLabs · 2021"
+summary: "Open-source tool to auto-generate GraphQL schemas, queries, mutations and SQL build scripts. Used by several hundred engineers; ~50% exported boilerplate directly into production."
+heroImage: "/assets/img/bryson-canyon.webp"
+bgCredit: "Photography — <em>Sean Yalda</em> · Bryce Canyon, Utah"
+liveUrl: "https://github.com/oslabs-beta/GraphQL-Blueprint"
+liveUrlLabel: "View on GitHub"
+credits:
+  - "OSLabs — Open Source Labs"
+  - "Co-built with a small core team"
+  - "Tech community contributors"
+stack:
+  - "React · TypeScript"
+  - "D3.js (schema visualization)"
+  - "Node.js · Express"
+  - "Jest unit tests · CircleCI"
+  - "AWS EC2 deployment"
+services:
+  - "Frontend Engineering"
+  - "Backend Engineering"
+  - "UX/UI Design"
+  - "Developer Experience"
+outroBody: "GraphQL Blueprint has been used by several hundred engineers, approximately half of whom exported generated boilerplate directly into their projects. Built as an OSLabs open-source release, it remains a reference point for developer tooling work — and a reminder that the most valuable thing engineering can do for engineers is delete tedious work."
+---
+
+import CaseSection from '../../components/CaseSection.astro';
+import CasePoints from '../../components/CasePoints.astro';
+
+<CaseSection eyebrow="Context" title="GraphQL is powerful. Its setup is not.">
+  GraphQL is a query and data-manipulation language that lets developers build apps faster than ever — but its setup is still unwieldy. Adding it to a project with a lot of data takes time. We wanted to create an app that generates the repetitive, tedious side of GraphQL effortlessly, while still giving developers the full power of the language.
+</CaseSection>
+
+<CaseSection variant="cream" eyebrow="The approach" title="A GUI for production-grade boilerplate.">
+  A graphical schema designer that exports production-level database, server, and client-side code for inclusion in React + Express projects. Developers model multi-database schemas visually and export the files needed to run a GraphQL server and client locally — the boilerplate stops being a tax on starting.
+
+  <CasePoints items={[
+    "Multi-database schema modeling in one project.",
+    "Generated GraphQL schemas, queries, and mutations.",
+    "NoSQL schemas and SQL build scripts.",
+    "Export-ready files developers can drop into existing repos."
+  ]} />
+</CaseSection>
+
+<CaseSection eyebrow="Frontend engineering" title="Tabbed workflows, schema visualization in D3.">
+  Tabbed windows let developers move quickly between views without losing context. Micro-interactions on every component enabled full CRUD on schemas, fields, and relationships. A tree view powered by D3.js gave users a bird's-eye view of their schema — critical for catching modeling mistakes early.
+
+  <CasePoints items={[
+    "Tabbed windows for rapid context switching.",
+    "CRUD micro-interactions on every entity.",
+    "D3.js tree visualization for whole-schema review.",
+    "Minimal interface — the schema is the star, not the chrome."
+  ]} />
+</CaseSection>
+
+<CaseSection variant="cream" eyebrow="Backend engineering" title="Parsing algorithms that don't block the thread.">
+  Parsing algorithms dynamically generate deeply nested typed code structures without blocking the main thread. Unit test coverage with Jest. CI/CD to AWS EC2 via CircleCI. The whole thing is built so that the moment a developer hits "export," they get artifacts ready to run.
+
+  <CasePoints items={[
+    "Non-blocking parsing for deeply nested generated structures.",
+    "Comprehensive Jest unit coverage on the generators.",
+    "CI/CD pipeline to AWS EC2 via CircleCI.",
+    "Strict separation between schema state and generated artifacts."
+  ]} />
+</CaseSection>

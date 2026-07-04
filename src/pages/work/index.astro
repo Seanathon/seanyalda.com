@@ -1,0 +1,61 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import WorkCard from '../../components/WorkCard.astro';
+import PhotoStrip from '../../components/PhotoStrip.astro';
+
+const caseStudies = (await getCollection('caseStudies'))
+  .filter(cs => !cs.data.draft)
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout
+  title="Work — Sean Yalda"
+  description="Selected work by Sean Yalda — case studies from PlayVS, the Alumni Association of the University of Michigan, and GraphQL Blueprint."
+  active="work"
+  footerDisplay="Building at the<br>intersection of<br>product, design<br>&amp; code."
+>
+  <Hero
+    headline="Selected"
+    headlineEm="case studies."
+    tag="Work · 2014 – Present"
+    bgImage="/assets/img/bryson-canyon.webp"
+    bgCredit="Photography — <em>Sean Yalda</em> · Bryce Canyon, Utah"
+    contact={[
+      { href: 'mailto:seanyalda@pm.me', label: 'seanyalda@pm.me' },
+      { href: 'https://linkedin.com/in/sean-yalda', label: 'LinkedIn', external: true },
+      { href: 'https://github.com/Seanathon', label: 'GitHub', external: true },
+    ]}
+    short
+  />
+
+  <Section label="Recent work" display="Projects.">
+    <div class="work-grid">
+      {caseStudies.map((cs, i) => (
+        <WorkCard
+          num={String(i + 1).padStart(2, '0')}
+          company={cs.data.company ?? cs.data.title}
+          title={`${cs.data.role.replace(/\.$/, '')} · ${cs.data.period}`}
+          description={cs.data.summary}
+          href={`/work/${cs.id}`}
+          slug={cs.id}
+        />
+      ))}
+      <WorkCard
+        num="+"
+        company="More on the way"
+        title="Sayari · Sun Communities · City of Detroit"
+        description='Case studies for current and earlier client work are in the queue. In the meantime, see the <a href="/about" style="color: var(--accent);">about page</a> for the full client list.'
+        placeholder
+      />
+    </div>
+  </Section>
+
+  <PhotoStrip
+    src="/assets/img/grand-teton.webp"
+    alt="Grand Teton range"
+    location="Grand Teton · Wyoming"
+  />
+</BaseLayout>

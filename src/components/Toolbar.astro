@@ -1,0 +1,53 @@
+---
+const themes = [
+  { slug: 'inkwell',  name: 'Inkwell',  dots: ['#FFF9EC','#E4A030','#A85527','#1D402D'] },
+  { slug: 'bryce',    name: 'Bryce',    dots: ['#F2F0CE','#F28A2E','#A64812','#025159'] },
+  { slug: 'velvet',   name: 'Velvet',   dots: ['#EFD6AC','#C44900','#432534','#183A37'] },
+  { slug: 'fuchsia',  name: 'Fuchsia',  dots: ['#EFF1F3','#FF285E','#223843','#D8B4A0'] },
+  { slug: 'tuxedo',   name: 'Tuxedo',   dots: ['#000000','#14213D','#FCA311','#FFFFFF'] },
+  { slug: 'garnet',   name: 'Garnet',   dots: ['#280905','#740A03','#C3110C','#E6501B'] },
+  { slug: 'lagoon',   name: 'Lagoon',   dots: ['#F5E1DA','#F1F1F1','#40A798','#476269'] },
+  { slug: 'hearth',   name: 'Hearth',   dots: ['#F4E1E1','#F98903','#C62727','#4C3232'] },
+  { slug: 'norfolk',  name: 'Norfolk',  dots: ['#F7EDDA','#FFA74F','#F0531C','#2E4B3C'] },
+  { slug: 'synth',    name: 'Synth',    dots: ['#11052C','#3D087B','#F43B86','#FFE459'] },
+  { slug: 'stoic',    name: 'Stoic',    dots: ['#F0F5F9','#C9D6DF','#52616B','#1E2022'] },
+  { slug: 'notebook', name: 'Notebook', dots: ['#F6F4E6','#FDDB3A','#52575D','#41444B'] },
+];
+---
+
+<aside class="toolbar" role="group" aria-label="Site utilities">
+  <button type="button" class="tb-btn" data-popover="theme" aria-haspopup="true" aria-expanded="false" aria-label="Theme">
+    <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 1.5a7.5 7.5 0 0 0 0 15c1.1 0 1.5-.8 1.5-1.5 0-.4-.2-.7-.4-1-.2-.3-.4-.6-.4-1 0-.7.6-1.3 1.3-1.3h1.5A4 4 0 0 0 16.5 8C16.5 4.4 13.1 1.5 9 1.5Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4.7" cy="8" r="1" fill="currentColor"/><circle cx="5.7" cy="4.7" r="1" fill="currentColor"/><circle cx="9" cy="3.7" r="1" fill="currentColor"/><circle cx="12.3" cy="4.7" r="1" fill="currentColor"/></svg>
+  </button>
+  <button type="button" class="tb-btn" data-popover="cv" aria-haspopup="true" aria-expanded="false" aria-label="CV">
+    <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 2h6l4 4v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><path d="M10 2v4h4" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><path d="M6 9h6M6 12h6M6 15h4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+  </button>
+</aside>
+
+<div class="tb-popover" data-popover-target="theme" role="menu" aria-label="Color theme">
+  <div class="tb-popover-label">Theme</div>
+  {themes.map(t => (
+    <button type="button" class="theme-btn" data-set-theme={t.slug}>
+      <span class="theme-btn-name">{t.name}</span>
+      <span class="theme-btn-dots" aria-hidden="true">
+        {t.dots.map(c => <i style={`background:${c}`}></i>)}
+      </span>
+    </button>
+  ))}
+</div>
+
+<div class="tb-popover" data-popover-target="cv" role="menu" aria-label="CV">
+  <div class="tb-popover-label">Curriculum vitae</div>
+  <a class="tb-link" href="/cv/" target="_blank" rel="noopener">
+    <span class="tb-link-title">Website
+      <svg width="11" height="11" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 8L8 2M8 2H3M8 2v5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+    </span>
+    <span class="tb-link-meta">Interactive · 2026</span>
+  </a>
+  <a class="tb-link" href="/assets/files/Sean_Yalda_Resume_ATS-2026.pdf" target="_blank" rel="noopener">
+    <span class="tb-link-title">PDF
+      <svg width="11" height="11" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 8L8 2M8 2H3M8 2v5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+    </span>
+    <span class="tb-link-meta">ATS · 2026</span>
+  </a>
+</div>

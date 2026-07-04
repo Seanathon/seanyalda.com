@@ -1,0 +1,12 @@
+---
+interface Image { src: string; alt: string; }
+interface Props { hero: Image; thumbs: Image[]; }
+const { hero, thumbs } = Astro.props;
+---
+
+<div class="case-gallery">
+  <img src={hero.src} alt={hero.alt} loading="lazy" />
+  <div>
+    {thumbs.map(t => <img src={t.src} alt={t.alt} loading="lazy" />)}
+  </div>
+</div>

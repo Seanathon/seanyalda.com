@@ -1,0 +1,61 @@
+---
+interface ContactLink { href: string; label: string; external?: boolean; }
+interface Cta { href: string; label: string; }
+interface Props {
+  headline: string;
+  headlineEm?: string;
+  tag: string;
+  bgImage: string;
+  bgCredit?: string;
+  contact?: ContactLink[];
+  cta?: Cta;
+  short?: boolean;
+}
+const {
+  headline,
+  headlineEm,
+  tag,
+  bgImage,
+  bgCredit,
+  contact = [],
+  cta,
+  short = false,
+} = Astro.props;
+---
+
+<section class={`hero${short ? ' hero--short' : ''}`}>
+  <div class="hero-bg" aria-hidden="true">
+    <img src={bgImage} alt="" transition:name="hero-bg" data-rand-photo="hero" />
+  </div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <h1 class="hero-headline" id="hhead">
+    <Fragment set:html={headline} />
+    {headlineEm && (
+      <>
+        <br /><em>{headlineEm}</em>
+      </>
+    )}
+  </h1>
+  <div class="hero-tag" id="htag">
+    <div class="hero-tag-dot"></div>
+    <span class="hero-tag-text" set:html={tag}></span>
+  </div>
+  {(contact.length > 0 || cta) && (
+    <div class="hero-strip" id="hstrip">
+      <div class="hero-contact">
+        {contact.map(c => (
+          <a href={c.href} target={c.external ? '_blank' : undefined} rel={c.external ? 'noopener' : undefined}>{c.label}</a>
+        ))}
+        {bgCredit && <div class="hero-photo-credit" set:html={bgCredit} data-rand-credit></div>}
+      </div>
+      {cta && (
+        <a href={cta.href} class="hero-cta">
+          {cta.label}
+          <svg width="14" height="9" viewBox="0 0 14 9" fill="none" aria-hidden="true">
+            <path d="M1 4.5h12M9 1l4 3.5L9 8" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      )}
+    </div>
+  )}
+</section>
