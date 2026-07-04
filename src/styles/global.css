@@ -1245,6 +1245,8 @@ body.lb-open { overflow: hidden; }
 }
 .lightbox.lb-visible { opacity: 1; }
 .lightbox[hidden] { display: none; }
+/* Horizontal touch gestures belong to the swipe handler, not the browser. */
+.lightbox { touch-action: pan-y; }
 
 .lb-figure {
   display: flex;
