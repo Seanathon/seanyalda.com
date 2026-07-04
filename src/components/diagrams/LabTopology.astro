@@ -1,0 +1,49 @@
+---
+// "Two boxes, one system" — the MS-01 + external drive cage architecture.
+// Strokes and fills bind to theme tokens (see ARTICLE DIAGRAMS in global.css)
+// so the diagram re-themes with the palette like code blocks do.
+---
+
+<figure class="article-diagram">
+  <svg viewBox="0 0 720 340" role="img" aria-label="Diagram: a Minisforum MS-01 mini PC connected to an external five-bay drive cage over SAS, both powered through one UPS">
+    <!-- MS-01 -->
+    <rect class="dg-box" x="40" y="40" width="280" height="210" rx="2" />
+    <text class="dg-t-title" x="56" y="66">Minisforum MS-01</text>
+    <text class="dg-t-mut" x="56" y="84">Proxmox VE · $849</text>
+    <text class="dg-t-label" x="56" y="112">i5-12600H · Quick Sync</text>
+    <text class="dg-t-label" x="56" y="132">64 GB DDR5</text>
+    <text class="dg-t-label" x="56" y="152">2× NVMe · boot + scratch</text>
+    <text class="dg-t-label" x="56" y="172">2× 10 GbE SFP+</text>
+    <rect class="dg-accent" x="56" y="188" width="248" height="44" rx="2" />
+    <text class="dg-t-label" x="68" y="206">LSI 9300-8e · IT mode</text>
+    <text class="dg-t-mut" x="68" y="222">PCIe 4.0 ×8 · raw disks only</text>
+
+    <!-- SAS link -->
+    <line class="dg-line" x1="304" y1="204" x2="420" y2="132" />
+    <line class="dg-line" x1="304" y1="216" x2="420" y2="144" />
+    <text class="dg-t-mut" x="330" y="162">2× SFF-8644 SAS</text>
+
+    <!-- Drive cage -->
+    <rect class="dg-box" x="420" y="40" width="260" height="160" rx="2" />
+    <text class="dg-t-title" x="436" y="66">SilverStone FS305</text>
+    <text class="dg-t-mut" x="436" y="84">passive backplane · no expander</text>
+    <rect class="dg-soft" x="436" y="96" width="38" height="64" rx="1" />
+    <rect class="dg-soft" x="482" y="96" width="38" height="64" rx="1" />
+    <rect class="dg-soft" x="528" y="96" width="38" height="64" rx="1" />
+    <rect class="dg-soft" x="574" y="96" width="38" height="64" rx="1" />
+    <rect class="dg-soft" x="620" y="96" width="38" height="64" rx="1" />
+    <text class="dg-t-mut" x="436" y="184">5× Exos 18 TB · recertified</text>
+
+    <!-- Cage PSU -->
+    <rect class="dg-box" x="420" y="216" width="260" height="44" rx="2" />
+    <text class="dg-t-label" x="436" y="236">Flex ATX 300 W PSU</text>
+    <text class="dg-t-mut" x="436" y="252">separate power domain</text>
+
+    <!-- UPS -->
+    <rect class="dg-box" x="230" y="292" width="260" height="36" rx="2" />
+    <text class="dg-t-label" x="316" y="315">APC 1500 UPS</text>
+    <line class="dg-line dg-dash" x1="180" y1="250" x2="300" y2="292" />
+    <line class="dg-line dg-dash" x1="550" y1="260" x2="440" y2="292" />
+  </svg>
+  <figcaption>Two boxes, one system. The HBA hands ZFS raw disks; the cage adds nothing but lanes; the drive power domain is its own. Everything lands on the same UPS.</figcaption>
+</figure>

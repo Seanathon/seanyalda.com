@@ -1,0 +1,58 @@
+---
+title: The NAS I
+titleEm: didn't buy.
+deck: Ninety terabytes of recertified rust, a $120 HBA with no thermometer, and the research that let a mini PC beat the appliance NAS.
+date: 2026-07-04
+topic: Homelab
+---
+
+import LabTopology from '../../components/diagrams/LabTopology.astro';
+import StorageTiers from '../../components/diagrams/StorageTiers.astro';
+
+In early June I paid $2,134.64 for five recertified 18-terabyte SAS drives — enterprise Seagate Exos units pulled from someone else's datacenter and resold with a promise, some with 17,000 hours already on the clock. Ninety terabytes, raw, for about the price of three of them new. This is the story of the research that made that a reasonable thing to do, told wide rather than deep.
+
+## The appliance I didn't buy
+
+Every NAS appliance I priced failed one of two questions. Does ZFS get raw disks? Can it transcode 4K without gasping? The four-bay enclosure I nearly bought turned out to be an ASMedia SATA controller behind a port multiplier: five drives sharing one lane, with the filesystem none the wiser. The appliances that could transcode cost more than a real computer.
+
+So the heart of the lab is a real computer. A Minisforum MS-01, $849: an i5-12600H whose Quick Sync engine chews through concurrent 4K transcodes, a PCIe 4.0 ×8 slot, and two 10-gigabit SFP+ ports it would take me a month to grow into. The storage hangs off that ×8 slot through a $120 used LSI 9300-8e host bus adapter flashed to IT mode, which does exactly one thing: hand ZFS five raw disks with full SMART data. The drive cage is deliberately dumb too — a SilverStone FS305, $150, no expander, just connectors and traces, one dedicated lane per bay — with its own 300-watt power supply and a $10 jumper so it powers on headless. Parts came to about $555 delivered.
+
+The principle underneath: every part between ZFS and the platters should be too simple to fail interestingly.
+
+<LabTopology />
+
+## Proving the drives
+
+Recertified drives are a bet, so the bet got a protocol. Before the pool existed, all five ran a 26-hour SMART long test, then a staged, destructive, full-surface write of every sector with checksum verification on the read back. About two and a half days of wall-clock, with a thermal checkpoint two hours in.
+
+One drive arrived with 219 "non-medium errors" already on its counter. The forums say that counter is usually noise. Instead of trusting the forums or returning the drive, I tracked the number through the whole gauntlet; it never moved, so the drive stayed, with a standing note to keep watching it.
+
+The pool is a single five-wide RAIDZ2, which survives any two drives dying at once. Mirrors would have stranded a drive in a five-bay cage; RAIDZ2 fills it and buys the margin that matters most on recertified hardware — a resilver is exactly when a second drive likes to fail. 81.8 terabytes raw, about 48 usable after parity.
+
+## A canary, not a thermometer
+
+The HBA taught me the best lesson of the build. The LSI 9300-8e is famous for two things: being the default answer for ZFS, and cooking itself without airflow. And its controller chip exposes no temperature sensor to Linux at all. You cannot watch the part that fails.
+
+So there's a Noctua fan zip-tied to its heatsink, and a watchdog that runs every fifteen minutes watching for symptoms instead of the cause: controller resets, SCSI task aborts, I/O errors, and drive temperatures as an airflow proxy. The drives idle around 30 °C and hit 42 under load; the watchdog warns at 50; Seagate calls it quits at 60. If the fan dies quietly in November, the canary tells me before three drives drop out of the pool at once. It needed one bug fix in its first week — the string "fault" appears inside a perfectly benign kernel boot message, and the matcher tripped on it. Every monitoring system I've ever shipped has a version of that story.
+
+Other discoveries, quickly: `powertop --auto-tune` kernel-panics this machine, now documented in three separate places so I stop rediscovering it. Ventoy and the Proxmox installer don't mix. And drive letters shuffle on reboot, which is why every destructive command in the runbook addresses disks by their immutable IDs and nothing else.
+
+<StorageTiers />
+
+## One irreversible command
+
+The June expansion doubled RAM to 64 GB (an identical second stick — the win was holding the memory speed, not raising it) and added a second NVMe as a deliberately loseable scratch pool, so torrent churn and big file ingests stop competing with streaming reads on the spinning drives.
+
+Then there are the three refurbished Intel S4610 enterprise SSDs, bought to become a three-way mirrored "special vdev" — a metadata accelerator ZFS grafts into the pool. Three-way, because it has to match the pool's two-failure tolerance: lose the special vdev and you lose everything. The listing bragged "100% health, 1 TB written," which against a multi-petabyte endurance rating is a rounding error.
+
+They're still sitting on the desk. Every step of the expansion is reversible except one — `zpool add tank special mirror` can never be undone on a RAIDZ pool — so the plan says: let the new RAM prove whether the SSDs are even necessary before running the one command you can't take back. Also, I'm missing a power cable.
+
+## Nine minutes in the dark
+
+At 1:17 one morning in late June I moved the network bridge from the 2.5-gig NIC to the 10-gig fiber ports, and the lab vanished. No remote access, and the MS-01 has no out-of-band management to crawl back in through. This was the exact failure the runbook had pre-staged: config backed up, monitor and keyboard already on the bench. Back online at 1:26. Nine minutes, zero drama, because the plan assumed I'd screw it up.
+
+## Furniture, eventually
+
+Right now the lab is two boxes and a nest of SAS cables in a wooden cubby. The endgame is drawn but not built: a single custom chassis, 349 by 199 by 126 millimeters, that mounts the mini PC and the drive cage side by side and hides the power supply underneath on standoffs. Front-loading bays, an 80-millimeter exhaust, real cable channels. Four CAD files so far, zero saw cuts.
+
+What runs on all of it — the media stack, the photo library, the home-automation brain, and the first of the agents this lab was actually built to host — deserves its own essays. For now: the pool scrubs monthly, the canary reports quiet, and the counter on drive one still says 219. I check it more often than I need to.

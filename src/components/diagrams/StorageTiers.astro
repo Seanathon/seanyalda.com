@@ -1,0 +1,39 @@
+---
+// "Where bytes live" — the pool tiering. Same theme-token binding as
+// LabTopology; the staged special vdev renders dashed + accent.
+---
+
+<figure class="article-diagram">
+  <svg viewBox="0 0 720 392" role="img" aria-label="Diagram: four storage tiers — an NVMe boot pool, an NVMe scratch pool, the five-drive RAIDZ2 bulk pool, and a staged three-SSD special vdev">
+    <!-- rpool -->
+    <rect class="dg-box" x="40" y="32" width="640" height="64" rx="2" />
+    <text class="dg-t-title" x="56" y="58">rpool · 1 TB NVMe</text>
+    <text class="dg-t-label" x="56" y="80">boot · guest roots · databases</text>
+    <text class="dg-t-mut" x="664" y="58" text-anchor="end">fast · backed up</text>
+
+    <!-- flash -->
+    <rect class="dg-box" x="40" y="112" width="640" height="64" rx="2" />
+    <text class="dg-t-title" x="56" y="138">flash · 2 TB NVMe</text>
+    <text class="dg-t-label" x="56" y="160">torrent scratch · bulk ingest</text>
+    <text class="dg-t-mut" x="664" y="138" text-anchor="end">fast · loseable by design</text>
+
+    <!-- tank -->
+    <rect class="dg-box" x="40" y="192" width="640" height="100" rx="2" />
+    <text class="dg-t-title" x="56" y="218">tank · 5× 18 TB RAIDZ2</text>
+    <text class="dg-t-label" x="56" y="240">media · photos · documents · backups</text>
+    <rect class="dg-soft" x="56" y="252" width="38" height="26" rx="1" />
+    <rect class="dg-soft" x="102" y="252" width="38" height="26" rx="1" />
+    <rect class="dg-soft" x="148" y="252" width="38" height="26" rx="1" />
+    <rect class="dg-soft" x="194" y="252" width="38" height="26" rx="1" />
+    <rect class="dg-soft" x="240" y="252" width="38" height="26" rx="1" />
+    <text class="dg-t-mut" x="664" y="218" text-anchor="end">survives any two drives</text>
+    <text class="dg-t-mut" x="664" y="238" text-anchor="end">81.8 T raw → ~48 T usable</text>
+
+    <!-- special vdev (staged) -->
+    <rect class="dg-accent dg-dash" x="40" y="308" width="640" height="64" rx="2" />
+    <text class="dg-t-title" x="56" y="334">special vdev · 3× S4610 mirror</text>
+    <text class="dg-t-label" x="56" y="356">metadata · small blocks</text>
+    <text class="dg-t-mut dg-t-accent" x="664" y="334" text-anchor="end">staged · one irreversible command</text>
+  </svg>
+  <figcaption>Where bytes live. Two NVMe pools with opposite personalities, one big pool that tolerates two failures, and a metadata mirror that isn't allowed in yet.</figcaption>
+</figure>

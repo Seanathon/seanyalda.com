@@ -1941,6 +1941,43 @@ a.article-row:hover .article-row-title { color: var(--accent); }
   color: var(--earth);
 }
 
+/* ─── ARTICLE DIAGRAMS ────────────────────────────────── */
+/* Inline SVG diagrams bound to theme tokens — they re-theme with the
+   palette, same as the Shiki code blocks below. */
+.article-diagram { margin: 36px 0; }
+.article-diagram svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: rgba(var(--text-rgb), 0.02);
+}
+.article-diagram .dg-box { fill: none; stroke: rgba(var(--text-rgb), 0.4); }
+.article-diagram .dg-soft { fill: rgba(var(--text-rgb), 0.06); stroke: rgba(var(--text-rgb), 0.25); }
+.article-diagram .dg-line { fill: none; stroke: rgba(var(--text-rgb), 0.35); }
+.article-diagram .dg-dash { stroke-dasharray: 4 4; }
+.article-diagram .dg-accent { fill: none; stroke: var(--accent); }
+.article-diagram text {
+  font-family: 'Geist', -apple-system, 'Helvetica Neue', sans-serif;
+  fill: rgba(var(--text-rgb), 0.88);
+}
+.article-diagram .dg-t-title { font-size: 13px; font-weight: 500; letter-spacing: 0.01em; }
+.article-diagram .dg-t-label { font-size: 11.5px; }
+.article-diagram .dg-t-mut {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  fill: var(--earth);
+}
+.article-diagram .dg-t-accent { fill: var(--accent); }
+.article-diagram figcaption {
+  margin-top: 12px;
+  font-size: var(--fs-sm);
+  color: var(--earth);
+}
+
 /* Shiki (`css-variables` theme) → site tokens. Code blocks re-theme with the
    palette — same principle as everything else: theme is content, not chrome. */
 :root {
