@@ -8,6 +8,7 @@ topic: Homelab
 
 import LabTopology from '../../components/diagrams/LabTopology.astro';
 import StorageTiers from '../../components/diagrams/StorageTiers.astro';
+import ProxmoxMap from '../../components/diagrams/ProxmoxMap.astro';
 
 In early June I paid $2,134.64 for five recertified 18-terabyte SAS drives — enterprise Seagate Exos units pulled from someone else's datacenter and resold with a promise, some with 17,000 hours already on the clock. Ninety terabytes, raw, for about the price of three of them new. This is the story of the research that made that a reasonable thing to do, told wide rather than deep.
 
@@ -60,4 +61,14 @@ At 1:17 one morning in late June I moved the network bridge from the 2.5-gig NIC
 
 Right now the lab lives in a wooden cubby: a small open rack for the compute and network half, the drive cage freestanding beside it, joined by a fat pair of SAS cables. The endgame is drawn but not built: a single custom chassis, 349 by 199 by 126 millimeters, that mounts the mini PC and the drive cage side by side and hides the power supply underneath on standoffs. Front-loading bays, an 80-millimeter exhaust, real cable channels. Four CAD files so far, zero saw cuts.
 
-What runs on all of it — the media stack, the photo library, the home-automation brain, and the first of the agents this lab was actually built to host — deserves its own essays. For now: the pool scrubs monthly, the canary reports quiet, and the counter on drive one still says 219. I check it more often than I need to.
+## The part the hardware was for
+
+All of that metal exists to be divided. Proxmox splits the machine into a dozen-plus unprivileged containers and two VMs, one per blast radius: the torrent client lives behind a VPN that fails closed, the search engine gets its own separate egress, and the home-automation OS is the only workload important enough to earn a full VM. House rule: a container, unless it can't be.
+
+<ProxmoxMap />
+
+One container is not like the others. Hermes, my development agent, moved off the workstation and into its own LXC, running OpenUI Lang — a generative-UI operating system whose interface the agent maintains itself. I don't design its screens; it redraws them to fit whatever it's working on. Watching software redecorate its own room is either a preview of the next decade or a very elaborate terrarium. Possibly both.
+
+And reaching any of this from outside goes through no open ports, because there are none. A pocket-sized travel router carries a WireGuard tunnel home: hotel Wi-Fi goes in one side, the lab comes out the other, and the couch follows me around the country.
+
+The pool scrubs monthly, the canary reports quiet, and the counter on drive one still says 219. What each of those containers is allowed to touch — and what the agents never will be — is the next essay.

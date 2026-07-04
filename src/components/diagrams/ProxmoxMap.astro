@@ -1,0 +1,45 @@
+---
+// "One machine, many blast radii" — the Proxmox guest map, plus the
+// WireGuard travel router as the only way in. Theme-token bound like
+// the other article diagrams.
+---
+
+<figure class="article-diagram">
+  <svg viewBox="0 0 720 404" role="img" aria-label="Diagram: a Proxmox host divided into VM, infrastructure, application, and agent tiers, with a travel router connecting in over WireGuard">
+    <!-- Host -->
+    <rect class="dg-box" x="40" y="32" width="490" height="336" rx="2" />
+    <text class="dg-t-title" x="56" y="58">Proxmox VE · one MS-01</text>
+    <text class="dg-t-mut" x="56" y="76">unprivileged LXCs + two VMs</text>
+
+    <!-- VMs -->
+    <rect class="dg-box" x="56" y="92" width="458" height="56" rx="2" />
+    <text class="dg-t-mut" x="68" y="112">VMs</text>
+    <text class="dg-t-label" x="68" y="132">home automation OS · photo library</text>
+
+    <!-- Infrastructure -->
+    <rect class="dg-box" x="56" y="160" width="458" height="56" rx="2" />
+    <text class="dg-t-mut" x="68" y="180">infrastructure LXCs</text>
+    <text class="dg-t-label" x="68" y="200">DNS + adblock · reverse proxy · backups · sync · file shares</text>
+
+    <!-- Applications -->
+    <rect class="dg-box" x="56" y="228" width="458" height="56" rx="2" />
+    <text class="dg-t-mut" x="68" y="248">application LXCs</text>
+    <text class="dg-t-label" x="68" y="268">media (Quick Sync) · automation · torrents (fail-closed VPN) · search</text>
+
+    <!-- Agent -->
+    <rect class="dg-accent" x="56" y="296" width="458" height="56" rx="2" />
+    <text class="dg-t-mut dg-t-accent" x="68" y="316">agent LXC</text>
+    <text class="dg-t-label" x="68" y="336">Hermes · OpenUI Lang — an interface it maintains itself</text>
+
+    <!-- Storage note -->
+    <text class="dg-t-mut" x="56" y="392">datasets bind-mounted from rpool · flash · tank</text>
+
+    <!-- Travel router -->
+    <rect class="dg-box" x="580" y="160" width="116" height="84" rx="2" />
+    <text class="dg-t-title" x="592" y="186">Travel router</text>
+    <text class="dg-t-label" x="592" y="206">WireGuard home</text>
+    <text class="dg-t-mut" x="592" y="226">no open ports</text>
+    <line class="dg-line dg-dash" x1="530" y1="202" x2="580" y2="202" />
+  </svg>
+  <figcaption>One machine, many blast radii. Guests get bind-mounted datasets, the agent gets its own container, and the only door in from outside is a WireGuard tunnel in a pocket router.</figcaption>
+</figure>
