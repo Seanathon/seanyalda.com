@@ -4,12 +4,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import Statement from '../components/Statement.astro';
 import Section from '../components/Section.astro';
-import WorkCard from '../components/WorkCard.astro';
+import LatestFeed from '../components/LatestFeed.astro';
 import PhotoStrip from '../components/PhotoStrip.astro';
+
+const articles = (await getCollection('articles'))
+  .filter(a => !a.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const latest = articles[0];
 
 const caseStudies = (await getCollection('caseStudies'))
   .filter(cs => !cs.data.draft)
   .sort((a, b) => a.data.order - b.data.order);
+const featuredCase = caseStudies[0];
+
+const fmt = (d: Date) =>
+  d.toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' });
 ---
 
 <BaseLayout
@@ -17,9 +26,9 @@ const caseStudies = (await getCollection('caseStudies'))
   active="home"
 >
   <Hero
-    headline="Software Engineer &amp;"
-    headlineEm="Interactive Designer."
-    tag="Sean Yalda · Los Angeles"
+    headline="Twenty years of"
+    headlineEm="shipped software."
+    tag="Sean Yalda · Engineer &amp; designer · Los Angeles"
     bgImage="/assets/img/bryson-canyon.webp"
     bgCredit="Photography — <em>Sean Yalda</em> · Bryce Canyon, Utah"
     contact={[
@@ -28,30 +37,57 @@ const caseStudies = (await getCollection('caseStudies'))
       { href: 'https://github.com/Seanathon', label: 'GitHub', external: true },
       { href: 'https://www.instagram.com/sleepysensei/', label: 'Instagram', external: true },
     ]}
-    cta={{ href: '/work', label: 'View Work' }}
+    cta={{ href: '/work', label: 'See the work' }}
   />
 
   <Statement
-    headline="Information architecture,<br>product, <em>&amp; growth.</em>"
+    headline="The designer and<br>the engineer are<br><em>the same person.</em>"
   >
     <p>
-      Using design and technology, I've helped teams across the country take their objectives and translate them into growth strategies that were researched, executed, measured, and ultimately achieved through impactful brands, products, and services.
+      Startups, agencies, a science museum, a city government, an esports league through three funding rounds — I was the designer, the engineer, and usually both.
+    </p>
+    <p>
+      These days the center of gravity is agent systems and web infrastructure: tools like Breaking Changes and Board, shipped end to end, then written up honestly — including the parts that stung.
     </p>
   </Statement>
 
-  <Section id="work" label="Selected Work" display="Recent.">
-    <div class="work-grid">
-      {caseStudies.map((cs, i) => (
-        <WorkCard
-          num={String(i + 1).padStart(2, '0')}
-          company={cs.data.company ?? cs.data.title}
-          title={`${cs.data.role.replace(/\.$/, '')} · ${cs.data.period}`}
-          description={cs.data.summary}
-          href={`/work/${cs.id}`}
-          slug={cs.id}
-        />
-      ))}
-    </div>
+  <Section id="latest" label="What's new" display="Now.">
+    <LatestFeed
+      feature={{
+        kind: `Essay · ${fmt(latest.data.date)}`,
+        title: latest.data.title,
+        titleEm: latest.data.titleEm,
+        deck: latest.data.deck,
+        href: `/articles/${latest.id}`,
+        cta: 'Read the essay',
+      }}
+      rows={[
+        {
+          kind: 'Product · Live',
+          title: 'Breaking Changes',
+          desc: 'Fifty releases of changelog into an upgrade plan. Web app, CLI, and a Claude Code skill that needs no API key.',
+          href: 'https://breakingchanges.ai',
+          external: true,
+        },
+        {
+          kind: 'Product · v0.2 alpha',
+          title: 'Board',
+          desc: 'Self-hosted curation where the AI composes the board — and it stays useful with the AI off.',
+          href: 'https://github.com/Seanathon/board',
+          external: true,
+        },
+        {
+          kind: 'Case study',
+          title: featuredCase.data.company ?? featuredCase.data.title,
+          desc: featuredCase.data.summary,
+          href: `/work/${featuredCase.id}`,
+        },
+      ]}
+      more={[
+        { href: '/work', label: 'All work' },
+        { href: '/articles', label: 'All articles' },
+      ]}
+    />
   </Section>
 
   <PhotoStrip

@@ -1,0 +1,72 @@
+---
+// Home page "Now" feed: one featured item (the newest thing on the site)
+// plus a short stack of rows pointing at products and case studies.
+interface Row {
+  kind: string;
+  title: string;
+  desc: string;
+  href: string;
+  external?: boolean;
+}
+interface Props {
+  feature: {
+    kind: string;
+    title: string;
+    titleEm?: string;
+    deck: string;
+    href: string;
+    cta: string;
+  };
+  rows: Row[];
+  more?: { href: string; label: string }[];
+}
+const { feature, rows, more = [] } = Astro.props;
+---
+
+<div class="latest">
+  <a href={feature.href} class="latest-feature reveal">
+    <span class="latest-kind">{feature.kind}</span>
+    <span class="latest-feature-title">
+      {feature.title}
+      {feature.titleEm && <><br /><em>{feature.titleEm}</em></>}
+    </span>
+    <p class="latest-feature-deck">{feature.deck}</p>
+    <span class="latest-cta">
+      {feature.cta}
+      <svg width="14" height="9" viewBox="0 0 14 9" fill="none" aria-hidden="true">
+        <path d="M1 4.5h12M9 1l4 3.5L9 8" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </span>
+  </a>
+
+  <div class="latest-side">
+    <ul class="latest-rows">
+      {rows.map(r => (
+        <li class="reveal">
+          <a
+            href={r.href}
+            class="latest-row"
+            target={r.external ? '_blank' : undefined}
+            rel={r.external ? 'noopener' : undefined}
+          >
+            <span class="latest-kind">{r.kind}</span>
+            <span class="latest-row-title">{r.title}</span>
+            <span class="latest-row-desc">{r.desc}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+    {more.length > 0 && (
+      <div class="latest-more">
+        {more.map(m => (
+          <a href={m.href}>
+            {m.label}
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+              <path d="M2 8L8 2M8 2H3M8 2v5" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+            </svg>
+          </a>
+        ))}
+      </div>
+    )}
+  </div>
+</div>
