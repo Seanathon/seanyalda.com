@@ -1,50 +1,33 @@
 ---
 title: Distribution through
 titleEm: the agent.
-deck: Breaking Changes ships as a web app, a CLI, and a Claude Code skill — and the skill is the primary interface. The decision that made that possible also deleted the hardest engineering in the product.
+deck: Breaking Changes is a web app, a CLI, and a Claude Code skill. The skill is 382 lines, and it's the best version of the product. That wasn't the plan.
 date: 2026-07-04
 topic: Agent systems
 ---
 
-[Breaking Changes](https://breakingchanges.ai) does one narrow thing: give it a GitHub dependency and two versions, and it turns everything published between them — often fifty-plus releases of changelog — into a tech-debt spec a team can execute. Which APIs broke, how risky the jump is, whether to stop at an intermediate version because a security fix landed there. It ships three ways: a web app at breakingchanges.ai, a zero-dependency CLI, and a [Claude Code skill](https://github.com/Seanathon/breakingchanges/tree/main/skill/breaking-changes).
+[Breaking Changes](https://breakingchanges.ai) started as a web app, the way everything I build starts as a web app. Paste a GitHub repo, pick the version you're on and the version you're scared of, and it collapses everything between them — fifty releases of changelog, sometimes more — into an upgrade plan a team can actually run. The first commit is from April 2025, and it claims the repo is "in a working state." That was optimistic.
 
-The decision this essay is about: **the skill is the primary interface.** The web app — the thing with a domain, a UI, and by far the most engineering hours — is the demo. That ordering wasn't the plan. It fell out of a key-custody problem.
+The app is free, and free tools can't pay for inference. So it's bring-your-own-key: you paste a key from OpenAI, Anthropic, Google, or Mistral, and you pay your provider directly for what the analysis costs. Which meant strangers' API keys were now passing through my code, and handling that properly became the most careful engineering in the product. Keys default to `sessionStorage` and die with the tab. Persisting one is an opt-in toggle, per provider, cleared after 24 hours of inactivity. The server is a transit proxy: it forwards your `Authorization` header to the provider you picked and forgets it. Error logs strip known key prefixes before they're written, because something will eventually crash mid-request and a stack trace shouldn't be worth money.
 
-## The custody problem
+All of that protects a credential that's in flight for maybe thirty seconds. None of it is the product. It's rent: the cost of borrowing someone else's intelligence.
 
-The web app is bring-your-own-key. There's no account, no database, and no funded inference on my side; you paste a key from OpenAI, Anthropic, Google, or Mistral, and you pay your provider directly. Doing that responsibly turned into the most delicate engineering in the product: keys default to `sessionStorage` and die with the tab; persisting one is an opt-in per provider, auto-cleared after 24 hours of inactivity; the server is a transit-only proxy that forwards your `Authorization` header to the provider you chose and discards it; error logs strip known key prefixes before they're written. All of it exists to protect a credential for the thirty seconds it's in flight.
+Then in June I finally asked the question I should have asked in April 2025. Who needs an upgrade plan, and where are they sitting when they need it? In a terminal, inside the project that's about to break. And these days there's a decent chance a coding agent is open in that terminal: an authenticated, already-paid-for model, sitting in the exact codebase the plan is for.
 
-None of that machinery is the product. It's the tax the product pays for having to *borrow* intelligence — the analysis step needs an LLM, and a free tool can't host one.
+So I repackaged the workflow as a [Claude Code skill](https://github.com/Seanathon/breakingchanges/tree/main/skill/breaking-changes). It's two files. `SKILL.md` is 118 lines of instructions; the fetch script is 264 lines of Node with zero dependencies, the same one that backs the CLI. When it runs inside the agent, the custody problem doesn't shrink. It's gone. There's no key to paste, because the agent is the model, and nothing leaves the machine except changelog fetches to `api.github.com`. A year of careful key handling, replaced by a markdown file.
 
-## Where the intelligence already lives
+I know how that sounds. I wrote the key handling.
 
-Then the obvious question, late as usual: who actually needs an upgrade plan, and where are they sitting when they need it? In a terminal, inside the project that needs upgrading — and in 2026, very likely with a coding agent open. That agent is an authenticated, already-paid-for LLM that lives in the exact codebase the spec is for.
-
-So the same workflow shipped as a Claude Code skill: a `SKILL.md` and the same zero-dependency Node script the CLI uses. Run it there and the custody apparatus doesn't get simpler — it disappears. No key to paste, because the calling agent *is* the LLM. No proxy, because nothing leaves the machine except changelog fetches to `api.github.com`. No storage policy, because nothing is stored. About a hundred lines of markdown instructions replaced the most carefully engineered code path in the product.
-
-## The seam was already there
-
-The port cost almost nothing because of a boundary drawn much earlier, for different reasons. The core is deterministic: fetch the releases, resolve the version range, aggregate the bodies, flag the breaking-change markers. It's Node 18 with the built-in `fetch`, zero dependencies, auditable in one sitting. Everything intelligent — turning that aggregate into a spec — sits on the other side of a line.
+The port was cheap because of a line I'd drawn much earlier, for a different reason. Fetching and aggregating changelogs is deterministic — resolve the range, pull the releases, flag the breaking changes — and I kept that half dependency-free so the code touching your key would be small enough to audit in one sitting. That was a trust decision. It turned out to be the distribution seam. The web app plugs a provider call into the intelligent half; the CLI plugs in nothing and emits JSON; the skill plugs in whoever happens to be reading the instructions.
 
 ```bash
-# the deterministic half — the same script backs the CLI and the skill
 node bin/fetch-changelogs.mjs facebook/react --pkg react --json
 ```
 
-That line was originally a trust decision: the part of a BYOK app that touches your key should be small enough to read. It turned out to be the distribution seam. The web app plugs a provider call into the intelligence side. The CLI plugs in nothing and emits JSON. The skill plugs in whoever is reading the instructions.
+Here's the part that stung a little. The skill isn't a lighter version of the web app. It's better. The web app only knows changelogs; it can't see your code, so its advice tops out at well-organized generalities. The agent reads your installed version out of `package.json`, greps for call sites of the API that got removed, and writes action items with your file names in them. I can't ship that in a browser tab at any budget.
 
-## The skill is also just better
+It's not all solved. There's no registry for skills, so installing mine means copying a folder into `~/.claude/skills`, and discovery means hoping an awesome-list maintainer merges your PR. Nothing pins a skill version to a script version. And the script's sharp edges travel with it: GitHub's tag API isn't chronological, so a repo without releases can miss your range entirely, and a security patch back-ported after a later major lands in the wrong slice of the timeline. I wrote all of this into `SKILL.md`, and something strange happens there — the reader of the documentation is the runtime. The doc says to fall back to `git` when the tag window misses, and the model does.
 
-This isn't only about operating cost. The web app is grounded in changelogs and nothing else — it can't see your code, so its advice tops out at well-organized generalities. The agent reads your installed version out of `package.json`, greps the call sites of the API that got removed, and writes action items that reference your files. That's a context advantage you cannot ship in a browser tab, no matter how much engineering you spend.
+For twenty years the question for a developer tool was: how do I get people in front of it? I think the better question now is where the intelligence already lives, and what's the smallest thing you can ship into it. For Breaking Changes the answer was 382 lines. The web app stays; it's the demo you can send as a link. But the best version of this thing I built isn't a website.
 
-## What it doesn't solve
-
-Agent-native distribution is early, and honesty about that belongs in the essay. Discovery is a folder copy — there's no registry; awesome-lists are the channel for now. Nothing pins a skill version to a helper version. And the helper's sharp edges travel with it: GitHub's tag API isn't chronological, so the no-releases fallback is unreliable for huge repos, and a back-ported patch published after a later major can land in the wrong slice of the range.
-
-Those limitations are written into `SKILL.md` — which produces a genuinely new documentation pattern: the reader is the runtime. The model hits the caveat at execution time and routes around it (the doc tells it to fall back to `git` or `gh api` when the tag window misses). Documentation as error handling.
-
-## The inverted question
-
-The default question for a dev tool used to be: how do I get users in front of it? The better question now: **where does the intelligence already live, and what's the smallest artifact I can ship into it?** Here the answer was a page of instructions and a script with no dependencies. The web app stays — it's the on-ramp you can send anyone a link to — but it's the demo of a workflow whose real home is inside the agent.
-
-After twenty years of shipping web products, this is the first time the best version of something I built isn't a website.
+Twenty years in, that's a strange sentence to type. I expect it gets less strange from here.
