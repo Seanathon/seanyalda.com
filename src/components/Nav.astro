@@ -5,16 +5,85 @@ interface Props {
 }
 const { active } = Astro.props;
 const isActive = (key: Page) => active === key;
+
+const links: { key: Page; href: string; label: string }[] = [
+  { key: 'home', href: '/', label: 'Home' },
+  { key: 'work', href: '/work', label: 'Work' },
+  { key: 'articles', href: '/articles', label: 'Articles' },
+  { key: 'about', href: '/about', label: 'About' },
+  { key: 'photography', href: '/photography', label: 'Photography' },
+  { key: 'contact', href: '/contact', label: 'Contact' },
+];
 ---
 
 <nav id="nav">
   <a href="/" class="nav-wordmark">Sean Yalda</a>
   <ul class="nav-links">
-    <li><a href="/" aria-current={isActive('home') ? 'page' : undefined}>Home</a></li>
-    <li><a href="/work" aria-current={isActive('work') ? 'page' : undefined}>Work</a></li>
-    <li><a href="/articles" aria-current={isActive('articles') ? 'page' : undefined}>Articles</a></li>
-    <li><a href="/about" aria-current={isActive('about') ? 'page' : undefined}>About</a></li>
-    <li><a href="/photography" aria-current={isActive('photography') ? 'page' : undefined}>Photography</a></li>
-    <li><a href="/contact" aria-current={isActive('contact') ? 'page' : undefined}>Contact</a></li>
+    {links.map(l => (
+      <li><a href={l.href} aria-current={isActive(l.key) ? 'page' : undefined}>{l.label}</a></li>
+    ))}
   </ul>
+  <button
+    type="button"
+    id="nav-toggle"
+    class="nav-toggle"
+    aria-expanded="false"
+    aria-controls="nav-menu"
+  >
+    <span class="nav-toggle-label">Menu</span>
+    <span class="nav-toggle-glyph" aria-hidden="true"></span>
+  </button>
 </nav>
+
+<div id="nav-menu" class="nav-overlay">
+  <ul class="nav-overlay-links">
+    {links.map((l, i) => (
+      <li style={`--i: ${i}`}>
+        <a href={l.href} aria-current={isActive(l.key) ? 'page' : undefined}>
+          <span class="nav-overlay-num">{String(i + 1).padStart(2, '0')}</span>
+          {l.label}
+        </a>
+      </li>
+    ))}
+  </ul>
+  <div class="nav-overlay-foot">
+    <a href="mailto:seanyalda@pm.me">seanyalda@pm.me</a>
+    <a href="https://github.com/Seanathon" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://linkedin.com/in/sean-yalda" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</div>
+
+<script is:inline data-astro-rerun>
+  (function () {
+    // Fresh page (or view-transition swap) always starts closed.
+    document.documentElement.classList.remove('menu-open');
+
+    const btn = document.getElementById('nav-toggle');
+    const menu = document.getElementById('nav-menu');
+    if (!btn || !menu || btn.dataset.bound) return;
+    btn.dataset.bound = 'true';
+
+    const setOpen = (open) => {
+      btn.setAttribute('aria-expanded', String(open));
+      menu.classList.toggle('open', open);
+      document.documentElement.classList.toggle('menu-open', open);
+      const label = btn.querySelector('.nav-toggle-label');
+      if (label) label.textContent = open ? 'Close' : 'Menu';
+    };
+
+    btn.addEventListener('click', () => setOpen(btn.getAttribute('aria-expanded') !== 'true'));
+    menu.addEventListener('click', (e) => {
+      if (e.target.closest('a')) setOpen(false);
+    });
+
+    // One document-level Escape handler for the whole session; it calls
+    // whatever the current page's setOpen is (rebound on every swap above).
+    window.__navSetOpen = setOpen;
+    if (!window.__navKeyBound) {
+      window.__navKeyBound = true;
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && window.__navSetOpen) window.__navSetOpen(false);
+      });
+    }
+  })();
+</script>
