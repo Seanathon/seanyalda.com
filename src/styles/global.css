@@ -1487,6 +1487,53 @@ footer {
   transform: none;
 }
 
+/* ─── PRODUCT LIST (work page) ────────────────────────── */
+.product-list { list-style: none; margin-top: 48px; }
+.product-item {
+  display: grid;
+  grid-template-columns: minmax(200px, 280px) 1fr auto;
+  gap: 32px;
+  align-items: baseline;
+  padding: 32px 0;
+  border-top: 1px solid var(--border);
+}
+.product-item:last-child { border-bottom: 1px solid var(--border); }
+.product-head { display: flex; flex-direction: column; gap: 6px; }
+.product-name {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--tracking-snug);
+}
+.product-status {
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+.product-desc {
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  opacity: 0.85;
+  max-width: 56ch;
+  margin: 0;
+}
+.product-links { display: flex; gap: 24px; white-space: nowrap; }
+.product-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  font-weight: var(--fw-semibold);
+  color: var(--text);
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity 0.2s, color 0.2s;
+}
+.product-links a:hover { opacity: 1; color: var(--accent); }
+.product-links a svg { opacity: 0.4; }
+
 /* ─── CONTACT FORM ────────────────────────────────────── */
 .contact-grid {
   display: grid;
@@ -1540,6 +1587,8 @@ button.hero-cta:disabled { opacity: 0.6; cursor: default; transform: none; }
 /* ─── RESPONSIVE ──────────────────────────────────────── */
 @media (max-width: 768px) {
   .contact-grid { grid-template-columns: 1fr; gap: 40px; margin-top: 32px; }
+  .product-item { grid-template-columns: 1fr; gap: 12px; padding: 28px 0; }
+  .product-list { margin-top: 32px; }
 
   /* Wordmark + five links can't share one row on phone widths —
      stack the wordmark above the links and let the row wrap. */

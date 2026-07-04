@@ -9,11 +9,40 @@ import PhotoStrip from '../../components/PhotoStrip.astro';
 const caseStudies = (await getCollection('caseStudies'))
   .filter(cs => !cs.data.draft)
   .sort((a, b) => a.data.order - b.data.order);
+
+// Shipped, self-initiated products. Entries graduate to full case studies
+// (and out of this list) once their write-ups are published.
+const products = [
+  {
+    name: 'Breaking Changes',
+    status: 'Live · Open source',
+    description:
+      'Plan major-version upgrades in minutes: aggregated breaking changes for any GitHub dependency, analyzed by your own LLM. Web app, zero-dependency CLI, and a Claude Code skill.',
+    links: [
+      { href: 'https://breakingchanges.ai', label: 'breakingchanges.ai' },
+      { href: 'https://github.com/Seanathon/breakingchanges', label: 'GitHub' },
+    ],
+  },
+  {
+    name: 'Board',
+    status: 'v0.2 alpha · Open source',
+    description:
+      'Self-hosted curation where AI composes opinionated boards for whatever you collect. Single-node, SQLite-portable, and built to stay beautiful with AI turned off.',
+    links: [{ href: 'https://github.com/Seanathon/board', label: 'GitHub' }],
+  },
+  {
+    name: 'The Cube',
+    status: 'Live · HYWN',
+    description:
+      'A 4,000-year-old imagining ritual as an async web experience — play it, and receive an oil painting of what you pictured alongside a personal interpretation.',
+    links: [{ href: 'https://cube.hywn.com', label: 'cube.hywn.com' }],
+  },
+];
 ---
 
 <BaseLayout
   title="Work — Sean Yalda"
-  description="Selected work by Sean Yalda — case studies from PlayVS, the Alumni Association of the University of Michigan, and GraphQL Blueprint."
+  description="Selected work by Sean Yalda — client case studies plus shipped products: Breaking Changes, Board, and The Cube."
   active="work"
   footerDisplay="Building at the<br>intersection of<br>product, design<br>&amp; code."
 >
@@ -51,6 +80,30 @@ const caseStudies = (await getCollection('caseStudies'))
         placeholder
       />
     </div>
+  </Section>
+
+  <Section label="Shipped & self-initiated" display="Products.">
+    <ul class="product-list">
+      {products.map(p => (
+        <li class="product-item reveal">
+          <div class="product-head">
+            <span class="product-name">{p.name}</span>
+            <span class="product-status">{p.status}</span>
+          </div>
+          <p class="product-desc">{p.description}</p>
+          <div class="product-links">
+            {p.links.map(l => (
+              <a href={l.href} target="_blank" rel="noopener">
+                {l.label}
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+                  <path d="M2 8L8 2M8 2H3M8 2v5" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+                </svg>
+              </a>
+            ))}
+          </div>
+        </li>
+      ))}
+    </ul>
   </Section>
 
   <PhotoStrip
