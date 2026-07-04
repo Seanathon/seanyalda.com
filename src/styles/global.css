@@ -1584,11 +1584,187 @@ button.hero-cta:disabled { opacity: 0.6; cursor: default; transform: none; }
 /* Thanks page has no hero — clear the fixed nav and hold the footer down. */
 .thanks-section { padding-top: 180px; min-height: 60vh; }
 
+/* ─── ARTICLES (index list) ───────────────────────────── */
+.article-list { list-style: none; margin-top: 48px; }
+.article-item { border-top: 1px solid var(--border); }
+.article-item:last-child { border-bottom: 1px solid var(--border); }
+.article-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 200px) 1fr auto;
+  gap: 32px;
+  align-items: baseline;
+  padding: 32px 0;
+  color: var(--text);
+  text-decoration: none;
+}
+.article-date {
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--earth);
+}
+.article-row-title {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-snug);
+  transition: color 0.2s;
+}
+.article-row-title em { color: var(--pop); }
+a.article-row:hover .article-row-title { color: var(--accent); }
+.article-row-deck {
+  margin-top: 10px;
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  color: rgba(var(--text-rgb), 0.78);
+  max-width: 65ch;
+}
+.article-row-deck a { color: var(--accent); text-decoration: none; }
+.article-row-deck a:hover { text-decoration: underline; }
+.article-topic {
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  opacity: 0.55;
+  white-space: nowrap;
+}
+.article-item--placeholder { opacity: 0.65; }
+.article-item--placeholder .article-row-title { font-size: var(--fs-lg); }
+
+/* ─── ARTICLE (essay page) ────────────────────────────── */
+.article-head {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 200px 24px 0;
+}
+.article-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--earth);
+}
+.article-title {
+  margin-top: 24px;
+  font-size: var(--fs-display);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+}
+.article-title em { color: var(--pop); }
+.article-deck {
+  margin-top: 24px;
+  font-size: var(--fs-md);
+  line-height: var(--lh-snug);
+  color: rgba(var(--text-rgb), 0.78);
+  max-width: 56ch;
+}
+
+.article-body {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 56px 24px 128px;
+}
+.article-body p {
+  font-size: var(--fs-base);
+  line-height: var(--lh-loose);
+  color: rgba(var(--text-rgb), 0.85);
+}
+.article-body p + p { margin-top: 1.5em; }
+.article-body h2 {
+  margin-top: 64px;
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-snug);
+  color: var(--text);
+}
+.article-body h2 + p { margin-top: 20px; }
+.article-body h3 {
+  margin-top: 48px;
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-snug);
+}
+.article-body h3 + p { margin-top: 16px; }
+.article-body a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: rgba(var(--accent-rgb), 0.4);
+  text-underline-offset: 3px;
+}
+.article-body strong { font-weight: var(--fw-medium); color: var(--text); }
+.article-body blockquote {
+  margin: 32px 0;
+  padding-left: 20px;
+  border-left: 2px solid var(--border);
+}
+.article-body blockquote p { color: rgba(var(--text-rgb), 0.7); }
+.article-body ul,
+.article-body ol { padding-left: 24px; margin-top: 1em; }
+.article-body li {
+  line-height: var(--lh-normal);
+  color: rgba(var(--text-rgb), 0.85);
+  margin-top: 8px;
+}
+.article-body code {
+  font-family: 'Geist Mono', ui-monospace, 'SF Mono', monospace;
+  font-size: 0.85em;
+}
+.article-body :not(pre) > code {
+  background: rgba(var(--text-rgb), 0.07);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.article-body pre {
+  margin: 36px 0;
+  padding: 20px 24px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: var(--fs-sm);
+  line-height: 1.7;
+}
+.article-body pre code { background: none; padding: 0; font-size: inherit; }
+.article-body figure { margin: 36px 0; }
+.article-body figcaption {
+  margin-top: 12px;
+  font-size: var(--fs-sm);
+  color: var(--earth);
+}
+
+/* Shiki (`css-variables` theme) → site tokens. Code blocks re-theme with the
+   palette — same principle as everything else: theme is content, not chrome. */
+:root {
+  --astro-code-foreground: rgba(var(--text-rgb), 0.9);
+  --astro-code-background: rgba(var(--text-rgb), 0.045);
+  --astro-code-token-constant: var(--accent);
+  --astro-code-token-string: var(--cream);
+  --astro-code-token-comment: var(--earth);
+  --astro-code-token-keyword: var(--accent);
+  --astro-code-token-parameter: rgba(var(--text-rgb), 0.75);
+  --astro-code-token-function: rgba(var(--text-rgb), 0.95);
+  --astro-code-token-string-expression: var(--cream);
+  --astro-code-token-punctuation: rgba(var(--text-rgb), 0.55);
+  --astro-code-token-link: var(--accent);
+  /* Pre-Astro-5 variable names, kept as aliases. */
+  --astro-code-color-text: rgba(var(--text-rgb), 0.9);
+  --astro-code-color-background: rgba(var(--text-rgb), 0.045);
+}
+
 /* ─── RESPONSIVE ──────────────────────────────────────── */
 @media (max-width: 768px) {
   .contact-grid { grid-template-columns: 1fr; gap: 40px; margin-top: 32px; }
   .product-item { grid-template-columns: 1fr; gap: 12px; padding: 28px 0; }
   .product-list { margin-top: 32px; }
+
+  .article-list { margin-top: 32px; }
+  .article-row { grid-template-columns: 1fr; gap: 10px; padding: 28px 0; }
+  .article-topic { display: none; }
+  .article-head { padding-top: 150px; }
+  .article-body { padding-top: 40px; padding-bottom: 96px; }
 
   /* Wordmark + five links can't share one row on phone widths —
      stack the wordmark above the links and let the row wrap. */

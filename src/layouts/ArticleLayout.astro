@@ -1,0 +1,53 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  data: {
+    title: string;
+    titleEm?: string;
+    deck: string;
+    date: Date;
+    topic: string;
+  };
+  minutes: number;
+}
+const { data, minutes } = Astro.props;
+
+const plainTitle = [data.title, data.titleEm].filter(Boolean).join(' ').replace(/\.$/, '');
+const dateLabel = data.date.toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+
+const footerLinks = [
+  { href: '/articles', label: 'All articles' },
+  { href: '/work', label: 'Work' },
+  { href: '/contact', label: 'Contact' },
+  { href: 'https://linkedin.com/in/sean-yalda', label: 'LinkedIn', external: true },
+];
+---
+
+<BaseLayout
+  title={`${plainTitle} — Sean Yalda`}
+  description={data.deck}
+  active="articles"
+  ogType="article"
+  footerDisplay="One essay<br>a month.<br><em>Decisions only.</em>"
+  footerLinks={footerLinks}
+>
+  <section class="article-head">
+    <p class="article-eyebrow reveal">
+      <time datetime={data.date.toISOString().slice(0, 10)}>{dateLabel}</time>
+      <span aria-hidden="true">·</span>
+      <span>{data.topic}</span>
+      <span aria-hidden="true">·</span>
+      <span>{minutes} min read</span>
+    </p>
+    <h1 class="article-title reveal">
+      {data.title}
+      {data.titleEm && <><br /><em>{data.titleEm}</em></>}
+    </h1>
+    <p class="article-deck reveal">{data.deck}</p>
+  </section>
+
+  <article class="article-body">
+    <slot />
+  </article>
+</BaseLayout>

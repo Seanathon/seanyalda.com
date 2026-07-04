@@ -17,7 +17,7 @@ const photoPool = (photosData as Array<{ id: string; src: string; width: number;
     fy: p.focus?.y ?? 0.4,
   }));
 
-type Page = 'home' | 'work' | 'about' | 'photography' | 'contact';
+type Page = 'home' | 'work' | 'articles' | 'about' | 'photography' | 'contact';
 
 interface Props {
   title: string;
@@ -27,6 +27,7 @@ interface Props {
   footerCopy?: string;
   footerLinks?: { href: string; label: string; external?: boolean }[];
   ogImage?: string;
+  ogType?: 'website' | 'article';
 }
 
 const {
@@ -37,6 +38,7 @@ const {
   footerCopy,
   footerLinks,
   ogImage = '/assets/img/bryson-canyon.webp',
+  ogType = 'website',
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
@@ -53,9 +55,10 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content={new URL(ogImage, Astro.site).toString()} />
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content={ogType} />
   <meta property="og:url" content={canonical.toString()} />
   <meta name="twitter:card" content="summary_large_image" />
+  <link rel="alternate" type="application/rss+xml" title="Sean Yalda — Articles" href={new URL('/rss.xml', Astro.site).toString()} />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

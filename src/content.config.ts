@@ -23,6 +23,20 @@ const caseStudies = defineCollection({
   }),
 });
 
+const articles = defineCollection({
+  loader: glob({ pattern: '**/*.mdx', base: './src/content/articles' }),
+  schema: z.object({
+    title: z.string(),
+    titleEm: z.string().optional(),
+    deck: z.string(),
+    date: z.coerce.date(),
+    updated: z.coerce.date().optional(),
+    topic: z.string(),
+    heroImage: z.string().optional(),
+    draft: z.boolean().optional().default(false),
+  }),
+});
+
 const photos = defineCollection({
   loader: file('./src/data/photos.json'),
   schema: z.object({
@@ -50,4 +64,4 @@ const photos = defineCollection({
   }),
 });
 
-export const collections = { caseStudies, photos };
+export const collections = { caseStudies, articles, photos };

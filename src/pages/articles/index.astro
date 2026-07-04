@@ -1,0 +1,74 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import PhotoStrip from '../../components/PhotoStrip.astro';
+
+const posts = (await getCollection('articles'))
+  .filter(p => !p.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const fmt = (d: Date) =>
+  d.toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' });
+---
+
+<BaseLayout
+  title="Articles — Sean Yalda"
+  description="Decision essays by Sean Yalda on agent systems, key custody, and production web engineering — why each choice was made and what it cost."
+  active="articles"
+>
+  <Hero
+    headline="Decisions,"
+    headlineEm="not tutorials."
+    tag="Articles · One essay a month"
+    bgImage="/assets/img/cave.webp"
+    bgCredit="Photography — <em>Sean Yalda</em>"
+    contact={[
+      { href: 'mailto:seanyalda@pm.me', label: 'seanyalda@pm.me' },
+      { href: '/rss.xml', label: 'RSS' },
+      { href: 'https://github.com/Seanathon', label: 'GitHub', external: true },
+    ]}
+    short
+  />
+
+  <Section label="Writing" display="Articles.">
+    <ul class="article-list">
+      {posts.map(p => (
+        <li class="article-item reveal">
+          <a href={`/articles/${p.id}`} class="article-row">
+            <time class="article-date" datetime={p.data.date.toISOString().slice(0, 10)}>
+              {fmt(p.data.date)}
+            </time>
+            <div class="article-main">
+              <h3 class="article-row-title">
+                {p.data.title}
+                {p.data.titleEm && <> <em>{p.data.titleEm}</em></>}
+              </h3>
+              <p class="article-row-deck">{p.data.deck}</p>
+            </div>
+            <span class="article-topic">{p.data.topic}</span>
+          </a>
+        </li>
+      ))}
+      <li class="article-item article-item--placeholder reveal">
+        <div class="article-row">
+          <span class="article-date" aria-hidden="true">+</span>
+          <div class="article-main">
+            <h3 class="article-row-title">More in the queue</h3>
+            <p class="article-row-deck">
+              One decision essay a month — agent systems, key custody, trust boundaries.
+              <a href="/rss.xml">Subscribe via RSS</a>.
+            </p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </Section>
+
+  <PhotoStrip
+    src="/assets/img/iceland-farms.webp"
+    alt="Farmland in Iceland"
+    location="Iceland"
+  />
+</BaseLayout>

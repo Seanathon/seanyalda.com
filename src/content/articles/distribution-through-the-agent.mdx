@@ -1,0 +1,50 @@
+---
+title: Distribution through
+titleEm: the agent.
+deck: Breaking Changes ships as a web app, a CLI, and a Claude Code skill — and the skill is the primary interface. The decision that made that possible also deleted the hardest engineering in the product.
+date: 2026-07-04
+topic: Agent systems
+---
+
+[Breaking Changes](https://breakingchanges.ai) does one narrow thing: give it a GitHub dependency and two versions, and it turns everything published between them — often fifty-plus releases of changelog — into a tech-debt spec a team can execute. Which APIs broke, how risky the jump is, whether to stop at an intermediate version because a security fix landed there. It ships three ways: a web app at breakingchanges.ai, a zero-dependency CLI, and a [Claude Code skill](https://github.com/Seanathon/breakingchanges/tree/main/skill/breaking-changes).
+
+The decision this essay is about: **the skill is the primary interface.** The web app — the thing with a domain, a UI, and by far the most engineering hours — is the demo. That ordering wasn't the plan. It fell out of a key-custody problem.
+
+## The custody problem
+
+The web app is bring-your-own-key. There's no account, no database, and no funded inference on my side; you paste a key from OpenAI, Anthropic, Google, or Mistral, and you pay your provider directly. Doing that responsibly turned into the most delicate engineering in the product: keys default to `sessionStorage` and die with the tab; persisting one is an opt-in per provider, auto-cleared after 24 hours of inactivity; the server is a transit-only proxy that forwards your `Authorization` header to the provider you chose and discards it; error logs strip known key prefixes before they're written. All of it exists to protect a credential for the thirty seconds it's in flight.
+
+None of that machinery is the product. It's the tax the product pays for having to *borrow* intelligence — the analysis step needs an LLM, and a free tool can't host one.
+
+## Where the intelligence already lives
+
+Then the obvious question, late as usual: who actually needs an upgrade plan, and where are they sitting when they need it? In a terminal, inside the project that needs upgrading — and in 2026, very likely with a coding agent open. That agent is an authenticated, already-paid-for LLM that lives in the exact codebase the spec is for.
+
+So the same workflow shipped as a Claude Code skill: a `SKILL.md` and the same zero-dependency Node script the CLI uses. Run it there and the custody apparatus doesn't get simpler — it disappears. No key to paste, because the calling agent *is* the LLM. No proxy, because nothing leaves the machine except changelog fetches to `api.github.com`. No storage policy, because nothing is stored. About a hundred lines of markdown instructions replaced the most carefully engineered code path in the product.
+
+## The seam was already there
+
+The port cost almost nothing because of a boundary drawn much earlier, for different reasons. The core is deterministic: fetch the releases, resolve the version range, aggregate the bodies, flag the breaking-change markers. It's Node 18 with the built-in `fetch`, zero dependencies, auditable in one sitting. Everything intelligent — turning that aggregate into a spec — sits on the other side of a line.
+
+```bash
+# the deterministic half — the same script backs the CLI and the skill
+node bin/fetch-changelogs.mjs facebook/react --pkg react --json
+```
+
+That line was originally a trust decision: the part of a BYOK app that touches your key should be small enough to read. It turned out to be the distribution seam. The web app plugs a provider call into the intelligence side. The CLI plugs in nothing and emits JSON. The skill plugs in whoever is reading the instructions.
+
+## The skill is also just better
+
+This isn't only about operating cost. The web app is grounded in changelogs and nothing else — it can't see your code, so its advice tops out at well-organized generalities. The agent reads your installed version out of `package.json`, greps the call sites of the API that got removed, and writes action items that reference your files. That's a context advantage you cannot ship in a browser tab, no matter how much engineering you spend.
+
+## What it doesn't solve
+
+Agent-native distribution is early, and honesty about that belongs in the essay. Discovery is a folder copy — there's no registry; awesome-lists are the channel for now. Nothing pins a skill version to a helper version. And the helper's sharp edges travel with it: GitHub's tag API isn't chronological, so the no-releases fallback is unreliable for huge repos, and a back-ported patch published after a later major can land in the wrong slice of the range.
+
+Those limitations are written into `SKILL.md` — which produces a genuinely new documentation pattern: the reader is the runtime. The model hits the caveat at execution time and routes around it (the doc tells it to fall back to `git` or `gh api` when the tag window misses). Documentation as error handling.
+
+## The inverted question
+
+The default question for a dev tool used to be: how do I get users in front of it? The better question now: **where does the intelligence already live, and what's the smallest artifact I can ship into it?** Here the answer was a page of instructions and a script with no dependencies. The web app stays — it's the on-ramp you can send anyone a link to — but it's the demo of a workflow whose real home is inside the agent.
+
+After twenty years of shipping web products, this is the first time the best version of something I built isn't a website.
