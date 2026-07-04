@@ -42,6 +42,7 @@ import Section from '../../components/Section.astro';
         class="reveal"
       >
         <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="subject" data-remove-prefix value="New message via seanyalda.com (%{submissionId})" />
         <p class="cf-hp" aria-hidden="true">
           <label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
         </p>
