@@ -1,0 +1,105 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+---
+
+<BaseLayout
+  title="Contact — Sean Yalda"
+  description="Get in touch with Sean Yalda — software engineer and interactive designer based in Los Angeles."
+  active="contact"
+  footerDisplay="Let's build<br>something<br><em>worth keeping.</em>"
+  ogImage="/assets/img/iceland-farms.webp"
+>
+  <Hero
+    headline="Say"
+    headlineEm="hello."
+    tag="Los Angeles · Open to interesting problems"
+    bgImage="/assets/img/iceland-farms.webp"
+    bgCredit="Photography — <em>Sean Yalda</em> · Iceland"
+    contact={[
+      { href: 'mailto:seanyalda@pm.me', label: 'seanyalda@pm.me' },
+      { href: 'https://linkedin.com/in/sean-yalda', label: 'LinkedIn', external: true },
+      { href: 'https://github.com/Seanathon', label: 'GitHub', external: true },
+    ]}
+    short
+  />
+
+  <Section label="Contact" display="Get in touch.">
+    <div class="contact-grid">
+      <div class="contact-intro reveal">
+        <p>A project, a role, a question about something I've built — write me. I read everything.</p>
+        <p>Prefer your own mail client? <a href="mailto:seanyalda@pm.me">seanyalda@pm.me</a> works just as well.</p>
+      </div>
+
+      <form
+        name="contact"
+        method="POST"
+        action="/contact/thanks"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        id="contact-form"
+        class="reveal"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <p class="cf-hp" aria-hidden="true">
+          <label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+        </p>
+        <div class="cf-field">
+          <label for="cf-name">Name</label>
+          <input id="cf-name" name="name" type="text" required autocomplete="name" />
+        </div>
+        <div class="cf-field">
+          <label for="cf-email">Email</label>
+          <input id="cf-email" name="email" type="email" required autocomplete="email" />
+        </div>
+        <div class="cf-field">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="6" required></textarea>
+        </div>
+        <div class="cf-actions">
+          <button type="submit" class="hero-cta">
+            Send message
+            <svg width="14" height="9" viewBox="0 0 14 9" fill="none" aria-hidden="true">
+              <path d="M1 4.5h12M9 1l4 3.5L9 8" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <p class="cf-status" id="cf-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+  </Section>
+</BaseLayout>
+
+<script is:inline data-astro-rerun>
+  // Progressive enhancement: AJAX submit with inline status. Without JS the
+  // form POSTs normally and Netlify redirects to /contact/thanks (action attr).
+  (function () {
+    const form = document.getElementById('contact-form');
+    if (!form || form.dataset.bound) return;
+    form.dataset.bound = 'true';
+    const status = document.getElementById('cf-status');
+    const btn = form.querySelector('button[type="submit"]');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      btn.disabled = true;
+      status.textContent = 'Sending…';
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString(),
+      })
+        .then((res) => {
+          if (!res.ok) throw new Error(String(res.status));
+          form.reset();
+          status.textContent = 'Sent. Thanks — I’ll get back to you soon.';
+        })
+        .catch(() => {
+          status.textContent = 'Something went wrong — email me at seanyalda@pm.me instead.';
+        })
+        .finally(() => {
+          btn.disabled = false;
+        });
+    });
+  })();
+</script>

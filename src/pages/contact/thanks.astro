@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/Section.astro';
+---
+
+<BaseLayout
+  title="Message sent — Sean Yalda"
+  description="Your message is on its way."
+  active="contact"
+>
+  <Section label="Contact" display="Sent." class="thanks-section">
+    <div class="contact-intro reveal">
+      <p>Your message is on its way. Thanks for writing — I'll get back to you soon.</p>
+      <p>
+        <a href="/" class="hero-cta">
+          Back home
+          <svg width="14" height="9" viewBox="0 0 14 9" fill="none" aria-hidden="true">
+            <path d="M1 4.5h12M9 1l4 3.5L9 8" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </p>
+    </div>
+  </Section>
+</BaseLayout>
