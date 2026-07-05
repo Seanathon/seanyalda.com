@@ -30,7 +30,7 @@ outroBody: "GraphQL Blueprint has been used by several hundred engineers, approx
 
 import CaseSection from '../../components/CaseSection.astro';
 import CasePoints from '../../components/CasePoints.astro';
-import CaseGallery from '../../components/CaseGallery.astro';
+import CaseCarousel from '../../components/CaseCarousel.astro';
 
 <CaseSection eyebrow="Context" title="GraphQL is powerful. Its setup is not.">
   GraphQL is a query and data-manipulation language that lets developers build apps faster than ever — but its setup is still unwieldy. Adding it to a project with a lot of data takes time. We wanted to create an app that generates the repetitive, tedious side of GraphQL effortlessly, while still giving developers the full power of the language. We built it by iterating on GraphQL Designer, whose team open-sourced their code in 2018 — Blueprint wouldn't exist without them.
@@ -47,11 +47,14 @@ import CaseGallery from '../../components/CaseGallery.astro';
   ]} />
 </CaseSection>
 
-<CaseGallery
-  hero={{ src: '/assets/img/work/graphql-bp-databases.webp', alt: 'MongoDB, PostgreSQL, and MySQL databases modeled side by side in one GraphQL Blueprint project' }}
-  thumbs={[
-    { src: '/assets/img/work/graphql-bp-mvp-sketch.webp', alt: 'Wireframe sketch of the MVP flow, with multi-database schema marked as the number-one feature' },
-    { src: '/assets/img/work/graphql-bp-splash.webp', alt: 'GraphQL Blueprint beta splash screen' }
+<CaseCarousel
+  slides={[
+    { src: '/assets/img/work/graphql-bp-mvp-sketch.webp', alt: 'Wireframe sketch of the MVP flow, with multi-database schema marked as the number-one feature', caption: 'MVP priorities, sketched — multi-database schema circled as the #1 feature.' },
+    { src: '/assets/img/work/graphql-bp-databases.webp', alt: 'MongoDB, PostgreSQL, and MySQL databases modeled side by side in one GraphQL Blueprint project', caption: 'MongoDB, PostgreSQL, and MySQL modeled in a single project.' },
+    { src: '/assets/img/work/graphql-bp-schema-editor.webp', alt: 'Table editor with the Add Field panel: type, required, unique, and relation controls', caption: 'Field-level editing — types, required, unique, and relations.' },
+    { src: '/assets/img/work/graphql-bp-tree-view.webp', alt: 'D3 tree view of a modeled schema, from the GraphQL endpoint down to databases, tables, and typed fields', caption: 'The D3 tree view — one schema, endpoint down to typed fields.' },
+    { src: '/assets/img/work/graphql-bp-code-preview.webp', alt: 'Realtime code preview: Mongoose schemas alongside generated GraphQL types, root queries, and mutations', caption: 'Realtime preview — Mongoose schemas, GraphQL types, client queries.' },
+    { src: '/assets/img/work/graphql-bp-splash.webp', alt: 'GraphQL Blueprint beta splash screen', caption: 'The beta release, July 2021.' }
   ]}
 />
 
@@ -65,14 +68,6 @@ import CaseGallery from '../../components/CaseGallery.astro';
     "Minimal interface — the schema is the star, not the chrome."
   ]} />
 </CaseSection>
-
-<CaseGallery
-  hero={{ src: '/assets/img/work/graphql-bp-tree-view.webp', alt: 'D3 tree view of a modeled schema, from the GraphQL endpoint down to databases, tables, and typed fields' }}
-  thumbs={[
-    { src: '/assets/img/work/graphql-bp-schema-editor.webp', alt: 'Table editor with the Add Field panel: type, required, unique, and relation controls' },
-    { src: '/assets/img/work/graphql-bp-code-preview.webp', alt: 'Realtime code preview: Mongoose schemas alongside generated GraphQL types, root queries, and mutations' }
-  ]}
-/>
 
 <CaseSection variant="cream" eyebrow="Backend engineering" title="Parsing algorithms that don't block the thread.">
   Parsing algorithms dynamically generate deeply nested typed code structures without blocking the main thread. Unit test coverage with Jest. CI/CD to AWS EC2 via CircleCI. The whole thing is built so that the moment a developer hits "export," they get artifacts ready to run.

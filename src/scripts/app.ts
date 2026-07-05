@@ -77,6 +77,32 @@ function init() {
     });
   });
 
+  // Case-study carousels
+  document.querySelectorAll<HTMLElement>('[data-carousel]').forEach(root => {
+    const imgs = Array.from(root.querySelectorAll<HTMLImageElement>('[data-carousel-img]'));
+    const thumbs = Array.from(root.querySelectorAll<HTMLButtonElement>('[data-carousel-thumb]'));
+    const caption = root.querySelector<HTMLElement>('[data-carousel-caption]');
+    const counter = root.querySelector<HTMLElement>('[data-carousel-counter]');
+    const pad = (n: number) => String(n).padStart(2, '0');
+    let idx = 0;
+
+    const show = (n: number) => {
+      idx = (n + imgs.length) % imgs.length;
+      imgs.forEach((im, i) => im.classList.toggle('is-active', i === idx));
+      thumbs.forEach((t, i) => t.classList.toggle('is-active', i === idx));
+      if (caption) caption.textContent = imgs[idx].dataset.caption || '';
+      if (counter) counter.textContent = `${pad(idx + 1)} / ${pad(imgs.length)}`;
+    };
+
+    thumbs.forEach((t, i) => t.addEventListener('click', () => show(i), { signal }));
+    root.querySelector('[data-carousel-prev]')?.addEventListener('click', () => show(idx - 1), { signal });
+    root.querySelector('[data-carousel-next]')?.addEventListener('click', () => show(idx + 1), { signal });
+    root.addEventListener('keydown', (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') show(idx - 1);
+      if (e.key === 'ArrowRight') show(idx + 1);
+    }, { signal });
+  });
+
   // Toolbar popovers
   const tbBtns = document.querySelectorAll<HTMLButtonElement>('[data-popover]');
   const popovers = document.querySelectorAll<HTMLElement>('[data-popover-target]');

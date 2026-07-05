@@ -1,0 +1,49 @@
+---
+interface Slide { src: string; alt: string; caption?: string; }
+interface Props { slides: Slide[]; }
+const { slides } = Astro.props;
+const pad = (n: number) => String(n).padStart(2, '0');
+---
+
+<div class="case-carousel" data-carousel>
+  <div class="carousel-stage">
+    {slides.map((s, i) => (
+      <img
+        src={s.src}
+        alt={s.alt}
+        loading={i === 0 ? 'eager' : 'lazy'}
+        class={i === 0 ? 'is-active' : undefined}
+        data-carousel-img
+        data-caption={s.caption || ''}
+      />
+    ))}
+  </div>
+  <div class="carousel-meta">
+    <span class="carousel-caption" data-carousel-caption>{slides[0].caption}</span>
+    <div class="carousel-controls">
+      <span class="carousel-counter" data-carousel-counter>{pad(1)} / {pad(slides.length)}</span>
+      <button type="button" data-carousel-prev aria-label="Previous image">
+        <svg width="14" height="9" viewBox="0 0 14 9" fill="none" aria-hidden="true">
+          <path d="M13 4.5H1M5 1L1 4.5 5 8" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <button type="button" data-carousel-next aria-label="Next image">
+        <svg width="14" height="9" viewBox="0 0 14 9" fill="none" aria-hidden="true">
+          <path d="M1 4.5h12M9 1l4 3.5L9 8" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="carousel-thumbs">
+    {slides.map((s, i) => (
+      <button
+        type="button"
+        class={`carousel-thumb${i === 0 ? ' is-active' : ''}`}
+        data-carousel-thumb
+        aria-label={`Show image ${i + 1}: ${s.alt}`}
+      >
+        <img src={s.src} alt="" loading="lazy" />
+      </button>
+    ))}
+  </div>
+</div>
