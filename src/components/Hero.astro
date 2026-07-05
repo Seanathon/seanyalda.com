@@ -10,6 +10,7 @@ interface Props {
   contact?: ContactLink[];
   cta?: Cta;
   short?: boolean;
+  fixedBg?: boolean;
 }
 const {
   headline,
@@ -20,12 +21,13 @@ const {
   contact = [],
   cta,
   short = false,
+  fixedBg = false,
 } = Astro.props;
 ---
 
 <section class={`hero${short ? ' hero--short' : ''}`}>
   <div class="hero-bg" aria-hidden="true">
-    <img src={bgImage} alt="" transition:name="hero-bg" data-rand-photo="hero" />
+    <img src={bgImage} alt="" transition:name="hero-bg" data-rand-photo={fixedBg ? undefined : 'hero'} data-fixed-photo={fixedBg ? '' : undefined} />
   </div>
   <div class="hero-overlay" aria-hidden="true"></div>
   <h1 class="hero-headline" id="hhead">

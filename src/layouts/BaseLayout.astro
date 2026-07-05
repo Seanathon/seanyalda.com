@@ -86,6 +86,13 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       const pickFrom = (pool) => pool[Math.floor(Math.random() * pool.length)];
       const pageUsed = new Set();
 
+      // Fixed images (e.g. case-study featured heroes) are off-limits for
+      // random slots on the same page.
+      document.querySelectorAll('img[data-fixed-photo]').forEach((img) => {
+        const fixed = photoPool.find(p => p.src === img.getAttribute('src'));
+        if (fixed) pageUsed.add(fixed.id);
+      });
+
       targets.forEach((el) => {
         let available = photoPool.filter(p => !used.has(p.id) && !pageUsed.has(p.id));
         if (!available.length) {
