@@ -1,45 +1,73 @@
 ---
-// "One machine, many blast radii" — the Proxmox guest map, plus the
-// WireGuard travel router as the only way in. Theme-token bound like
-// the other article diagrams.
+// "One machine, many blast radii" — the Proxmox guest map. Tier rows fill
+// against the host outline, the agent row takes the accent, the pools hang
+// below as the bind-mount plumbing, and the WireGuard travel router is the
+// only arrow pointing in. Theme-token bound like the other article diagrams.
 ---
 
 <figure class="article-diagram">
-  <svg viewBox="0 0 720 404" role="img" aria-label="Diagram: a Proxmox host divided into VM, infrastructure, application, and agent tiers, with a travel router connecting in over WireGuard">
+  <svg viewBox="0 0 720 500" role="img" aria-label="Diagram: a Proxmox host divided into VM, infrastructure, application, and agent tiers, fed by three bind-mounted storage pools below, with a travel router connecting in over WireGuard as the only way in">
+    <defs>
+      <marker id="pm-a" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+        <path class="dg-arrow" d="M0,0 L6,3 L0,6 Z" />
+      </marker>
+    </defs>
+
     <!-- Host -->
-    <rect class="dg-box" x="40" y="32" width="490" height="336" rx="2" />
+    <rect class="dg-box" x="40" y="32" width="490" height="344" rx="2" />
     <text class="dg-t-title" x="56" y="58">Proxmox VE · one MS-01</text>
+    <text class="dg-t-mut" x="514" y="58" text-anchor="end">a container, unless it can’t be</text>
     <text class="dg-t-mut" x="56" y="76">unprivileged LXCs + two VMs</text>
 
     <!-- VMs -->
-    <rect class="dg-box" x="56" y="92" width="458" height="56" rx="2" />
-    <text class="dg-t-mut" x="68" y="112">VMs</text>
-    <text class="dg-t-label" x="68" y="132">home automation OS · photo library</text>
+    <g>
+      <rect class="dg-node" x="56" y="92" width="458" height="56" rx="2" />
+      <text class="dg-t-mut" x="68" y="112">VMs — the exceptions</text>
+      <text class="dg-t-label" x="68" y="132">home automation OS · photo library</text>
+    </g>
 
     <!-- Infrastructure -->
-    <rect class="dg-box" x="56" y="160" width="458" height="56" rx="2" />
-    <text class="dg-t-mut" x="68" y="180">infrastructure LXCs</text>
-    <text class="dg-t-label" x="68" y="200">DNS + adblock · reverse proxy · backups · sync · file shares</text>
+    <g>
+      <rect class="dg-node" x="56" y="160" width="458" height="56" rx="2" />
+      <text class="dg-t-mut" x="68" y="180">infrastructure LXCs</text>
+      <text class="dg-t-label" x="68" y="200">DNS + adblock · reverse proxy · backups · sync · file shares</text>
+    </g>
 
     <!-- Applications -->
-    <rect class="dg-box" x="56" y="228" width="458" height="56" rx="2" />
-    <text class="dg-t-mut" x="68" y="248">application LXCs</text>
-    <text class="dg-t-label" x="68" y="268">media (Quick Sync) · automation · torrents (fail-closed VPN) · search</text>
+    <g>
+      <rect class="dg-node" x="56" y="228" width="458" height="56" rx="2" />
+      <text class="dg-t-mut" x="68" y="248">application LXCs</text>
+      <text class="dg-t-label" x="68" y="268">media (Quick Sync) · automation · torrents (fail-closed VPN) · search</text>
+    </g>
 
     <!-- Agent -->
-    <rect class="dg-accent" x="56" y="296" width="458" height="56" rx="2" />
-    <text class="dg-t-mut dg-t-accent" x="68" y="316">agent LXC</text>
-    <text class="dg-t-label" x="68" y="336">Hermes · Hermes OS — screens it renders itself (OpenUI Lang)</text>
+    <g>
+      <rect class="dg-accent-soft" x="56" y="296" width="458" height="56" rx="2" />
+      <text class="dg-t-mut dg-t-accent" x="68" y="316">agent LXC</text>
+      <text class="dg-t-label" x="68" y="336">Hermes · Hermes OS — screens it renders itself (OpenUI Lang)</text>
+    </g>
 
-    <!-- Storage note -->
-    <text class="dg-t-mut" x="56" y="392">datasets bind-mounted from rpool · flash · tank</text>
+    <!-- Bind-mount plumbing -->
+    <line class="dg-line dg-dash" x1="150" y1="424" x2="150" y2="382" marker-end="url(#pm-a)" />
+    <line class="dg-line dg-dash" x1="285" y1="424" x2="285" y2="382" marker-end="url(#pm-a)" />
+    <line class="dg-line dg-dash" x1="420" y1="424" x2="420" y2="382" marker-end="url(#pm-a)" />
+
+    <rect class="dg-soft" x="95" y="424" width="110" height="36" rx="1" />
+    <text class="dg-t-label" x="150" y="446" text-anchor="middle">rpool</text>
+    <rect class="dg-soft" x="230" y="424" width="110" height="36" rx="1" />
+    <text class="dg-t-label" x="285" y="446" text-anchor="middle">flash</text>
+    <rect class="dg-soft" x="365" y="424" width="110" height="36" rx="1" />
+    <text class="dg-t-label" x="420" y="446" text-anchor="middle">tank</text>
+    <text class="dg-t-mut" x="285" y="484" text-anchor="middle">bind-mounted datasets · guests never see raw disks</text>
 
     <!-- Travel router -->
-    <rect class="dg-box" x="580" y="160" width="116" height="84" rx="2" />
-    <text class="dg-t-title" x="592" y="186">Travel router</text>
-    <text class="dg-t-label" x="592" y="206">WireGuard home</text>
-    <text class="dg-t-mut" x="592" y="226">no open ports</text>
-    <line class="dg-line dg-dash" x1="530" y1="202" x2="580" y2="202" />
+    <g>
+      <rect class="dg-node" x="580" y="160" width="116" height="96" rx="2" />
+      <text class="dg-t-title" x="592" y="186">Travel router</text>
+      <text class="dg-t-label" x="592" y="206">WireGuard home</text>
+      <text class="dg-t-mut" x="592" y="226">no open ports</text>
+    </g>
+    <line class="dg-line dg-dash" x1="580" y1="208" x2="536" y2="208" marker-end="url(#pm-a)" />
   </svg>
   <figcaption>One machine, many blast radii. Guests get bind-mounted datasets, the agent gets its own container, and the only door in from outside is a WireGuard tunnel in a pocket router.</figcaption>
 </figure>

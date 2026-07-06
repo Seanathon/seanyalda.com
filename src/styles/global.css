@@ -2057,6 +2057,12 @@ a.article-row:hover .article-row-title { color: var(--accent); }
 .article-diagram .dg-line { fill: none; stroke: rgba(var(--text-rgb), 0.35); }
 .article-diagram .dg-dash { stroke-dasharray: 4 4; }
 .article-diagram .dg-accent { fill: none; stroke: var(--accent); }
+.article-diagram .dg-zone { fill: rgba(var(--text-rgb), 0.03); }
+.article-diagram .dg-node { fill: rgba(var(--bg-rgb), 0.55); stroke: rgba(var(--text-rgb), 0.4); }
+.article-diagram .dg-accent-soft { fill: rgba(var(--accent-rgb), 0.07); stroke: var(--accent); }
+.article-diagram .dg-divider { stroke: rgba(var(--text-rgb), 0.15); }
+.article-diagram .dg-arrow { fill: rgba(var(--text-rgb), 0.45); }
+.article-diagram .dg-arrow-accent { fill: var(--accent); }
 .article-diagram text {
   font-family: 'Geist', -apple-system, 'Helvetica Neue', sans-serif;
   fill: rgba(var(--text-rgb), 0.88);
@@ -2070,6 +2076,13 @@ a.article-row:hover .article-row-title { color: var(--accent); }
   fill: var(--earth);
 }
 .article-diagram .dg-t-accent { fill: var(--accent); }
+.article-diagram .dg-t-zone {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  fill: rgba(var(--text-rgb), 0.38);
+}
 .article-diagram figcaption {
   margin-top: 12px;
   font-size: var(--fs-sm);

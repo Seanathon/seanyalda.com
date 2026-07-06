@@ -1,39 +1,78 @@
 ---
-// "Where bytes live" — the pool tiering. Same theme-token binding as
-// LabTopology; the staged special vdev renders dashed + accent.
+// "Where bytes live" — the pool tiering, split into the two domains that
+// actually matter: NVMe latency vs spinning bulk. The staged special vdev
+// renders dashed + accent, bracketed into tank because it would become
+// part of the same pool. Theme-token bound like the other diagrams.
 ---
 
 <figure class="article-diagram">
-  <svg viewBox="0 0 720 392" role="img" aria-label="Diagram: four storage tiers — an NVMe boot pool, an NVMe scratch pool, the five-drive RAIDZ2 bulk pool, and a staged three-SSD special vdev">
+  <svg viewBox="0 0 720 464" role="img" aria-label="Diagram: a latency domain holding two NVMe pools — boot and scratch — and a bulk domain holding the five-drive RAIDZ2 pool, with a staged three-SSD special vdev bracketed into the same pool">
+    <defs>
+      <marker id="st-aa" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+        <path class="dg-arrow-accent" d="M0,0 L6,3 L0,6 Z" />
+      </marker>
+    </defs>
+
+    <!-- zone bands -->
+    <rect class="dg-zone" x="0" y="16" width="720" height="168" />
+    <rect class="dg-zone" x="0" y="196" width="720" height="252" />
+
+    <text class="dg-t-zone" x="12" y="40">Latency domain</text>
+    <text class="dg-t-mut" x="12" y="56">NVMe · M.2</text>
+    <text class="dg-t-zone" x="12" y="220">Bulk domain</text>
+    <text class="dg-t-mut" x="12" y="236">spinning rust</text>
+
     <!-- rpool -->
-    <rect class="dg-box" x="40" y="32" width="640" height="64" rx="2" />
-    <text class="dg-t-title" x="56" y="58">rpool · 1 TB NVMe</text>
-    <text class="dg-t-label" x="56" y="80">boot · guest roots · databases</text>
-    <text class="dg-t-mut" x="664" y="58" text-anchor="end">fast · backed up</text>
+    <g>
+      <rect class="dg-node" x="120" y="44" width="270" height="108" rx="2" />
+      <text class="dg-t-title" x="136" y="70">rpool · 1 TB NVMe</text>
+      <text class="dg-t-label" x="136" y="92">boot · guest roots · databases</text>
+      <text class="dg-t-mut" x="136" y="112">fast · backed up</text>
+    </g>
 
     <!-- flash -->
-    <rect class="dg-box" x="40" y="112" width="640" height="64" rx="2" />
-    <text class="dg-t-title" x="56" y="138">flash · 2 TB NVMe</text>
-    <text class="dg-t-label" x="56" y="160">torrent scratch · bulk ingest</text>
-    <text class="dg-t-mut" x="664" y="138" text-anchor="end">fast · loseable by design</text>
+    <g>
+      <rect class="dg-node" x="410" y="44" width="270" height="108" rx="2" />
+      <text class="dg-t-title" x="426" y="70">flash · 2 TB NVMe</text>
+      <text class="dg-t-label" x="426" y="92">torrent scratch · bulk ingest</text>
+      <text class="dg-t-mut" x="426" y="112">fast · loseable by design</text>
+    </g>
+    <text class="dg-t-mut" x="545" y="172" text-anchor="middle">keeps noisy writes off the spinning drives</text>
 
     <!-- tank -->
-    <rect class="dg-box" x="40" y="192" width="640" height="100" rx="2" />
-    <text class="dg-t-title" x="56" y="218">tank · 5× 18 TB RAIDZ2</text>
-    <text class="dg-t-label" x="56" y="240">media · photos · documents · backups</text>
-    <rect class="dg-soft" x="56" y="252" width="38" height="26" rx="1" />
-    <rect class="dg-soft" x="102" y="252" width="38" height="26" rx="1" />
-    <rect class="dg-soft" x="148" y="252" width="38" height="26" rx="1" />
-    <rect class="dg-soft" x="194" y="252" width="38" height="26" rx="1" />
-    <rect class="dg-soft" x="240" y="252" width="38" height="26" rx="1" />
-    <text class="dg-t-mut" x="664" y="218" text-anchor="end">survives any two drives</text>
-    <text class="dg-t-mut" x="664" y="238" text-anchor="end">81.8 T raw → ~48 T usable</text>
+    <g>
+      <rect class="dg-node" x="120" y="228" width="310" height="180" rx="2" />
+      <text class="dg-t-title" x="136" y="254">tank · 5× 18 TB RAIDZ2</text>
+      <text class="dg-t-label" x="136" y="274">media · photos · documents · backups</text>
+      <rect class="dg-soft" x="136" y="288" width="50" height="44" rx="1" />
+      <rect class="dg-soft" x="194" y="288" width="50" height="44" rx="1" />
+      <rect class="dg-soft" x="252" y="288" width="50" height="44" rx="1" />
+      <rect class="dg-soft" x="310" y="288" width="50" height="44" rx="1" />
+      <rect class="dg-soft" x="368" y="288" width="50" height="44" rx="1" />
+      <text class="dg-t-mut" x="161" y="314" text-anchor="middle">18 T</text>
+      <text class="dg-t-mut" x="219" y="314" text-anchor="middle">18 T</text>
+      <text class="dg-t-mut" x="277" y="314" text-anchor="middle">18 T</text>
+      <text class="dg-t-mut" x="335" y="314" text-anchor="middle">18 T</text>
+      <text class="dg-t-mut" x="393" y="314" text-anchor="middle">18 T</text>
+      <text class="dg-t-mut" x="136" y="360">survives any two drives</text>
+      <text class="dg-t-mut" x="136" y="378">81.8 T raw → ~48 T usable</text>
+    </g>
+
+    <!-- one-pool bracket -->
+    <line class="dg-accent dg-dash" x1="436" y1="318" x2="494" y2="318" marker-end="url(#st-aa)" />
+    <text class="dg-t-mut dg-t-accent" x="465" y="304" text-anchor="middle">one pool</text>
 
     <!-- special vdev (staged) -->
-    <rect class="dg-accent dg-dash" x="40" y="308" width="640" height="64" rx="2" />
-    <text class="dg-t-title" x="56" y="334">special vdev · 3× S4610 mirror</text>
-    <text class="dg-t-label" x="56" y="356">metadata · small blocks</text>
-    <text class="dg-t-mut dg-t-accent" x="664" y="334" text-anchor="end">staged · one irreversible command</text>
+    <g>
+      <rect class="dg-accent-soft dg-dash" x="500" y="228" width="190" height="180" rx="2" />
+      <text class="dg-t-title" x="516" y="254">special vdev</text>
+      <text class="dg-t-label" x="516" y="274">3× S4610 mirror</text>
+      <text class="dg-t-label" x="516" y="292">metadata · small blocks</text>
+      <text class="dg-t-mut dg-t-accent" x="516" y="360">staged on the desk</text>
+      <text class="dg-t-mut dg-t-accent" x="516" y="378">one irreversible command</text>
+    </g>
+
+    <text class="dg-t-mut" x="360" y="436" text-anchor="middle">the special vdev would hold the pool’s index — lose all three, lose everything</text>
   </svg>
-  <figcaption>Where bytes live. Two NVMe pools with opposite personalities, one big pool that tolerates two failures, and a metadata mirror that isn't allowed in yet.</figcaption>
+  <figcaption>Where bytes live. Two NVMe pools with opposite personalities, one big pool that tolerates two failures, and a metadata mirror that isn’t allowed in yet.</figcaption>
 </figure>
